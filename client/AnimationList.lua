@@ -3717,6 +3717,25 @@ RP.AnimalEmotes = {
             PtfxWait = 200
         }
     },
+    ["bdogfris"] = {
+        "creatures@rottweiler@amb@world_dog_sitting@base",
+        "nill",
+        "Frisbee (big dog)",
+        AnimationOptions = {
+            Prop = 'p_ld_frisbee_01',
+            PropBone = 31086,
+            PropPlacement = {
+                0.2600,
+                0.0200,
+               -0.0600,
+               -173.7526,
+               -169.4149,
+                21.4173
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
 
     ---- ANIMAL EMOTES ----
     ----   SMALL DOG   ----
@@ -5096,7 +5115,27 @@ RP.AnimalEmotes = {
             PtfxInfo = Config.Languages[Config.MenuLanguage]['firework'],
             PtfxWait = 200
         }
-    }
+    },
+    ["sdogfris"] = {
+        "creatures@pug@move",
+        "nill",
+        "Frisbee (small dog)",
+        AnimationOptions = {
+            Prop = 'p_ld_frisbee_01',
+            PropBone = 31086,
+            PropPlacement = {
+                0.1900,
+               -0.0150,
+                0.0000,
+              -90.0000,
+              120.0000,
+                0.000,
+                
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
 }
 
 
