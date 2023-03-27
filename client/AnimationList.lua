@@ -5142,6 +5142,8 @@ RP.AnimalEmotes = {
 --- EXIT EMOTES ---
 
 RP.Exits = {
+
+------ HUMAN ------
     ["getup"] = {
         "get_up@sat_on_floor@to_stand",
         "getup_0",
@@ -5175,6 +5177,15 @@ RP.Exits = {
             EmoteDuration = 1000
         }
     },
+    ["offtable"] = {
+        "anim@amb@board_room@diagram_blueprints@",
+        "look_around_01_amy_skater_01",
+        "Off Tabble",
+        AnimationOptions = {
+            EmoteDuration = 5700
+        }
+    },
+------ ANIMALS  ------
     ["sdogup"] = {
         "creatures@pug@amb@world_dog_sitting@exit",
         "exit",
@@ -6164,6 +6175,17 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = false
+        }
+    },
+    ["leanplan"] = {
+        "anim@amb@board_room@diagram_blueprints@",
+        "idle_01_amy_skater_01",
+        "Lean On Table",
+        AnimationOptions = {
+            EmoteLoop = true,
+            StartDelay = 200,
+            ExitEmote = "offtable",
+            ExitEmoteType = "Exits"
         }
     },
     ["me"] = {
