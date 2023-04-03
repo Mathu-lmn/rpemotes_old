@@ -4,6 +4,12 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 
 <img src="https://forum.cfx.re/uploads/default/original/4X/6/8/c/68cd34ce003360d74d73551f9be7215f5b6c7a31.jpeg" width="800">
 
+<p align="center"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License"></p>
+
+
+
+
+
 
 
 # **Join Our Official Discord 💬**
@@ -473,13 +479,15 @@ Below is an example:
 
 # 📜 LICENSE & DISCLAIMER
 
-This repository was created by **TayMcKenzieNZ** for strict usage with the Grand Theft Auto 5 unofficial multiplayer platforms 'FiveM', and is under the GNU General Public License v3.0 license.
+This repository was created by **TayMcKenzieNZ** for strict usage with the Grand Theft Auto 5 unofficial multiplayer platform 'FiveM', and is under the GNU General Public License v3.0 license.
 
-All custom props and animations were provided to RPEmotes by the community with express permission and must not be extracted from [RpEmotes(https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers.
+All custom props and animations were provided to RPEmotes by the community with express permission and must not be extracted from [RpEmotes](https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers.
 
-If you want to modify RpEmotes ***(does not apply if you want to use it for personal purposes)*** or make an agreement, you can contact the RPEmotes via our official Discord via opening a ticket. 
+If you want to modify RpEmotes ***(does not apply if you want to use it for personal purposes)*** or make an agreement, you can contact the RPEmotes team via our official [Discord](https://discord.gg/sw3NwDq6C8) by opening a ticket. 
 
-Pull requests are actively reviewed and discussed with TayMcKenzieNZ and the RPEmotes team, and will be accepted as long as they do not contain  animation / prop files *(we need permission before adding them)* breaking changes or suspicious and/or malicious code.
+Pull requests are actively reviewed and discussed with TayMcKenzieNZ and the RPEmotes team, and will be accepted as long as they do not contain animation / prop files *(we need permission before adding them)* breaking changes or suspicious and / or malicious code.
+
+We also do not accept any copyright material. This includes but is not limited to McDonald's, Subway, Sony Playstation, Microsoft Xbox, etc.
 
 
 
