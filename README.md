@@ -4,8 +4,10 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 
 <img src="https://forum.cfx.re/uploads/default/original/4X/6/8/c/68cd34ce003360d74d73551f9be7215f5b6c7a31.jpeg" width="800">
 
-<p align="center"><img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License"></p>
-
+<p align="center">
+    <img src="https://img.shields.io/badge/license-GPL--3.0-blue.svg" alt="License">
+    <a href="https://github.com/TayMcKenzieNZ/rpemotes/network/members"><img src="https://img.shields.io/github/forks/TayMcKenzieNZ/rpemotes.svg?style=social&label=Forks"></a>
+</p>
 
 
 
