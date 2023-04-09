@@ -20158,38 +20158,38 @@ RP.PropEmotes = {
         }
     },
     ["sax"] = {
-        "smo@milkshake_idle",
-        "milkshake_idle_clip",
+        "play_saxophone@dark",
+        "play_saxophone_clip",
         "Saxophone 1",
         AnimationOptions = {
             Prop = 'rpemotes_prop_saxophone01',
-            PropBone = 60309,
+            PropBone = 57005,
             PropPlacement = {
-              -0.3150,
-               0.0230,
-               0.0010,
-            -161.0151,
-            -86.2348,
-            -79.9734
+               0.0700,
+               0.0400,
+               0.0300,
+             -71.2242,
+              29.3364,
+               5.9514
             },
             EmoteLoop = true,
             EmoteMoving = true
         }
    },
     ["sax2"] = {
-        "smo@milkshake_idle",
-        "milkshake_idle_clip",
-        "Saxophone 1",
+       "play_saxophone@dark",
+       "play_saxophone_clip",
+        "Saxophone 2",
         AnimationOptions = {
             Prop = 'rpemotes_prop_saxophone02',
-            PropBone = 60309,
+            PropBone = 57005,
             PropPlacement = {
-              -0.3150,
-               0.0230,
-               0.0010,
-            -161.0151,
-            -86.2348,
-            -79.9734
+               0.0700,
+               0.0400,
+               0.0300,
+             -71.2242,
+              29.3364,
+               5.9514
             },
             EmoteLoop = true,
             EmoteMoving = true
