@@ -12880,6 +12880,112 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
+    ["bookb"] = {
+        "holding_book_1@dark",
+        "holding_book_1_clip",
+        "Book 2",
+        AnimationOptions = {
+            Prop = 'prop_cs_book_01',
+            PropBone = 57005,
+            PropPlacement = {
+                0.0900,
+                0.0900,
+               -0.0400,
+               80.1585,
+              158.5623,
+               24.7080,
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["bookc"] = {
+        "holding_book_2@dark",
+        "holding_book_2_clip",
+        "Book 3",
+        AnimationOptions = {
+            Prop = "prop_michael_backpack",
+            PropBone = 40269,
+            PropPlacement = {
+                0.0300,
+               -0.1600,
+               -0.0900,
+              -170.7740,
+               112.8415,
+               -20.0836
+            },
+            SecondProp = 'prop_cs_book_01',
+            SecondPropBone = 18905,
+            SecondPropPlacement = {
+                0.0400,
+                0.0400,
+                0.0300,
+              -69.0815,
+              176.3905,
+              19.3724
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["bookd"] = {
+        "holding_book_3@dark",
+        "holding_book_3_clip",
+        "Book 4",
+        AnimationOptions = {
+            Prop = 'prop_cs_stock_book',
+            PropBone = 18905,
+            PropPlacement = {
+                0.0700,
+                0.0400,
+                0.0700,
+                0.0000,
+                0.0000,
+              -15.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["booke"] = {
+        "holding_book_4@dark",
+        "holding_book_4_clip",
+        "Book 5",
+        AnimationOptions = {
+            Prop = 'prop_cs_stock_book',
+            PropBone = 57005,
+            PropPlacement = {
+                0.0100,
+                0.0100,
+               -0.0600,
+               15.1511,
+                3.1232,
+              -21.2448
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["bookf"] = {
+        "holding_book_5@dark",
+        "holding_book_5_clip",
+        "Book 6",
+        AnimationOptions = {
+            Prop = 'v_ilev_mp_bedsidebook',
+            PropBone = 18905,
+            PropPlacement = {
+                0.2100,
+                0.0600,
+                0.0400,
+              170.6161,
+              -14.2960,
+               28.8727
+            },
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+    },
     ["bouquet"] = {
         "impexp_int-0",
         "mp_m_waremech_01_dual-0",
