@@ -13617,44 +13617,6 @@ RP.PropEmotes = {
             EmoteLoop = true,
             EmoteMoving = true
         }
-     },
-    ["tablet3"] = {
-        "amb@world_human_tourist_map@male@base",
-        "base",
-        "Tablet",
-        AnimationOptions = {
-            Prop = "sf_prop_sf_tablet_01a",
-            PropBone = 28422,
-            PropPlacement = {
-                0.0,
-                -0.03,
-                0.0,
-                20.0,
-                -90.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
-    ["tablet4"] = {
-        "amb@code_human_in_bus_passenger_idles@female@tablet@idle_a",
-        "idle_a",
-        "Tablet 2",
-        AnimationOptions = {
-            Prop = "sf_prop_sf_tablet_01a",
-            PropBone = 28422,
-            PropPlacement = {
-                -0.05,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
     },
     ["phonecall"] = {
         "cellphone@",
