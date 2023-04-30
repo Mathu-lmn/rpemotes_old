@@ -20263,4 +20263,99 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
    },
+    ["poolcue"] = {
+       "pool_pack_1@dark",
+       "pool_pack_1_clip",
+        "Play Pool",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.0900,
+               0.2000,
+               0.0800,
+             -61.4338,
+              -7.2194,
+               3.1642
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
+    ["poolcue2"] = {
+       "pool_pack_2@dark",
+       "pool_pack_2_clip",
+        "Play Pool 2 (Pose)",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.1200,
+              -0.5200,
+              -0.1200,
+             -78.0400,
+              -1.4526,
+               1.8479
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["poolcue3"] = {
+       "pool_pack_3@dark",
+       "pool_pack_3_clip",
+        "Play Pool 3 (Pose)",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.1200,
+              -0.3500,
+              -0.0200,
+             -90.0000,
+               0.0,
+               0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["poolcue4"] = {
+       "pool_pack_4@dark",
+       "pool_pack_4_clip",
+        "Play Pool 4 (Pose)",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 61163,
+            PropPlacement = {
+               0.2600,
+              -0.1600,
+              -0.3100,
+             -31.8144,
+              14.4214,
+             -13.2854
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["poolcue5"] = {
+       "pool_pack_5@dark",
+       "pool_pack_5_clip",
+        "Play Pool 5",
+        AnimationOptions = {
+            Prop = 'prop_pool_cue',
+            PropBone = 57005,
+            PropPlacement = {
+               0.0700,
+               0.5500,
+               0.1000,
+             -76.6157,
+              -9.5838,
+               2.9748,
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
 }
