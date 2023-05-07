@@ -79,6 +79,8 @@ Config = {
     CrawlKeybind = 'rcontrol', -- The default crawl keybind, get the button string here: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- Check for updates
 	CheckForUpdates = true,
+    -- If turned on, playing an emote will cancel the previous one.
+    CancelPreviousEmote = false,
 }
 
 Config.KeybindKeys = {

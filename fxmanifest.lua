@@ -3,9 +3,9 @@
 
 fx_version 'cerulean'
 game 'gta5'
-authors { 'TayMcKenzieNZ', 'MadsL, iSentrie, AvaN0x' }
-description 'RPEmotes V1.1.9'
-version '1.1.9'
+authors { 'TayMcKenzieNZ', 'MadsL, AvaN0x' }
+description 'RPEmotes V1.2.0'
+version '1.2.0'
 lua54 'yes'
 
 dependencies {
@@ -43,6 +43,7 @@ client_scripts {
     'client/EmoteMenu.lua',
     'client/Expressions.lua',
     'client/Keybinds.lua',
+    'client/NoIdleCam.lua',
     'client/Pointing.lua',
     'client/Ragdoll.lua',
     'client/Syncing.lua',

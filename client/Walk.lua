@@ -6,9 +6,10 @@ function WalkMenuStart(name)
 end
 
 function RequestWalking(set)
-    RequestAnimSet(set)
-    while not HasAnimSetLoaded(set) do
-        Citizen.Wait(1)
+    local timeout = GetGameTimer() + 5000
+    while not HasAnimSetLoaded(set) and GetGameTimer() < timeout do
+        RequestAnimSet(set)
+        Wait(5)
     end
 end
 

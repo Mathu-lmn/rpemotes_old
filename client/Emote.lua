@@ -18,6 +18,8 @@ local PtfxNoProp = false
 local AnimationThreadStatus = false
 local CanCancel = true
 local InExitEmote = false
+local ExitAndPlay = false
+local EmoteCancelPlaying = false
 IsInAnimation = false
 
 -- Remove emotes if needed
@@ -161,6 +163,7 @@ end)
 -----------------------------------------------------------------------------------------------------
 
 function EmoteCancel(force)
+    EmoteCancelPlaying = true
     -- Don't cancel if we are in an exit emote
     if InExitEmote then
         return
@@ -201,7 +204,6 @@ function EmoteCancel(force)
                 IsInAnimation = false
                 return
             end
-
             OnEmotePlay(RP[ExitEmoteType][options.ExitEmote])
             DebugPrint("Playing exit animation")
 
@@ -213,12 +215,14 @@ function EmoteCancel(force)
                     InExitEmote = false
                     DestroyAllProps()
                     ClearPedTasks(ply)
+                    EmoteCancelPlaying = false
                 end)
                 return
             end
         else
             ClearPedTasks(ply)
             IsInAnimation = false
+            EmoteCancelPlaying = false
         end
         DestroyAllProps()
     end
@@ -422,18 +426,33 @@ function LoadAnim(dict)
         return false
     end
 
-    while not HasAnimDictLoaded(dict) do
+    local timeout = 2000
+    while not HasAnimDictLoaded(dict) and timeout > 0 do
         RequestAnimDict(dict)
-        Wait(10)
+        Wait(5)
+        timeout = timeout - 5
     end
-
-    return true
+    if timeout == 0 then
+        DebugPrint("Loading anim dict " .. dict .. " timed out")
+        return false
+    else
+        return true
+    end
 end
 
 function LoadPropDict(model)
-    while not HasModelLoaded(joaat(model)) do
+    -- load the model if it's not loaded and wait until it's loaded or timeout
+    if not HasModelLoaded(joaat(model)) then
         RequestModel(joaat(model))
-        Wait(10)
+        local timeout = 2000
+        while not HasModelLoaded(joaat(model)) and timeout > 0 do
+            Wait(5)
+            timeout = timeout - 5
+        end
+        if timeout == 0 then
+            DebugPrint("Loading model " .. model .. " timed out")
+            return
+        end
     end
 end
 
@@ -467,6 +486,7 @@ function AddPropToPlayer(prop1, bone, off1, off2, off3, rot1, rot2, rot3, textur
     table.insert(PlayerProps, prop)
     PlayerHasProp = true
     SetModelAsNoLongerNeeded(prop1)
+    DebugPrint("Added prop to player")
     return true
 end
 
@@ -510,6 +530,14 @@ function OnEmotePlay(EmoteName, textureVariation)
         return false
     end
 
+    if Config.CancelPreviousEmote and IsInAnimation and not ExitAndPlay and not EmoteCancelPlaying then
+        ExitAndPlay = true
+        DebugPrint("Canceling previous emote and playing next emote")
+        PlayExitAndEnterEmote(EmoteName, textureVariation)
+        return
+    end
+
+
     local animOption = EmoteName.AnimationOptions
     if animOption and animOption.NotInVehicle and InVehicle then
         return EmoteChatMessage("You can't play this animation while in vehicle.")
@@ -545,11 +573,14 @@ function OnEmotePlay(EmoteName, textureVariation)
         if ChosenDict == "MaleScenario" then if InVehicle then return end
             if PlayerGender == "male" then
                 ClearPedTasks(PlayerPedId())
+                DestroyAllProps()
                 TaskStartScenarioInPlace(PlayerPedId(), ChosenAnimation, 0, true)
                 DebugPrint("Playing scenario = (" .. ChosenAnimation .. ")")
                 IsInAnimation = true
                 RunAnimationThread()
             else
+                DestroyAllProps()
+                EmoteCancel()
                 EmoteChatMessage(Config.Languages[lang]['maleonly'])
             end
             return
@@ -563,6 +594,7 @@ function OnEmotePlay(EmoteName, textureVariation)
             return
         elseif ChosenDict == "Scenario" then if InVehicle then return end
             ClearPedTasks(PlayerPedId())
+            DestroyAllProps()
             TaskStartScenarioInPlace(PlayerPedId(), ChosenAnimation, 0, true)
             DebugPrint("Playing scenario = (" .. ChosenAnimation .. ")")
             IsInAnimation = true
@@ -629,6 +661,10 @@ function OnEmotePlay(EmoteName, textureVariation)
         end
     end
 
+    if IsPedUsingAnyScenario(PlayerPedId()) or IsPedActiveInScenario(PlayerPedId()) then
+        ClearPedTasksImmediately(PlayerPedId())
+    end
+
     TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, 5.0, 5.0, AnimationDuration, MovementType, 0, false, false, false)
     RemoveAnimDict(ChosenDict)
     IsInAnimation = true
@@ -661,6 +697,66 @@ function OnEmotePlay(EmoteName, textureVariation)
         if animOption.PtfxAsset and not PtfxNoProp then
             TriggerServerEvent("rpemotes:ptfx:syncProp", ObjToNet(prop))
         end
+    end
+end
+
+function PlayExitAndEnterEmote(emoteName, textureVariation)
+    local ply = PlayerPedId()
+    if not CanCancel and force ~= true then return end
+    if ChosenDict == "MaleScenario" and IsInAnimation then
+        ClearPedTasksImmediately(ply)
+        IsInAnimation = false
+        DebugPrint("Forced scenario exit")
+    elseif ChosenDict == "Scenario" and IsInAnimation then
+        ClearPedTasksImmediately(ply)
+        IsInAnimation = false
+        DebugPrint("Forced scenario exit")
+    end
+
+    PtfxNotif = false
+    PtfxPrompt = false
+    Pointing = false
+
+    if LocalPlayer.state.ptfx then
+        PtfxStop()
+    end
+    DetachEntity(ply, true, false)
+    CancelSharedEmote(ply)
+
+    if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
+        -- If the emote exit type is not spesifed it defaults to Emotes
+        local options = ChosenAnimOptions
+        local ExitEmoteType = options.ExitEmoteType or "Emotes"
+
+        -- Checks that the exit emote actually exists
+        if not RP[ExitEmoteType] or not RP[ExitEmoteType][options.ExitEmote] then
+            DebugPrint("Exit emote was invalid")
+            ClearPedTasks(ply)
+            IsInAnimation = false
+            return
+        end
+        OnEmotePlay(RP[ExitEmoteType][options.ExitEmote])
+        DebugPrint("Playing exit animation")
+
+        -- Check that the exit emote has a duration, and if so, set InExitEmote variable
+        local animationOptions = RP[ExitEmoteType][options.ExitEmote].AnimationOptions
+        if animationOptions and animationOptions.EmoteDuration then
+            InExitEmote = true
+            SetTimeout(animationOptions.EmoteDuration, function()
+                InExitEmote = false
+                DestroyAllProps()
+                ClearPedTasks(ply)
+                OnEmotePlay(emoteName, textureVariation)
+                ExitAndPlay = false
+            end)
+            return
+        end
+    else
+        ClearPedTasks(ply)
+        IsInAnimation = false
+        ExitAndPlay = false
+        DestroyAllProps()
+        OnEmotePlay(emoteName, textureVariation)
     end
 end
 
