@@ -452,7 +452,8 @@ Config.Languages = {
         ['btn_select'] = "Select",
         ['btn_back'] = "Back",
         ['btn_switch'] = "Movement",
-        ['btn_increment'] = "Increment"
+        ['btn_increment'] = "Increment",
+        ['dead'] = "You can't use emotes while dead!"
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',
@@ -581,7 +582,8 @@ Config.Languages = {
         ['btn_select'] = "Sélectionner",
         ['btn_back'] = "Retour",
         ['btn_switch'] = "Mouvement",
-        ['btn_increment'] = "Vitesse déplacement"
+        ['btn_increment'] = "Vitesse déplacement",
+        ['dead'] = "Vous ne pouvez pas faire d'animation en étant mort !"
     },
     ['de'] = { -- German 🇩🇪
         ['emotes'] = 'Emotes 🎬',

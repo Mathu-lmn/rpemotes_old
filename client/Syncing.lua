@@ -59,10 +59,10 @@ AddEventHandler("SyncPlayEmote", function(emote, player)
             end
         end
 
-        OnEmotePlay(RP.Shared[emote])
+        OnEmotePlay(RP.Shared[emote], emote)
         return
     elseif RP.Dances[emote] ~= nil then
-        OnEmotePlay(RP.Dances[emote])
+        OnEmotePlay(RP.Dances[emote], emote)
         return
     end
 end)
@@ -115,10 +115,10 @@ AddEventHandler("SyncPlayEmoteSource", function(emote, player)
     Wait(300)
     targetPlayerId = player
     if RP.Shared[emote] ~= nil then
-        OnEmotePlay(RP.Shared[emote])
+        OnEmotePlay(RP.Shared[emote], emote)
         return
     elseif RP.Dances[emote] ~= nil then
-        OnEmotePlay(RP.Dances[emote])
+        OnEmotePlay(RP.Dances[emote], emote)
         return
     end
 end)

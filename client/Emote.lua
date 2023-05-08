@@ -21,6 +21,7 @@ local InExitEmote = false
 local ExitAndPlay = false
 local EmoteCancelPlaying = false
 IsInAnimation = false
+CurrentAnimationName = nil
 
 -- Remove emotes if needed
 
@@ -204,7 +205,7 @@ function EmoteCancel(force)
                 IsInAnimation = false
                 return
             end
-            OnEmotePlay(RP[ExitEmoteType][options.ExitEmote])
+            OnEmotePlay(RP[ExitEmoteType][options.ExitEmote], ExitEmoteType)
             DebugPrint("Playing exit animation")
 
             -- Check that the exit emote has a duration, and if so, set InExitEmote variable
@@ -346,19 +347,19 @@ function EmoteMenuStart(args, hard, textureVariation)
 
     if etype == "dances" then
         if RP.Dances[name] ~= nil then
-            OnEmotePlay(RP.Dances[name])
+            OnEmotePlay(RP.Dances[name], name)
         end
     elseif etype == "animals" then
         if RP.AnimalEmotes[name] ~= nil then
-            OnEmotePlay(RP.AnimalEmotes[name])
+            OnEmotePlay(RP.AnimalEmotes[name], name)
         end
     elseif etype == "props" then
         if RP.PropEmotes[name] ~= nil then
-            OnEmotePlay(RP.PropEmotes[name], textureVariation)
+            OnEmotePlay(RP.PropEmotes[name], name, textureVariation)
         end
     elseif etype == "emotes" then
         if RP.Emotes[name] ~= nil then
-            OnEmotePlay(RP.Emotes[name])
+            OnEmotePlay(RP.Emotes[name], name)
         end
     elseif etype == "expression" then
         if RP.Expressions[name] ~= nil then
@@ -369,6 +370,14 @@ end
 
 function EmoteCommandStart(source, args, raw)
     if #args > 0 then
+        if IsEntityDead(PlayerPedId()) then
+            TriggerEvent('chat:addMessage', {
+                color = {255, 0, 0},
+                multiline = true,
+                args = {"RPEmotes", Config.Languages[lang]['dead']}
+            })
+            return
+        end
         local name = string.lower(args[1])
         if name == "c" then
             if IsInAnimation then
@@ -383,23 +392,23 @@ function EmoteCommandStart(source, args, raw)
         end
 
         if RP.Emotes[name] ~= nil then
-            OnEmotePlay(RP.Emotes[name])
+            OnEmotePlay(RP.Emotes[name], name)
             return
         elseif RP.Dances[name] ~= nil then
-            OnEmotePlay(RP.Dances[name])
+            OnEmotePlay(RP.Dances[name], name)
             return
         elseif RP.AnimalEmotes[name] ~= nil then
-            OnEmotePlay(RP.AnimalEmotes[name])
+            OnEmotePlay(RP.AnimalEmotes[name], name)
             return
         elseif RP.Exits[name] ~= nil then
-            OnEmotePlay(RP.Exits[name])
+            OnEmotePlay(RP.Exits[name], name)
             return
         elseif RP.PropEmotes[name] ~= nil then
             if RP.PropEmotes[name].AnimationOptions.PropTextureVariations then
                 if #args > 1 then
                     local textureVariation = tonumber(args[2])
                     if (RP.PropEmotes[name].AnimationOptions.PropTextureVariations[textureVariation] ~= nil) then
-                        OnEmotePlay(RP.PropEmotes[name], textureVariation - 1)
+                        OnEmotePlay(RP.PropEmotes[name], name, textureVariation - 1)
                         return
                     else
                         local str = ""
@@ -408,12 +417,12 @@ function EmoteCommandStart(source, args, raw)
                         end
 
                         EmoteChatMessage(string.format(Config.Languages[lang]['invalidvariation'], str), true)
-                        OnEmotePlay(RP.PropEmotes[name], 0)
+                        OnEmotePlay(RP.PropEmotes[name], name, 0)
                         return
                     end
                 end
             end
-            OnEmotePlay(RP.PropEmotes[name])
+            OnEmotePlay(RP.PropEmotes[name], name)
             return
         else
             EmoteChatMessage("'" .. name .. "' " .. Config.Languages[lang]['notvalidemote'] .. "")
@@ -513,7 +522,7 @@ end
 ------ This is the major function for playing emotes! -----------------------------------------------
 -----------------------------------------------------------------------------------------------------
 
-function OnEmotePlay(EmoteName, textureVariation)
+function OnEmotePlay(EmoteName, name, textureVariation)
     InVehicle = IsPedInAnyVehicle(PlayerPedId(), true)
 	Pointing = false
 
@@ -533,7 +542,7 @@ function OnEmotePlay(EmoteName, textureVariation)
     if Config.CancelPreviousEmote and IsInAnimation and not ExitAndPlay and not EmoteCancelPlaying then
         ExitAndPlay = true
         DebugPrint("Canceling previous emote and playing next emote")
-        PlayExitAndEnterEmote(EmoteName, textureVariation)
+        PlayExitAndEnterEmote(EmoteName, name, textureVariation)
         return
     end
 
@@ -555,6 +564,7 @@ function OnEmotePlay(EmoteName, textureVariation)
     end
 
     ChosenDict, ChosenAnimation, ename = table.unpack(EmoteName)
+    CurrentAnimationName = name
     ChosenAnimOptions = animOption
     AnimationDuration = -1
 
@@ -700,7 +710,7 @@ function OnEmotePlay(EmoteName, textureVariation)
     end
 end
 
-function PlayExitAndEnterEmote(emoteName, textureVariation)
+function PlayExitAndEnterEmote(emoteName, name, textureVariation)
     local ply = PlayerPedId()
     if not CanCancel and force ~= true then return end
     if ChosenDict == "MaleScenario" and IsInAnimation then
@@ -735,7 +745,7 @@ function PlayExitAndEnterEmote(emoteName, textureVariation)
             IsInAnimation = false
             return
         end
-        OnEmotePlay(RP[ExitEmoteType][options.ExitEmote])
+        OnEmotePlay(RP[ExitEmoteType][options.ExitEmote], ExitEmoteType)
         DebugPrint("Playing exit animation")
 
         -- Check that the exit emote has a duration, and if so, set InExitEmote variable
@@ -746,7 +756,7 @@ function PlayExitAndEnterEmote(emoteName, textureVariation)
                 InExitEmote = false
                 DestroyAllProps()
                 ClearPedTasks(ply)
-                OnEmotePlay(emoteName, textureVariation)
+                OnEmotePlay(emoteName, name, textureVariation)
                 ExitAndPlay = false
             end)
             return
@@ -756,7 +766,7 @@ function PlayExitAndEnterEmote(emoteName, textureVariation)
         IsInAnimation = false
         ExitAndPlay = false
         DestroyAllProps()
-        OnEmotePlay(emoteName, textureVariation)
+        OnEmotePlay(emoteName, name, textureVariation)
     end
 end
 
@@ -773,5 +783,72 @@ exports("CanCancelEmote", function(State)
 		CanCancel = State == true
 end)
 exports('IsPlayerInAnim', function()
-	return IsInAnimation 
+	return IsInAnimation
+end)
+
+-- Door stuff
+local openingDoor = false
+AddEventHandler('CEventOpenDoor', function(entities, eventEntity, args)
+    if not IsInAnimation then
+        return
+    end
+
+    if openingDoor then
+        return
+    end
+
+    openingDoor = true
+
+    while IsPedOpeningADoor(PlayerPedId()) do
+        Wait(100)
+    end
+
+    openingDoor = false
+
+    Wait(200)
+
+    local emote = RP.Emotes[CurrentAnimationName]
+    if not emote then
+        emote = RP.PropEmotes[CurrentAnimationName]
+    end
+
+    if not emote then
+        return
+    end
+
+    emote.name = CurrentAnimationName
+
+    ClearPedTasks(PlayerPedId())
+    DestroyAllProps()
+    OnEmotePlay(emote, emote.name)
+end)
+
+-- Cancelled emote ? NO
+AddEventHandler("CEventPlayerCollisionWithPed", function()
+    if not IsInAnimation then
+        return
+    end
+
+    -- We wait a bit to avoid collision with the ped resetting the animation again
+
+    Wait(500)
+
+    if not IsInAnimation then
+        return
+    end
+
+    local emote = RP.Emotes[CurrentAnimationName]
+    if not emote then
+        emote = RP.PropEmotes[CurrentAnimationName]
+    end
+
+    if not emote then
+        return
+    end
+
+    emote.name = CurrentAnimationName
+
+    ClearPedTasks(PlayerPedId())
+    DestroyAllProps()
+    OnEmotePlay(emote, emote.name)
 end)
