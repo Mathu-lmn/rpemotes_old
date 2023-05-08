@@ -655,7 +655,7 @@ Config.Languages = {
         ['btn_back'] = "Zurück",
         ['btn_switch'] = "Bewegung",
         ['btn_increment'] = "Increment",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "Du kannst keine Emotes nutzen während du tot bist!"
     },
     ['hu'] = { -- Hungarian 🇭🇺
         ['emotes'] = 'Animációs Menü 🎬',
