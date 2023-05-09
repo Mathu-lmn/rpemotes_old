@@ -987,7 +987,7 @@ RP.Shared = {
         "amnilka@photopose@couple@couplefirst",
         "amnilka_couple_fem_003",
         "Sit With Me Please?",
-        "carrymecute",
+        "sitwithmepose",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true,
