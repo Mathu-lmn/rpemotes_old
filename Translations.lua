@@ -393,7 +393,7 @@ Config.Languages = {
         ['btn_back'] = "Terug",
         ['btn_switch'] = "Bewegen",
         ['btn_increment'] = "Increment",
-        ['dead'] "Je kunt geen emotes gebruiken wanneer je dood bent!"
+        ['dead'] = "Je kunt geen emotes gebruiken wanneer je dood bent!"
     },
     ['en'] = { -- English 🇬🇧
         ['emotes'] = 'Emotes 🎬',
