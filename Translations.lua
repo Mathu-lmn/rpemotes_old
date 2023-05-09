@@ -393,7 +393,7 @@ Config.Languages = {
         ['btn_back'] = "Terug",
         ['btn_switch'] = "Bewegen",
         ['btn_increment'] = "Increment",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] "Je kunt geen emotes gebruiken wanneer je dood bent!"
     },
     ['en'] = { -- English 🇬🇧
         ['emotes'] = 'Emotes 🎬',
@@ -1117,7 +1117,7 @@ Config.Languages = {
         ['btn_back'] = "Назад",
         ['btn_switch'] = "Движение",
         ['btn_increment'] = "Increment",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "Вы не можете использовать эмоции, когда умерли!"
     },
     ['lk'] = { -- Sinhala 🇱🇰
         ['emotes'] = 'Emotes 🎬',
@@ -1314,7 +1314,7 @@ Config.Languages = {
         ['btn_back'] = "Tillbaka",
         ['btn_switch'] = "Rörelse",
         ['btn_increment'] = "Increment",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "Du kan inte använda animationer när du är död!"
     },
     ['tr'] = { -- Turkish 🇹🇷
         ['emotes'] = 'İfadeler 🎬',
