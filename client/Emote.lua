@@ -378,6 +378,14 @@ function EmoteCommandStart(source, args, raw)
             })
             return
         end
+        if (IsPedSwimming(PlayerPedId()) or IsPedSwimmingUnderWater(PlayerPedId())) and not Config.AllowInWater then
+            TriggerEvent('chat:addMessage', {
+                color = {255, 0, 0},
+                multiline = true,
+                args = {"RPEmotes", Config.Languages[lang]['swimming']}
+            })
+            return
+        end
         local name = string.lower(args[1])
         if name == "c" then
             if IsInAnimation then

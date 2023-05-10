@@ -81,6 +81,8 @@ Config = {
 	CheckForUpdates = true,
     -- If turned on, playing an emote will cancel the previous one.
     CancelPreviousEmote = false,
+    -- If turned off, opening the menu and playing an emote will not be possible while swimming
+    AllowInWater = true,
 }
 
 Config.KeybindKeys = {
