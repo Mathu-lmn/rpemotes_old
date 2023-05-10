@@ -139,13 +139,17 @@ RegisterCommand('walks', function() WalksOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 
 RegisterCommand('handsup', function()
-	if Config.HandsupKeybindEnabled then
-		if IsEntityPlayingAnim(PlayerPedId(), "missminuteman_1ig_2", "handsup_base", 51) then
-			EmoteCancel()
-		else
-			EmoteCommandStart(nil, {"handsup"}, nil)
-		end
-	end
+    if Config.HandsupKeybindEnabled then
+        if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled then
+            return
+        end
+
+        if IsEntityPlayingAnim(PlayerPedId(), "missminuteman_1ig_2", "handsup_base", 51) then
+            EmoteCancel()
+        else
+            EmoteCommandStart(nil, {"handsup"}, nil)
+        end
+    end
 end, false)
 
 AddEventHandler('onResourceStop', function(resource)
