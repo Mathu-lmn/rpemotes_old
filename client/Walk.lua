@@ -1,8 +1,23 @@
+local canChange = true
+local unable_message = "You are unable to change your walking style right now."
+
 function WalkMenuStart(name)
+    if not canChange then
+        EmoteChatMessage(unable_message)
+        return
+    end
     if Config.PersistentWalk then SetResourceKvp("walkstyle", name) end
     RequestWalking(name)
     SetPedMovementClipset(PlayerPedId(), name, 0.2)
     RemoveAnimSet(name)
+end
+
+function ResetWalk()
+    if not canChange then
+        EmoteChatMessage(unable_message)
+        return
+    end
+    ResetPedMovementClipset(PlayerPedId())
 end
 
 function RequestWalking(set)
@@ -23,6 +38,11 @@ function WalksOnCommand(source, args, raw)
 end
 
 function WalkCommandStart(source, args, raw)
+
+    if not canChange then
+        EmoteChatMessage(unable_message)
+        return
+    end
     local name = firstToUpper(string.lower(args[1]))
 
     if name == "Reset" then
@@ -60,3 +80,12 @@ if Config.WalkingStylesEnabled then
     TriggerEvent('chat:addSuggestion', '/walk', 'Set your walkingstyle.', { { name = "style", help = "/walks for a list of valid styles" } })
     TriggerEvent('chat:addSuggestion', '/walks', 'List available walking styles.')
 end
+
+function toggleWalkstyle(bool, message)
+    canChange = bool
+    if message then
+        unable_message = message
+    end
+end
+
+exports('toggleWalkstyle', toggleWalkstyle)
