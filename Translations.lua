@@ -459,7 +459,8 @@ Config.Languages = {
         ['btn_back'] = "Back",
         ['btn_switch'] = "Movement",
         ['btn_increment'] = "Increment",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "You can't use emotes while dead!",
+        ['swimming'] = "You can't use emotes while swimming"
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',
