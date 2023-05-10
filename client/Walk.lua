@@ -53,3 +53,10 @@ if Config.WalkingStylesEnabled and Config.PersistentWalk then
         end
     end)
 end
+
+if Config.WalkingStylesEnabled then
+    RegisterCommand('walks', function() WalksOnCommand() end, false)
+    RegisterCommand('walk', function(source, args, raw) WalkCommandStart(source, args, raw) end, false)
+    TriggerEvent('chat:addSuggestion', '/walk', 'Set your walkingstyle.', { { name = "style", help = "/walks for a list of valid styles" } })
+    TriggerEvent('chat:addSuggestion', '/walks', 'List available walking styles.')
+end

@@ -114,9 +114,6 @@ Citizen.CreateThread(function()
     end
     TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu (F4) by default. This may differ from server to server.')
     TriggerEvent('chat:addSuggestion', '/emotes', 'List available emotes.')
-    TriggerEvent('chat:addSuggestion', '/walk', 'Set your walkingstyle.',
-        { { name = "style", help = "/walks for a list of valid styles" } })
-    TriggerEvent('chat:addSuggestion', '/walks', 'List available walking styles.')
     TriggerEvent('chat:addSuggestion', '/emotecancel', 'Cancel currently playing emote.')
     TriggerEvent('chat:addSuggestion', '/handsup', 'Put your arms up.')
 end)
@@ -134,8 +131,6 @@ else
     RegisterCommand('emotemenu', function() OpenEmoteMenu() end, false)
 end
 RegisterCommand('emotes', function() EmotesOnCommand() end, false)
-RegisterCommand('walk', function(source, args, raw) WalkCommandStart(source, args, raw) end, false)
-RegisterCommand('walks', function() WalksOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 
 RegisterCommand('handsup', function()
