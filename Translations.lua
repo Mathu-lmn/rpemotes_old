@@ -854,7 +854,7 @@ Config.Languages = {
         ['btn_back'] = "Tilbake",
         ['btn_switch'] = "Bevegelse",
         ['btn_increment'] = "Increment",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "Du kan ikke starte animasjoner mens du er død!"
     },
 	['fa'] = { -- persian 🇮🇷
         ['emotes'] = 'Emotes 🎬',
