@@ -391,6 +391,8 @@ function GetSafeZoneBounds()
     return { X = math.round(SafeSize * ((W / H) * 5.4)), Y = math.round(SafeSize * 5.4) }
 end
 
+---Returns true if the player is using a controller
+---@return boolean
 function Controller()
     return not IsInputDisabled(2)
 end
@@ -2887,7 +2889,7 @@ function UIMenu:ProcessControl()
         self:GoBack()
     end
 
-    if self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(1, 19) or IsDisabledControlJustReleased(2, 19)) then
+    if (self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(1, 19) or IsDisabledControlJustReleased(2, 19))) and not tobool(Controller()) then
         if paginationValue == 1 then
             paginationValue = 10
         else
@@ -3606,7 +3608,7 @@ function UIMenu:UpdateScaleform()
         PopScaleformMovieFunction()
     end
 
-    if self.Controls.Increment.Enabled then
+    if self.Controls.Increment.Enabled and not tobool(Controller()) then
         PushScaleformMovieFunction(self.InstructionalScaleform, "SET_DATA_SLOT")
         PushScaleformMovieFunctionParameterInt(3)
         PushScaleformMovieFunctionParameterString(GetControlInstructionalButton(2, 19, 0))
