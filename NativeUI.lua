@@ -2900,6 +2900,7 @@ function UIMenu:ProcessControl()
         else
             paginationValue = 1
         end
+        PlaySoundFrontend(-1, self.Settings.Audio.UpDown, self.Settings.Audio.Library, true)
         self:Visible(true)
     end
 
@@ -2910,6 +2911,7 @@ function UIMenu:ProcessControl()
         else
             paginationValue = 1
         end
+        PlaySoundFrontend(-1, self.Settings.Audio.UpDown, self.Settings.Audio.Library, true)
         self:Visible(true)
     end
 
