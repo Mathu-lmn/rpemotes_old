@@ -188,6 +188,14 @@ Alternatively, you can use the keybind command that comes with FiveM without hav
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Increments 
+
+Pressing 'LEFT ALT' on the keyboard allows players to scroll through the menu one by one, or by 10.
+
+Alternatively, players can use the `SHARE` button on an Xbox controller or `OPTIONS` button on a Playstation controller.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Ragdoll 🥴
 
 * To enable ragdoll, change `RagdollEnabled = false,` to true in config.lua.
