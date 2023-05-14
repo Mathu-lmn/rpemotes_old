@@ -391,6 +391,8 @@ function GetSafeZoneBounds()
     return { X = math.round(SafeSize * ((W / H) * 5.4)), Y = math.round(SafeSize * 5.4) }
 end
 
+---Returns true if the player is using a controller
+---@return boolean
 function Controller()
     return not IsInputDisabled(2)
 end
@@ -2883,16 +2885,33 @@ function UIMenu:ProcessControl()
         return
     end
 
-    if self.Controls.Back.Enabled and (IsDisabledControlJustReleased(0, 177) or IsDisabledControlJustReleased(1, 177) or IsDisabledControlJustReleased(2, 177) or IsDisabledControlJustReleased(0, 199) or IsDisabledControlJustReleased(1, 199) or IsDisabledControlJustReleased(2, 199)) then
+    if self.Controls.Back.Enabled and (IsDisabledControlJustReleased(0, 177) or IsDisabledControlJustReleased(1, 177) or IsDisabledControlJustReleased(2, 177)) then
         self:GoBack()
     end
 
-    if self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(1, 19) or IsDisabledControlJustReleased(2, 19)) then
+    if self.Controls.Back.Enabled and (IsDisabledControlJustReleased(0, 199) or IsDisabledControlJustReleased(1, 199) or IsDisabledControlJustReleased(2, 199)) and not tobool(Controller()) then
+        self:GoBack()
+    end
+
+    -- If player is using keyboard, the control is alt
+    if (self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(1, 19) or IsDisabledControlJustReleased(2, 19))) and not tobool(Controller()) then
         if paginationValue == 1 then
             paginationValue = 10
         else
             paginationValue = 1
         end
+        PlaySoundFrontend(-1, self.Settings.Audio.UpDown, self.Settings.Audio.Library, true)
+        self:Visible(true)
+    end
+
+    -- If player is using controller, the control index is 199
+    if (self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 199) or IsDisabledControlJustReleased(1, 199) or IsDisabledControlJustReleased(2, 199))) and tobool(Controller()) then
+        if paginationValue == 1 then
+            paginationValue = 10
+        else
+            paginationValue = 1
+        end
+        PlaySoundFrontend(-1, self.Settings.Audio.UpDown, self.Settings.Audio.Library, true)
         self:Visible(true)
     end
 
@@ -3606,10 +3625,20 @@ function UIMenu:UpdateScaleform()
         PopScaleformMovieFunction()
     end
 
-    if self.Controls.Increment.Enabled then
+    -- If using keyboard, show alt increment button
+    if self.Controls.Increment.Enabled and not tobool(Controller()) then
         PushScaleformMovieFunction(self.InstructionalScaleform, "SET_DATA_SLOT")
         PushScaleformMovieFunctionParameterInt(3)
         PushScaleformMovieFunctionParameterString(GetControlInstructionalButton(2, 19, 0))
+        PushScaleformMovieFunctionParameterString(Config.Languages[lang]['btn_increment']..(paginationValue and ': '..paginationValue or ": "..paginationValue))
+        PopScaleformMovieFunction()
+    end
+
+    -- If using controller, show 199 increment button
+    if self.Controls.Increment.Enabled and tobool(Controller()) then
+        PushScaleformMovieFunction(self.InstructionalScaleform, "SET_DATA_SLOT")
+        PushScaleformMovieFunctionParameterInt(3)
+        PushScaleformMovieFunctionParameterString(GetControlInstructionalButton(2, 199, 0))
         PushScaleformMovieFunctionParameterString(Config.Languages[lang]['btn_increment']..(paginationValue and ': '..paginationValue or ": "..paginationValue))
         PopScaleformMovieFunction()
     end
