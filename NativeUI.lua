@@ -2889,7 +2889,18 @@ function UIMenu:ProcessControl()
         self:GoBack()
     end
 
+    -- If player is using keyboard, the control is alt
     if (self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 19) or IsDisabledControlJustReleased(1, 19) or IsDisabledControlJustReleased(2, 19))) and not tobool(Controller()) then
+        if paginationValue == 1 then
+            paginationValue = 10
+        else
+            paginationValue = 1
+        end
+        self:Visible(true)
+    end
+
+    -- If player is using controller, the control index is 199
+    if (self.Controls.Increment.Enabled and (IsDisabledControlJustReleased(0, 199) or IsDisabledControlJustReleased(1, 199) or IsDisabledControlJustReleased(2, 199))) and tobool(Controller()) then
         if paginationValue == 1 then
             paginationValue = 10
         else
@@ -3608,10 +3619,20 @@ function UIMenu:UpdateScaleform()
         PopScaleformMovieFunction()
     end
 
+    -- If using keyboard, show alt increment button
     if self.Controls.Increment.Enabled and not tobool(Controller()) then
         PushScaleformMovieFunction(self.InstructionalScaleform, "SET_DATA_SLOT")
         PushScaleformMovieFunctionParameterInt(3)
         PushScaleformMovieFunctionParameterString(GetControlInstructionalButton(2, 19, 0))
+        PushScaleformMovieFunctionParameterString(Config.Languages[lang]['btn_increment']..(paginationValue and ': '..paginationValue or ": "..paginationValue))
+        PopScaleformMovieFunction()
+    end
+
+    -- If using controller, show 199 increment button
+    if self.Controls.Increment.Enabled and tobool(Controller()) then
+        PushScaleformMovieFunction(self.InstructionalScaleform, "SET_DATA_SLOT")
+        PushScaleformMovieFunctionParameterInt(3)
+        PushScaleformMovieFunctionParameterString(GetControlInstructionalButton(2, 199, 0))
         PushScaleformMovieFunctionParameterString(Config.Languages[lang]['btn_increment']..(paginationValue and ': '..paginationValue or ": "..paginationValue))
         PopScaleformMovieFunction()
     end
