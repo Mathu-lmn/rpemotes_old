@@ -60,6 +60,8 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 
 * Hungarian 🇭🇺
 
+* Indonesian 🇮🇩
+
 * Italian 🇮🇹
 
 * Norwegian 🇳🇴
