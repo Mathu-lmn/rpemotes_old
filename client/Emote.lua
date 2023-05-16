@@ -132,8 +132,8 @@ else
 end
 RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
-
 if Config.HandsupKeybindEnabled then
+    RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
     RegisterCommand('handsup', function()
         if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled then
             return
