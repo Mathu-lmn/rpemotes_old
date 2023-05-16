@@ -133,8 +133,8 @@ end
 RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 
-RegisterCommand('handsup', function()
-    if Config.HandsupKeybindEnabled then
+if Config.HandsupKeybindEnabled then
+    RegisterCommand('handsup', function()
         if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled then
             return
         end
@@ -144,8 +144,8 @@ RegisterCommand('handsup', function()
         else
             EmoteCommandStart(nil, {"handsup"}, nil)
         end
-    end
-end, false)
+    end, false)
+end
 
 AddEventHandler('onResourceStop', function(resource)
     if resource == GetCurrentResourceName() then
