@@ -150,7 +150,7 @@ exports["rpemotes"]:IsPlayerCrawling()
 exports["rpemotes"]:IsPlayerPointing()
 exports["rpemotes"]:IsPlayerInAnim()
 exports["rpemotes"]:toggleWalkstyle(bool, message)
--- bool to allow or not / message to show the user (optional, default is :"You are unable to change your walking style right now.")
+-- bool to allow the user to change their walkstyle in the menu or not / message to show the user (optional, default is :"You are unable to change your walking style right now.")"
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
