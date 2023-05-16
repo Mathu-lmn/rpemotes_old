@@ -129,7 +129,7 @@ Config.Languages = {
         ['btn_back'] = "返回",
         ['btn_switch'] = "移动",
         ['btn_increment'] = "移动量",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "您无法在死亡状态下使用此动作!"
     },
     ['zhtw'] = { -- Chinese Traditional
         ['emotes'] = '動作 🎬',
@@ -195,7 +195,7 @@ Config.Languages = {
         ['btn_back'] = "返回",
         ['btn_switch'] = "移動",
         ['btn_increment'] = "移動量",
-        ['dead'] = "You can't use emotes while dead!"
+        ['dead'] = "您無法在死亡狀態下使用此動作!"
     },
     ['cs'] = { -- Czech 🇨🇿
         ['emotes'] = 'Animace 🎬',
