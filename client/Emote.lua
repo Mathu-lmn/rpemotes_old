@@ -91,10 +91,6 @@ if Config.EnableXtoCancel then
     RegisterKeyMapping("emotecancel", "Cancel current emote", "keyboard", Config.CancelEmoteKey)
 end
 
-if Config.HandsupKeybindEnabled then
-    RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
-end
-
 -----------------------------------------------------------------------------------------------------
 -- Commands / Events --------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
