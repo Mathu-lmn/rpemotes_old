@@ -139,7 +139,7 @@ function CancelSharedEmote(ply)
 end
 
 RegisterNetEvent("ClientEmoteRequestReceive")
-AddEventHandler("ClientEmoteRequestReceive", function(emotename, etype)
+AddEventHandler("ClientEmoteRequestReceive", function(emotename, etype, target)
     isRequestAnim = true
     requestedemote = emotename
 
@@ -151,28 +151,30 @@ AddEventHandler("ClientEmoteRequestReceive", function(emotename, etype)
 
     PlaySound(-1, "NAV", "HUD_AMMO_SHOP_SOUNDSET", 0, 0, 1)
     SimpleNotify(Config.Languages[lang]['doyouwanna'] .. remote .. "~w~)")
-end)
-
-Citizen.CreateThread(function()
-    while true do
+    -- The player has now 10 seconds to accept the request
+    local timer = 10 * 1000
+    while isRequestAnim do
         Citizen.Wait(5)
-        if IsControlJustPressed(1, 246) and isRequestAnim then
-            target, distance = GetClosestPlayer()
-            if (distance ~= -1 and distance < 3) then
-                if RP.Shared[requestedemote] ~= nil then
-                    _, _, _, otheremote = table.unpack(RP.Shared[requestedemote])
-                elseif RP.Dances[requestedemote] ~= nil then
-                    _, _, _, otheremote = table.unpack(RP.Dances[requestedemote])
-                end
-                if otheremote == nil then otheremote = requestedemote end
-                TriggerServerEvent("ServerValidEmote", GetPlayerServerId(target), requestedemote, otheremote)
-                isRequestAnim = false
-            else
-                SimpleNotify(Config.Languages[lang]['nobodyclose'])
-            end
-        elseif IsControlJustPressed(1, 182) and isRequestAnim then
-            SimpleNotify(Config.Languages[lang]['refuseemote'])
+        timer = timer - 5
+        if timer == 0 then
             isRequestAnim = false
+            SimpleNotify(Config.Languages[lang]['refuseemote'])
+        end
+
+        if IsControlJustPressed(1, 246) then
+            isRequestAnim = false
+
+            -- Check if the emote is shared or dance
+            if RP.Shared[requestedemote] ~= nil then
+                _, _, _, otheremote = table.unpack(RP.Shared[requestedemote])
+            elseif RP.Dances[requestedemote] ~= nil then
+                _, _, _, otheremote = table.unpack(RP.Dances[requestedemote])
+            end
+            if otheremote == nil then otheremote = requestedemote end
+            TriggerServerEvent("ServerValidEmote", target, requestedemote, otheremote)
+        elseif IsControlJustPressed(1, 182) then
+            isRequestAnim = false
+            SimpleNotify(Config.Languages[lang]['refuseemote'])
         end
     end
 end)
@@ -180,15 +182,6 @@ end)
 -----------------------------------------------------------------------------------------------------
 ------ Functions and stuff --------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------
-
-function GetPlayerFromPed(ped)
-    for _, player in ipairs(GetActivePlayers()) do
-        if GetPlayerPed(player) == ped then
-            return player
-        end
-    end
-    return -1
-end
 
 function GetPedInFront()
     local player = PlayerId()
