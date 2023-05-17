@@ -131,7 +131,7 @@ RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
 if Config.HandsupEnabled then
     RegisterCommand('handsup', function()
-        if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled then
+        if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled and not inHandsup then
             return
         end
 
