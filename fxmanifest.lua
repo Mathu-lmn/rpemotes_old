@@ -5,8 +5,8 @@
 fx_version 'cerulean'
 game 'gta5'
 authors { 'TayMcKenzieNZ', 'MadsL', 'AvaN0x', 'Community' }
-description 'RPEmotes V1.2.3'
-version '1.2.3'
+description 'RPEmotes V1.2.4'
+version '1.2.4'
 lua54 'yes'
 
 dependencies {
@@ -54,6 +54,7 @@ client_scripts {
 
 
 ---- Loads all ytyp files for custom props to stream ---
+---- You will need to add a data_file 'DLC_ITYP_REQUEST' for your own to work in game ---
 
 data_file 'DLC_ITYP_REQUEST' 'stream/taymckenzienz_rpemotes.ytyp'
 
