@@ -2477,6 +2477,7 @@ function UIMenu.New(Title, Subtitle, X, Y, TxtDictionary, TxtName)
                     { 0, 31 }, -- Move Up and Down
                     { 0, 59 }, -- Move Vehicle Left and Right
                     { 0, 75 }, -- Exit Vehicle
+                    { 0, 23 }, -- Enter Vehicle
                 },
                 Keyboard = {
                     { 0, 0 }, -- Camera
