@@ -166,6 +166,7 @@ if Config.HandsupEnabled then
                 emote.name = CurrentAnimationName
 
                 ClearPedTasks(PlayerPedId())
+                Wait(400)
                 DestroyAllProps()
                 OnEmotePlay(emote, emote.name)
             end
