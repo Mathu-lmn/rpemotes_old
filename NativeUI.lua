@@ -2467,10 +2467,17 @@ function UIMenu.New(Title, Subtitle, X, Y, TxtDictionary, TxtName)
             },
             EnabledControls = {
                 Controller = {
-                    { 0, 2 }, -- Look Up and Down
-                    { 0, 1 }, -- Look Left and Right
+                    { 0, 2 },  -- Look Up and Down
+                    { 0, 1 },  -- Look Left and Right
                     { 0, 25 }, -- Aim
                     { 0, 24 }, -- Attack
+                    { 0, 71 }, -- Accelerate Vehicle
+                    { 0, 72 }, -- Vehicle Brake
+                    { 0, 30 }, -- Move Left and Right
+                    { 0, 31 }, -- Move Up and Down
+                    { 0, 59 }, -- Move Vehicle Left and Right
+                    { 0, 75 }, -- Exit Vehicle
+                    { 0, 23 }, -- Enter Vehicle
                 },
                 Keyboard = {
                     { 0, 0 }, -- Camera

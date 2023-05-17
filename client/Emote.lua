@@ -22,6 +22,7 @@ local ExitAndPlay = false
 local EmoteCancelPlaying = false
 IsInAnimation = false
 CurrentAnimationName = nil
+inHandsup = false
 
 -- Remove emotes if needed
 
@@ -128,19 +129,53 @@ else
 end
 RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
-if Config.HandsupKeybindEnabled then
-    RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
+if Config.HandsupEnabled then
     RegisterCommand('handsup', function()
-        if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled then
+        if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled and not inHandsup then
             return
         end
 
-        if IsEntityPlayingAnim(PlayerPedId(), "missminuteman_1ig_2", "handsup_base", 51) then
-            EmoteCancel()
-        else
-            EmoteCommandStart(nil, {"handsup"}, nil)
-        end
+        Handsup()
     end, false)
+
+
+    function Handsup()
+        inHandsup = not inHandsup
+        if inHandsup then
+            DestroyAllProps()
+            local dict = "random@mugging3"
+            RequestAnimDict(dict)
+            while not HasAnimDictLoaded(dict) do
+                Wait(0)
+            end
+            RequestAnimDict(dict)
+            while not HasAnimDictLoaded(dict) do Wait(1) end
+            TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.0, 2.0, -1, 49, 0, false, false, false)
+        else
+            ClearPedSecondaryTask(PlayerPedId())
+            if Config.PersistentEmoteAfterHandsup and IsInAnimation then
+                local emote = RP.Emotes[CurrentAnimationName]
+                if not emote then
+                    emote = RP.PropEmotes[CurrentAnimationName]
+                end
+
+                if not emote then
+                    return
+                end
+
+                emote.name = CurrentAnimationName
+
+                ClearPedTasks(PlayerPedId())
+                Wait(400)
+                DestroyAllProps()
+                OnEmotePlay(emote, emote.name)
+            end
+        end
+    end
+
+    if Config.HandsupKeybindEnabled then
+        RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
+    end
 end
 
 AddEventHandler('onResourceStop', function(resource)
