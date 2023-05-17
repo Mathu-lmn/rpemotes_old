@@ -135,6 +135,11 @@ if Config.HandsupEnabled then
             return
         end
 
+        Handsup()
+    end, false)
+
+
+    function Handsup()
         inHandsup = not inHandsup
         if inHandsup then
             local dict = "random@mugging3"
@@ -164,7 +169,8 @@ if Config.HandsupEnabled then
                 OnEmotePlay(emote, emote.name)
             end
         end
-    end, false)
+    end
+
     if Config.HandsupKeybindEnabled then
         RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
     end
