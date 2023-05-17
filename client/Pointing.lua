@@ -103,7 +103,7 @@ local function StartPointing()
     if Pointing and LoadAnim("anim@mp_point") then
         SetPedConfigFlag(playerPed, 36, true)
         TaskMoveNetworkByName(playerPed, 'task_mp_pointing', 0.5, false, 'anim@mp_point', 24)
-
+        DestroyAllProps()
         -- Start thread
         PointingThread()
     end

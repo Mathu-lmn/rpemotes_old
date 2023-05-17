@@ -142,6 +142,7 @@ if Config.HandsupEnabled then
     function Handsup()
         inHandsup = not inHandsup
         if inHandsup then
+            DestroyAllProps()
             local dict = "random@mugging3"
             RequestAnimDict(dict)
             while not HasAnimDictLoaded(dict) do
