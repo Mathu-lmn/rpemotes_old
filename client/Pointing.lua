@@ -21,6 +21,22 @@ local function PointingStopped()
         ClearPedSecondaryTask(playerPed)
     end
     RemoveAnimDict("anim@mp_point")
+    if Config.PersistentEmoteAfterPointing and IsInAnimation then
+        local emote = RP.Emotes[CurrentAnimationName]
+        if not emote then
+            emote = RP.PropEmotes[CurrentAnimationName]
+        end
+
+        if not emote then
+            return
+        end
+
+        emote.name = CurrentAnimationName
+
+        ClearPedTasks(PlayerPedId())
+        DestroyAllProps()
+        OnEmotePlay(emote, emote.name)
+    end
 end
 
 local function PointingThread()
