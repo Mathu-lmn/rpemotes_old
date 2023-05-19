@@ -553,6 +553,10 @@ A huge thank you to the following people for their amazing contributions made to
 
 - Thank you to [AvaN0x](https://github.com/AvaN0x) for reformatting and assisting with code, additional features and figuring out shared particle effects
 
+- Thank you to [Mads](https://github.com/MadsLeander) for joining the team as Co-Developer 
+
+- Thank you to [Mathu_lmn](https://github.com/Mathu-lmn) for joining the team as Co-Developer 
+
 - Thank you to [Tigerle](https://forum.cfx.re/u/tigerle_studios) for providing the additional code required to make Shared Emotes work to it's full extent
 
 - Thank you to [SMGMissy](https://forum.cfx.re/u/smgmissy/) for assisting with custom pride flags and how to stream them
@@ -598,8 +602,6 @@ A huge thank you to the following people for their amazing contributions made to
 - Thanks to [EnchantedBrownie](https://www.gta5-mods.com/users/EnchantedBrownie) for the custom animations
 
 - Thanks to [Copofiscool](https://forum.cfx.re/u/copofiscool/) for adding a toggle to the Favorite Keybinds
-
-- Thank you to [Mads](https://github.com/MadsLeander) for joining the team as Co-Developer 
 
 - Thank you to [iSentrie](https://forum.cfx.re/u/isentrie/) for additional code, support and joining the RPEmotes project 
 

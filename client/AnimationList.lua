@@ -12057,25 +12057,6 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["boopbee"] = {
-        "smo@milkshake_idle",
-        "milkshake_idle_clip",
-        "Sip Milkshake - Vanilla",
-        AnimationOptions = {
---            Prop = 'brum_cherryshake_vanilla',
-            PropBone = 28422,
-            PropPlacement = {
-               0.0850,
-               0.0670,
-              -0.0350,
-            -115.0862,
-            -165.7841,
-              24.1318
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-   },
     ["sodafu"] = {
         "anim@male_drinking_01",
         "m_drinking_01_clip",
