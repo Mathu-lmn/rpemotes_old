@@ -33,7 +33,7 @@ local function PointingStopped()
 
         emote.name = CurrentAnimationName
 
-        ClearPedTasks(PlayerPedId())
+        ClearPedSecondaryTask(playerPed)
         Wait(400)
         DestroyAllProps()
         OnEmotePlay(emote, emote.name)
