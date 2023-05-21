@@ -480,7 +480,7 @@ function CheckAnimalAndOnEmotePlay(EmoteName, name)
                 return
             end
         end
-        EmoteChatMessage(Config.Languages[lang]['notvalidpet'])
+        EmoteChatMessage(Config.Languages[lang]['wrong_animal_size'])
     elseif string.sub(name, 1, 4) == "sdog" then
         for i = 1, #SmallDogs do
             if IsPedModel(PlayerPedId(), GetHashKey(SmallDogs[i])) then
@@ -488,7 +488,7 @@ function CheckAnimalAndOnEmotePlay(EmoteName, name)
                 return
             end
         end
-        EmoteChatMessage(Config.Languages[lang]['notvalidpet'])
+        EmoteChatMessage(Config.Languages[lang]['wrong_animal_size'])
     end
 end
 

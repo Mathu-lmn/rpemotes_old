@@ -463,6 +463,7 @@ Config.Languages = {
         ['swimming'] = "You can't use emotes while swimming",
         ['notvalidpet'] = "RUH ROH! Animation for four-legged friends 🐕!",
         ['animaldisabled'] = "Sorry! Animal emotes are disabled on this server",
+        ['wrong_animal_size'] = "Incorrect ped model detected",
         ['adultemotedisabled'] = "Bonk! Adult emotes disabled 🔞",
         ['exit_binoculars'] = "Exit binoculars",
         ['toggle_binoculars_vision'] = "Toggle between vision modes",
