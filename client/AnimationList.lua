@@ -5129,8 +5129,7 @@ RP.AnimalEmotes = {
                 0.0000,
               -90.0000,
               120.0000,
-                0.000,
-                
+                0.000,  
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -6633,6 +6632,7 @@ RP.Emotes = {
         "single47_clip",
         "Window Elbow 2",
         AnimationOptions = {
+            onlyInVehicle = true,
             EmoteLoop = true
         }
     },
@@ -8388,6 +8388,7 @@ RP.Emotes = {
         "cmonfrank",
         "Car Taunt",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8397,6 +8398,7 @@ RP.Emotes = {
         "cmonmynigga",
         "Car Taunt 2",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8406,6 +8408,7 @@ RP.Emotes = {
         "hahahakeepup",
         "Car Taunt 3",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8415,6 +8418,7 @@ RP.Emotes = {
         "manthisismeanttobe",
         "Car Taunt 4",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8424,6 +8428,7 @@ RP.Emotes = {
         "rememberthis",
         "Car Taunt 5",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 3000,
         }
@@ -8433,6 +8438,7 @@ RP.Emotes = {
         "skoolinyoass",
         "Car Taunt 6",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 3000,
         }
@@ -8442,6 +8448,7 @@ RP.Emotes = {
         "youaintfuckin",
         "Car Taunt 7",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8451,6 +8458,7 @@ RP.Emotes = {
         "heyidontneedanybody",
         "Car Taunt 8",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8460,6 +8468,7 @@ RP.Emotes = {
         "heymotherfuckayoudriveslowasfuck",
         "Car Taunt 9",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 3000,
         }
@@ -8469,6 +8478,7 @@ RP.Emotes = {
         "kids_on_bicycles",
         "Car Taunt 10",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8478,6 +8488,7 @@ RP.Emotes = {
         "learnhowtouseastick",
         "Car Taunt 11",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8487,6 +8498,7 @@ RP.Emotes = {
         "slowassshit",
         "Car Taunt 12",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 2000,
         }
@@ -8496,6 +8508,7 @@ RP.Emotes = {
         "mcs_7_taunt_female",
         "Car Taunt 13",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 5000,
         }
@@ -8505,6 +8518,7 @@ RP.Emotes = {
         "mcs_7_taunt_male",
         "Car Taunt 14",
         AnimationOptions = {
+            onlyInVehicle = true,
 			EmoteMoving = false,
             EmoteDuration = 5000,
         }
@@ -13810,44 +13824,44 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["binoculars"] = {
-        "amb@world_human_binoculars@male@idle_b",
-        "idle_f",
-        "Binoculars",
-        AnimationOptions = {
-            Prop = "prop_binoc_01",
-            PropBone = 28422,
-            PropPlacement = {
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
-    ["binoculars2"] = {
-        "amb@world_human_binoculars@male@idle_a",
-        "idle_c",
-        "Binoculars 2",
-        AnimationOptions = {
-            Prop = "prop_binoc_01",
-            PropBone = 28422,
-            PropPlacement = {
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
+    -- ["binoculars"] = {
+    --     "amb@world_human_binoculars@male@idle_b",
+    --     "idle_f",
+    --     "Binoculars",
+    --     AnimationOptions = {
+    --         Prop = "prop_binoc_01",
+    --         PropBone = 28422,
+    --         PropPlacement = {
+    --             0.0,
+    --             0.0,
+    --             0.0,
+    --             0.0,
+    --             0.0,
+    --             0.0
+    --         },
+    --         EmoteLoop = true,
+    --         EmoteMoving = true
+    --     }
+    -- },
+    -- ["binoculars2"] = {
+    --     "amb@world_human_binoculars@male@idle_a",
+    --     "idle_c",
+    --     "Binoculars 2",
+    --     AnimationOptions = {
+    --         Prop = "prop_binoc_01",
+    --         PropBone = 28422,
+    --         PropPlacement = {
+    --             0.0,
+    --             0.0,
+    --             0.0,
+    --             0.0,
+    --             0.0,
+    --             0.0
+    --         },
+    --         EmoteLoop = true,
+    --         EmoteMoving = true
+    --     }
+    -- },
     ["tennisplay"] = {
         "move_weapon@jerrycan@generic",
         "idle",
