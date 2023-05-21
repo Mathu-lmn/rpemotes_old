@@ -260,7 +260,7 @@ end
 
 function EmoteChatMessage(msg, multiline)
     if msg then
-        TriggerEvent("chat:addMessage", { multiline = multiline == true or false, color = { 255, 255, 255 }, args = { "^5Help^0", tostring(msg) } })
+        TriggerEvent("chat:addMessage", { multiline = multiline == true or false, color = { 255, 255, 255 }, args = { "^1Help^0", tostring(msg) } })
     end
 end
 
