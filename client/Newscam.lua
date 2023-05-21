@@ -194,7 +194,7 @@ if Config.NewscamEnabled then
             Wait(0);
         end
         if (GetOnscreenKeyboardResult()) then
-            msg = tostring(GetOnscreenKeyboardResult())
+            title = tostring(GetOnscreenKeyboardResult())
         end
 
         AddTextEntry("bottom", "Enter the bottom title of the news")
@@ -214,7 +214,7 @@ if Config.NewscamEnabled then
             Wait(0);
         end
         if (GetOnscreenKeyboardResult()) then
-            title = tostring(GetOnscreenKeyboardResult())
+            msg = tostring(GetOnscreenKeyboardResult())
         end
 
 
