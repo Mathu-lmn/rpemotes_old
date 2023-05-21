@@ -5,8 +5,8 @@
 fx_version 'cerulean'
 game 'gta5'
 authors { 'TayMcKenzieNZ', 'MadsL', 'Mathu_Imn', 'Community' }
-description 'RPEmotes V1.2.5'
-version '1.2.5'
+description 'RPEmotes V1.2.6'
+version '1.2.6'
 lua54 'yes'
 
 dependencies {
@@ -25,7 +25,8 @@ dependencies {
 
 shared_scripts {
     'config.lua',
-    'Translations.lua'
+    'Translations.lua',
+    'animals.lua',
 }
 
 server_scripts {
@@ -39,6 +40,7 @@ client_scripts {
     'NativeUI.lua',
     'client/AnimationList.lua',
     'client/AnimationListCustom.lua',
+    'client/Binoculars.lua',
     'client/Crouch.lua',
     'client/Emote.lua',
     'client/EmoteMenu.lua',
