@@ -13383,9 +13383,41 @@ RP.PropEmotes = {
         }
     },
     ["camera"] = {
+        "stand_camera_1@dad",
+        "stand_camera_1_clip",
+        "Camera",
+        AnimationOptions = {
+            Prop = 'prop_pap_camera_01',
+            PropBone = 57005,
+            PropPlacement = {
+                0.1040,
+               -0.0060,
+               -0.0600,
+               -2.7280,
+                33.0998,
+                4.1917
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+            PtfxAsset = "scr_bike_business",
+            PtfxName = "scr_bike_cfid_camera_flash",
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
+        }
+    },
+    ["camera2"] = {
         "amb@world_human_paparazzi@male@base",
         "base",
-        "Camera",
+        "Camera 2",
         AnimationOptions = {
             Prop = 'prop_pap_camera_01',
             PropBone = 28422,
@@ -13414,10 +13446,10 @@ RP.PropEmotes = {
             PtfxWait = 200
         }
     },
-    ["camera2"] = {
+    ["camera3"] = {
         "cellphone@female",
         "cellphone_text_read_base_cover_low",
-        "Camera 2",
+        "Camera 3",
         AnimationOptions = {
             Prop = "prop_ing_camera_01",
             PropBone = 28422,
@@ -13446,6 +13478,70 @@ RP.PropEmotes = {
             PtfxWait = 200
         }
     },
+    ["camera4"] = {
+        "chocoholic@single110a",
+        "single110a_clip",
+        "Camera 4",
+        AnimationOptions = {
+            Prop = "prop_ing_camera_01",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0710,
+                0.0150,
+               -0.0420,
+              -68.3220,
+               99.6144,
+                2.9027
+            },
+            EmoteLoop = false,
+            EmoteMoving = true,
+            PtfxAsset = "scr_bike_business",
+            PtfxName = "scr_bike_cfid_camera_flash",
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
+        }
+     },
+    ["camera5"] = {
+        "chocoholic@single110b",
+        "single110b_clip",
+        "Camera 5",
+        AnimationOptions = {
+            Prop = "prop_ing_camera_01",
+            PropBone = 60309,
+            PropPlacement = {
+                0.0980,
+                0.0560,
+                0.1330,
+              -15.8221,
+              107.0825,
+              -16.0159
+            },
+            EmoteLoop = false,
+            EmoteMoving = true,
+            PtfxAsset = "scr_bike_business",
+            PtfxName = "scr_bike_cfid_camera_flash",
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
+        }
+     },
     ["champagnespray"] = {
         "anim@mp_player_intupperspray_champagne",
         "idle_a",
