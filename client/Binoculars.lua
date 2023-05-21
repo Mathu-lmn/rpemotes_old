@@ -123,14 +123,17 @@ if Config.BinocularsEnabled then
                     -- if index = 0, toggle night vision, if index = 1, toggle thermal vision, if index = 2, toggle normal vision and reset index
                     if index == 0 then
                         SetNightvision(true)
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
                         index = index + 1
                     elseif index == 1 then
                         SetSeethrough(true)
                         SetNightvision(false)
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
                         index = index + 1
                     elseif index == 2 then
                         SetNightvision(false)
                         SetSeethrough(false)
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
                         index = 0
                     end
                 end

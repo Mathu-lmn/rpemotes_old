@@ -146,6 +146,7 @@ if Config.NewscamEnabled then
                     -- if index = 0, show the "security_camera" scaleform, if index = 1, show the "breaking_news" scaleform and reset the index to 0
                     if index == 0 then
                         index = 1
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
                         scaleform_news = nil
                         CreateThread(function()
                             while index == 1 do
@@ -156,6 +157,7 @@ if Config.NewscamEnabled then
                         end)
                     else
                         index = 0
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
                         scaleform_news = breaking_news
                     end
                 end
