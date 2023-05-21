@@ -616,10 +616,10 @@ function OnEmotePlay(EmoteName, name, textureVariation)
     local animOption = EmoteName.AnimationOptions
     if InVehicle then
         if animOption and animOption.NotInVehicle then
-            return EmoteChatMessage("You can't play this animation while in vehicle.")
+            return EmoteChatMessage(Config.Languages[lang]['not_in_a_vehicle'])
         end
     elseif animOption and animOption.onlyInVehicle then
-        return EmoteChatMessage("You can only play this animation while in vehicle.")
+        return EmoteChatMessage(Config.Languages[lang]['in_a_vehicle'])
     end
 
     if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
@@ -629,7 +629,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
     end
 
     if IsProne then
-        EmoteChatMessage("You can't play animations while crawling.")
+        EmoteChatMessage(Config.Languages[lang]['no_anim_crawling'])
         return false
     end
 

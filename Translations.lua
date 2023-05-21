@@ -468,7 +468,10 @@ Config.Languages = {
         ['toggle_binoculars_vision'] = "Toggle between vision modes",
         ['exit_news'] = "Exit News Camera",
         ['toggle_news_vision'] = "Toggle between vision modes",
-        ['edit_values_newscam'] = "Edit the news text"
+        ['edit_values_newscam'] = "Edit the news text",
+        ['not_in_a_vehicle'] = "You can't play this animation while in vehicle",
+        ['in_a_vehicle'] = "You can only play this animation while in vehicle",
+        ['no_anim_crawling'] = "You can't play animations while crawling"
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',
