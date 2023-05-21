@@ -88,6 +88,8 @@ Config = {
     AllowInWater = true,
     -- Check for updates
     CheckForUpdates = true,
+    -- If set to true, the /binoculars command will be enabled.
+    BinocularsEnabled = true,
 }
 
 Config.KeybindKeys = {
