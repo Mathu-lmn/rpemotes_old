@@ -470,7 +470,7 @@ Config.Languages = {
         ['toggle_news_vision'] = "Toggle between vision modes",
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
-        ['in_a_vehicle'] = "You can only play this animation while in a vehicle",
+        ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
         ['no_anim_crawling'] = "You can't play animations while crawling"
     },
     ['fi'] = { -- Finnish 🇫🇮
@@ -612,7 +612,7 @@ Config.Languages = {
         ['toggle_news_vision'] = "Basculer entre les modes de vision",
         ['edit_values_newscam'] = "Editer les textes",
         ['not_in_a_vehicle'] = "Vous ne pouvez pas jouer cette animation dans un véhicule",
-        ['in_a_vehicle'] = "Vous ne pouvez jouer cette animation que dans un véhicule",
+        ['in_a_vehicle'] = "Vous ne pouvez jouer cette animation que dans un véhicule 🚷",
         ['no_anim_crawling'] = "Vous ne pouvez pas jouer d'animations pendant que vous rampez"
     },
     ['de'] = { -- German 🇩🇪
