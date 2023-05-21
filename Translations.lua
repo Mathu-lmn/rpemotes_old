@@ -465,7 +465,10 @@ Config.Languages = {
         ['animaldisabled'] = "Sorry! Animal emotes are disabled on this server",
         ['adultemotedisabled'] = "Bonk! Adult emotes disabled 🔞",
         ['exit_binoculars'] = "Exit binoculars",
-        ['toggle_binoculars_vision'] = "Toggle between vision modes"
+        ['toggle_binoculars_vision'] = "Toggle between vision modes",
+        ['exit_news'] = "Exit News Camera",
+        ['toggle_news_vision'] = "Toggle between vision modes",
+        ['edit_values_newscam'] = "Edit the news text"
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',

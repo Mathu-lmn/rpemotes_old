@@ -90,6 +90,8 @@ Config = {
     CheckForUpdates = true,
     -- If set to true, the /binoculars command will be enabled.
     BinocularsEnabled = true,
+    -- If set to true, the /newscam command will be enabled.
+    NewscamEnabled = true,
 }
 
 Config.KeybindKeys = {

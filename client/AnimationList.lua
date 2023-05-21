@@ -14880,25 +14880,25 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["newscam"] = {
-        "missfinale_c2mcs_1",
-        "fin_c2_mcs_1_camman",
-        "News Camera",
-        AnimationOptions = {
-            Prop = "prop_v_cam_01",
-            PropBone = 28422,
-            PropPlacement = {
-                0.0,
-                0.0300,
-                0.0100,
-                0.0,
-                0.0,
-                0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
+    -- ["newscam"] = {
+    --     "missfinale_c2mcs_1",
+    --     "fin_c2_mcs_1_camman",
+    --     "News Camera",
+    --     AnimationOptions = {
+    --         Prop = "prop_v_cam_01",
+    --         PropBone = 28422,
+    --         PropPlacement = {
+    --             0.0,
+    --             0.0300,
+    --             0.0100,
+    --             0.0,
+    --             0.0,
+    --             0.0
+    --         },
+    --         EmoteLoop = true,
+    --         EmoteMoving = true
+    --     }
+    -- },
     ["newsmic"] = {
         "anim@heists@humane_labs@finale@keycards",
         "ped_a_enter_loop",
