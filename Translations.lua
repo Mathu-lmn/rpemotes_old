@@ -460,7 +460,12 @@ Config.Languages = {
         ['btn_switch'] = "Movement",
         ['btn_increment'] = "Increment",
         ['dead'] = "You can't use emotes while dead!",
-        ['swimming'] = "You can't use emotes while swimming"
+        ['swimming'] = "You can't use emotes while swimming",
+        ['notvalidpet'] = "RUH ROH! Animation for four-legged friends 🐕!",
+        ['animaldisabled'] = "Sorry! Animal emotes are disabled on this server",
+        ['adultemotedisabled'] = "Bonk! Adult emotes disabled 🔞",
+        ['exit_binoculars'] = "Exit binoculars",
+        ['toggle_binoculars_vision'] = "Toggle between vision modes"
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = 'Animaatiot 🎬',
