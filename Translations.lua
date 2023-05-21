@@ -603,6 +603,7 @@ Config.Languages = {
         ['btn_switch'] = "Mouvement",
         ['btn_increment'] = "Vitesse déplacement",
         ['dead'] = "Vous ne pouvez pas faire d'animation en étant mort !",
+        ['swimming'] = "Vous ne pouvez pas faire d'emotes en nageant",
         ['notvalidpet'] = "RUH ROH! Vous n'avez pas un ped adapté 🐕!",
         ['animaldisabled'] = "Désolé! Les emotes d'animaux sont désactivées sur ce serveur",
         ['adultemotedisabled'] = "Bonk ! Les Emotes adultes sont désactivées🔞",
