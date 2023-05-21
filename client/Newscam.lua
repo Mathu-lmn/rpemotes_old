@@ -187,8 +187,8 @@ if Config.NewscamEnabled then
 
     function SetMsgBottomTitle()
         -- keyboard input to set the message and bottom title
-        AddTextEntry("title", "Enter the top message of the news")
-        DisplayOnscreenKeyboard(1, "title", "", "", "", "", "", 200)
+        AddTextEntry("top", "Enter the top message of the news")
+        DisplayOnscreenKeyboard(1, "top", "", "", "", "", "", 200)
         while (UpdateOnscreenKeyboard() == 0) do
             DisableAllControlActions(0);
             Wait(0);
