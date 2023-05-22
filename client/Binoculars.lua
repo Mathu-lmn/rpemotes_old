@@ -13,6 +13,7 @@ if Config.BinocularsEnabled then
     local fov = (fov_max + fov_min) * 0.5
     local binoculars = false
     local index = 0
+    local new_z = 0.0
     prop_binoc = nil
 
     -- INSTRUCTIONAL BUTTONS
@@ -107,6 +108,8 @@ if Config.BinocularsEnabled then
                     binoculars = false
                 end
 
+                SetEntityRotation(PlayerPedId(), 0, 0, new_z, 2, true)
+
                 local zoomvalue = (1.0 / (fov_max - fov_min)) * (fov - fov_min)
                 CheckInputRotation(cam, zoomvalue)
 
@@ -179,12 +182,12 @@ if Config.BinocularsEnabled then
         local rightAxisY = GetDisabledControlNormal(0, 221)
         local rotation = GetCamRot(cam, 2)
         if rightAxisX ~= 0.0 or rightAxisY ~= 0.0 then
-            local new_z = rotation.z + rightAxisX * -1.0 * (speed_ud) * (zoomvalue + 0.1)
+            new_z = rotation.z + rightAxisX * -1.0 * (speed_ud) * (zoomvalue + 0.1)
             local new_x = math.max(math.min(20.0, rotation.x + rightAxisY * -1.0 * (speed_lr) * (zoomvalue + 0.1)), -29.5)
             SetCamRot(cam, new_x, 0.0, new_z, 2)
         end
     end
-    
+
 
     function HandleZoom(cam)
         local lPed = PlayerPedId()
