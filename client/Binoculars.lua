@@ -204,7 +204,7 @@ if Config.BinocularsEnabled then
         local rightAxisY = GetDisabledControlNormal(0, 221)
         local rotation = GetCamRot(cam, 2)
         if rightAxisX ~= 0.0 or rightAxisY ~= 0.0 then
-            new_z = rotation.z + rightAxisX * -1.0 * (speed_ud) * (zoomvalue + 0.1)
+            local new_z = rotation.z + rightAxisX * -1.0 * (speed_ud) * (zoomvalue + 0.1)
             local new_x = math.max(math.min(20.0, rotation.x + rightAxisY * -1.0 * (speed_lr) * (zoomvalue + 0.1)), -29.5)
             SetCamRot(cam, new_x, 0.0, new_z, 2)
         end
