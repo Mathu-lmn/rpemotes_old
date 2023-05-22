@@ -88,6 +88,8 @@ Config = {
     AllowInWater = true,
     -- If set to true, the /binoculars command will be enabled.
     BinocularsEnabled = true,
+    -- If set to true, you'll be able to toggle between different vision modes in the binoculars
+    AllowVisionsToggling = true,
     -- If set to true, the /newscam command will be enabled.
     NewscamEnabled = true,
     -- Check for updates
