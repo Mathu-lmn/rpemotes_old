@@ -13,7 +13,6 @@ if Config.BinocularsEnabled then
     local fov = (fov_max + fov_min) * 0.5
     local binoculars = false
     local index = 0
-    local new_z = 0.0
     prop_binoc = nil
     local instructions = true
 
@@ -120,8 +119,6 @@ if Config.BinocularsEnabled then
                     PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
                     binoculars = false
                 end
-
-                SetEntityRotation(PlayerPedId(), 0, 0, new_z, 2, true)
 
                 local zoomvalue = (1.0 / (fov_max - fov_min)) * (fov - fov_min)
                 CheckInputRotation(cam, zoomvalue)
