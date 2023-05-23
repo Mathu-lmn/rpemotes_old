@@ -164,7 +164,11 @@ exports["rpemotes"]:toggleNewscam()
 The keybind uses RegisterKeyMapping. By default the configured keybind in the *initial* config.lua will be the default key, however once the keybind is set for a user it'll remain and can be changed in the users settings under `Esc > settings > keybinds > fivem`.
 
 
-**Menu key:** F4
+**Menu key:**
+
+|COMMAND: | ACTION:|
+|---|---|
+| F4 | Open / Close  RPEmotes menu |
 
 Server owners can change this in the `config.lua`.
 
@@ -216,6 +220,13 @@ Once enabled, players can press `B` on the keyboard to enable standalone finger 
 
 Much like everything else in the menu, server owners can change these keybinds to their own preferences.
 
+|COMMAND: | ACTION:|
+|---|---|
+| B | Toggle Finger Pointing |
+| Y| Toggle Hands Up |
+| /pointing | Toggle Finger Pointing |
+| /handsup | Toggle Hands Up |
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Crouching & Crawling
@@ -233,6 +244,8 @@ RIGHT CONTROL. Players can move forward, back, left and right as well as turning
 
 |COMMAND: | ACTION:|
 |---|---|
+| LEFT CONTROL | Toggle Crouching On / Off |
+| RIGHT CONTROL | Toggle Crawling On / Off |
 | /crouch | Toggle Crouching On / Off |
 | /crawl| Toggle Crawling On / Off |
 
@@ -240,13 +253,16 @@ RIGHT CONTROL. Players can move forward, back, left and right as well as turning
 
 # Moods & Walkstyles 😜🚶‍♂️
 
-Moods and walkstyles can be set from the menu (/mood, /walk, /emotemenu) or via pressing F4 (default menu key)
+Moods and walkstyles can be set from the menu. These will save to your character and reapply when exiting a vehicle, or loading back into the server as they are saved via client side KVP.
 
-These will save to your character and reapply when exiting a vehicle, or loading back into the server as they are saved via client side KVP.
+|COMMAND: | ACTION:|
+|---|---|
+| F4 | Opens RPEmotes menu |
+| /walks | See A List Of Walkstyles In Chat |
+| /moods | See A List Of Walkstyles In Chat |
 
-To see a list of walkstyles type /walks
 
-To see a list of moods type /moods
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
