@@ -11539,17 +11539,55 @@ RP.PropEmotes = {
     ["frappe2"] = {
         "amb@code_human_wander_drinking@female@base",
         "static",
-        "Frappe 2 ",
+        "Frappe 2",
         AnimationOptions = {
-            Prop = 'starbuckscup',
+            Prop = 'beanmachine_cup',
             PropBone = 28422,
             PropPlacement = {
-               -0.0060,
-                0.0150,
-               -0.0780,
+                0.0110,
+                0.0,
+                0.0300,
                 0.0,
                 0.0,
+             -140.0,
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["frappe3"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Frappe 3",
+        AnimationOptions = {
+            Prop = 'beanmachine_cup2',
+            PropBone = 28422,
+            PropPlacement = {
                 0.0,
+                0.0,
+               -0.0600,
+                0.0,
+                0.0,
+             -178.0,
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["frappe4"] = {
+        "amb@code_human_wander_drinking@female@base",
+        "static",
+        "Frappe 4",
+        AnimationOptions = {
+            Prop = 'beanmachine_cup3',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+               -0.0600,
+                0.0,
+                0.0,
+             -178.0,
             },
             EmoteLoop = true,
             EmoteMoving = true
