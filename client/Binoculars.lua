@@ -14,6 +14,7 @@ if Config.BinocularsEnabled then
     local binoculars = false
     local index = 0
     prop_binoc = nil
+    local instructions = true
 
     -- INSTRUCTIONAL BUTTONS
 
@@ -98,8 +99,20 @@ if Config.BinocularsEnabled then
             PushScaleformMovieFunctionParameterInt(0) -- 0 for nothing, 1 for LSPD logo
             PopScaleformMovieFunctionVoid()
 
-            local scaleform_instructions = SetupButtons({ { key = 177, text = 'exit_binoculars', }, { key = 19, text = 'toggle_binoculars_vision', }, })
-
+            local keyList = nil
+            if Config.AllowVisionsToggling then
+                keyList = {
+                    { key = 177, text = 'exit_binoculars' },
+                    { key = 19,  text = 'toggle_binoculars_vision' },
+                    { key = 47,  text = 'toggle_instructions' }
+                }
+            else
+                keyList = {
+                    { key = 177, text = 'exit_binoculars' },
+                    { key = 47,  text = 'toggle_instructions' }
+                }
+            end
+            local scaleform_instructions = SetupButtons(keyList)
             -- MAIN LOOP
             while binoculars and not IsEntityDead(PlayerPedId()) and not IsPedSittingInAnyVehicle(PlayerPedId()) do
                 if IsControlJustPressed(0, 177) then
@@ -119,7 +132,7 @@ if Config.BinocularsEnabled then
                 DisablePlayerFiring(PlayerPedId(), true) -- Disable weapon firing
 
 
-                if IsControlJustPressed(0, 19) then
+                if IsControlJustPressed(0, 19) and Config.AllowVisionsToggling then
                     -- if index = 0, toggle night vision, if index = 1, toggle thermal vision, if index = 2, toggle normal vision and reset index
                     if index == 0 then
                         SetNightvision(true)
@@ -138,8 +151,20 @@ if Config.BinocularsEnabled then
                     end
                 end
 
+                if IsControlJustPressed(0, 47) then
+                    if not instructions then
+                        instructions = true
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
+                    else
+                        instructions = false
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
+                    end
+                end
+
                 DrawScaleformMovieFullscreen(scaleform_bin, 255, 255, 255, 255)
-                DrawScaleformMovieFullscreen(scaleform_instructions, 255, 255, 255, 255)
+                if instructions then
+                    DrawScaleformMovieFullscreen(scaleform_instructions, 255, 255, 255, 255)
+                end
                 Wait(1)
             end
         end
@@ -184,7 +209,7 @@ if Config.BinocularsEnabled then
             SetCamRot(cam, new_x, 0.0, new_z, 2)
         end
     end
-    
+
 
     function HandleZoom(cam)
         local lPed = PlayerPedId()

@@ -17,6 +17,7 @@ if Config.NewscamEnabled then
     local msg = "YOUR TEXT HERE"
     local bottom = "YOUR TEXT HERE"
     local title = "YOUR TEXT HERE"
+    local instructions = true
 
     -- INSTRUCTIONAL BUTTONS
 
@@ -120,8 +121,12 @@ if Config.NewscamEnabled then
             SetCamFov(cam, fov)
             RenderScriptCams(true, false, 0, 1, 0)
 
-            local scaleform_instructions = SetupButtons({ { key = 177, text = 'exit_news', },
-                { key = 19, text = 'toggle_news_vision', }, { key = 74, text = 'edit_values_newscam', }, })
+            local scaleform_instructions = SetupButtons({
+                { key = 177, text = 'exit_news' },
+                { key = 19, text = 'toggle_news_vision' },
+                { key = 74, text = "edit_values_newscam"},
+                { key = 47,  text = 'toggle_instructions' }
+            })
 
             -- MAIN LOOP
             while newscam and not IsEntityDead(PlayerPedId()) and not IsPedSittingInAnyVehicle(PlayerPedId()) do
@@ -167,8 +172,20 @@ if Config.NewscamEnabled then
                     SetMsgBottomTitle()
                 end
 
+                if IsControlJustPressed(0, 47) then
+                    if not instructions then
+                        instructions = true
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
+                    else
+                        instructions = false
+                        PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
+                    end
+                end
+
                 DrawScaleformMovieFullscreen(scaleform_news, 255, 255, 255, 255)
-                DrawScaleformMovieFullscreen(scaleform_instructions, 255, 255, 255, 255)
+                if instructions then
+                    DrawScaleformMovieFullscreen(scaleform_instructions, 255, 255, 255, 255)
+                end
                 Wait(1)
             end
         end
