@@ -46,7 +46,7 @@ client_scripts {
     'client/EmoteMenu.lua',
     'client/Expressions.lua',
     'client/Keybinds.lua',
-    'client/NewsCam.lua',
+    'client/Newscam.lua',
     'client/NoIdleCam.lua',
     'client/Pointing.lua',
     'client/Ragdoll.lua',
