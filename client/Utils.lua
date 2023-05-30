@@ -119,3 +119,68 @@ function RequestWalking(set)
         Wait(5)
     end
 end
+
+
+function GetPedInFront()
+    local player = PlayerId()
+    local plyPed = GetPlayerPed(player)
+    local plyPos = GetEntityCoords(plyPed, false)
+    local plyOffset = GetOffsetFromEntityInWorldCoords(plyPed, 0.0, 1.3, 0.0)
+    local rayHandle = StartShapeTestCapsule(plyPos.x, plyPos.y, plyPos.z, plyOffset.x, plyOffset.y, plyOffset.z, 10.0, 12
+        , plyPed, 7)
+    local _, _, _, _, ped2 = GetShapeTestResult(rayHandle)
+    return ped2
+end
+
+function NearbysOnCommand(source, args, raw)
+    local NearbysCommand = ""
+    for a in pairsByKeys(RP.Shared) do
+        NearbysCommand = NearbysCommand .. "" .. a .. ", "
+    end
+    EmoteChatMessage(NearbysCommand)
+    EmoteChatMessage(Config.Languages[lang]['emotemenucmd'])
+end
+
+function SimpleNotify(message)
+    if Config.NotificationsAsChatMessage then
+        TriggerEvent("chat:addMessage", { color = { 255, 255, 255 }, args = { tostring(message) } })
+    else
+        BeginTextCommandThefeedPost("STRING")
+        AddTextComponentSubstringPlayerName(message)
+        EndTextCommandThefeedPostTicker(0, 1)
+    end
+end
+
+function GetClosestPlayer()
+    local players = GetPlayers()
+    local closestDistance = -1
+    local closestPlayer = -1
+    local ply = PlayerPedId()
+    local plyCoords = GetEntityCoords(ply, 0)
+
+    for index, value in ipairs(players) do
+        local target = GetPlayerPed(value)
+        if (target ~= ply) then
+            local targetCoords = GetEntityCoords(GetPlayerPed(value), 0)
+            local distance = GetDistanceBetweenCoords(targetCoords["x"], targetCoords["y"], targetCoords["z"],
+                plyCoords["x"], plyCoords["y"], plyCoords["z"], true)
+            if (closestDistance == -1 or closestDistance > distance) then
+                closestPlayer = value
+                closestDistance = distance
+            end
+        end
+    end
+    return closestPlayer, closestDistance
+end
+
+function GetPlayers()
+    local players = {}
+
+    for i = 0, 255 do
+        if NetworkIsPlayerActive(i) then
+            table.insert(players, i)
+        end
+    end
+
+    return players
+end
