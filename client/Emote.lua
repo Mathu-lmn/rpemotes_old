@@ -458,7 +458,6 @@ function CheckAnimalAndOnEmotePlay(EmoteName, name)
     end
 end
 
-
 function DestroyAllProps()
     for _, v in pairs(PlayerProps) do
         DeleteEntity(v)
