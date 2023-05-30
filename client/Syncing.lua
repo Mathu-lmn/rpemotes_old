@@ -64,6 +64,8 @@ AddEventHandler("SyncPlayEmote", function(emote, player)
     elseif RP.Dances[emote] ~= nil then
         OnEmotePlay(RP.Dances[emote], emote)
         return
+    else
+        DebugPrint("SyncPlayEmote : Emote not found")
     end
 end)
 

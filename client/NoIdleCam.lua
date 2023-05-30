@@ -23,7 +23,7 @@ end)
 Citizen.CreateThread(function()
   TriggerEvent("chat:addSuggestion", "/idlecamon", "Re-enables the idle cam")
   TriggerEvent("chat:addSuggestion", "/idlecamoff", "Disables the idle cam")
-  
+
   local idleCamDisabled = GetResourceKvpString("idleCam") == "off"
   DisableIdleCamera(idleCamDisabled)
 end)

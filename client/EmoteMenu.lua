@@ -30,16 +30,6 @@ _menuPool = NativeUI.CreatePool()
 mainMenu = NativeUI.CreateMenu(Config.MenuTitle or "", "", menuPosition["x"], menuPosition["y"], Menuthing, Menuthing)
 _menuPool:Add(mainMenu)
 
-function ShowNotification(text)
-    if Config.NotificationsAsChatMessage then
-        TriggerEvent("chat:addMessage", { color = { 255, 255, 255 }, args = { tostring(text) } })
-    else
-        BeginTextCommandThefeedPost("STRING")
-        AddTextComponentSubstringPlayerName(text)
-        EndTextCommandThefeedPostTicker(false, false)
-    end
-end
-
 local EmoteTable = {}
 local FavEmoteTable = {}
 local DanceTable = {}
@@ -579,10 +569,6 @@ function OpenEmoteMenu()
         mainMenu:Visible(true)
         ProcessMenu()
     end
-end
-
-function firstToUpper(str)
-    return (str:gsub("^%l", string.upper))
 end
 
 AddEmoteMenu(mainMenu)
