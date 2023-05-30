@@ -43,10 +43,6 @@ for i = 1, #emoteTypes do
     end
 end
 
-local function IsPlayerAiming(player)
-    return IsPlayerFreeAiming(player) or IsAimCamActive() or IsAimCamThirdPersonActive()
-end
-
 local function RunAnimationThread()
     local playerId = PlayerId()
     if AnimationThreadStatus then return end
@@ -258,18 +254,6 @@ function EmoteCancel(force)
     AnimationThreadStatus = false
 end
 
-function EmoteChatMessage(msg, multiline)
-    if msg then
-        TriggerEvent("chat:addMessage", { multiline = multiline == true or false, color = { 255, 255, 255 }, args = { "^1Help^0", tostring(msg) } })
-    end
-end
-
-function DebugPrint(args)
-    if Config.DebugDisplay then
-        print(args)
-    end
-end
-
 --#region ptfx
 function PtfxThis(asset)
     while not HasNamedPtfxAssetLoaded(asset) do
@@ -349,24 +333,6 @@ function EmotesOnCommand(source, args, raw)
     end
     EmoteChatMessage(EmotesCommand)
     EmoteChatMessage(Config.Languages[lang]['emotemenucmd'])
-end
-
-function pairsByKeys(t, f)
-    local a = {}
-    for n in pairs(t) do
-        table.insert(a, n)
-    end
-    table.sort(a, f)
-    local i = 0 -- iterator variable
-    local iter = function() -- iterator function
-        i = i + 1
-        if a[i] == nil then
-            return nil
-        else
-            return a[i], t[a[i]]
-        end
-    end
-    return iter
 end
 
 function EmoteMenuStart(args, hard, textureVariation)
@@ -489,43 +455,6 @@ function CheckAnimalAndOnEmotePlay(EmoteName, name)
             end
         end
         EmoteChatMessage(Config.Languages[lang]['notvalidpet'])
-    end
-end
-
-function LoadAnim(dict)
-    if not DoesAnimDictExist(dict) then
-        return false
-    end
-
-    local timeout, success, error = 2000, true
-    success, error = pcall(function()
-        repeat
-            RequestAnimDict(dict)
-            Wait(5)
-            timeout = timeout - 5
-        until HasAnimDictLoaded(dict) or timeout <= 0
-    end)
-
-    DebugPrint(not success and ("An error occurred while loading the animation dictionary: " .. error) or
-               timeout == 0 and ("Loading anim dict " .. dict .. " timed out") or "")
-    
-    return success and timeout > 0
-end
-
-
-function LoadPropDict(model)
-    -- load the model if it's not loaded and wait until it's loaded or timeout
-    if not HasModelLoaded(joaat(model)) then
-        RequestModel(joaat(model))
-        local timeout = 2000
-        while not HasModelLoaded(joaat(model)) and timeout > 0 do
-            Wait(5)
-            timeout = timeout - 5
-        end
-        if timeout == 0 then
-            DebugPrint("Loading model " .. model .. " timed out")
-            return
-        end
     end
 end
 

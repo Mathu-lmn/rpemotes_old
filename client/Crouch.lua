@@ -6,50 +6,6 @@ local proneType = "onfront"
 local lastKeyPress = 0
 
 
--- Utils --
-local function LoadAnimDict(dict)
-    RequestAnimDict(dict)
-    while not HasAnimDictLoaded(dict) do
-		Citizen.Wait(0)
-	end
-end
-
-local function LoadAnimSet(set)
-    RequestAnimSet(set)
-    while not HasAnimSetLoaded(set) do
-		Citizen.Wait(0)
-	end
-end
-
-local function IsPlayerAiming(player)
-    return IsPlayerFreeAiming(player) or IsAimCamActive() or IsAimCamThirdPersonActive()
-end
-
-local function CanPlayerCrouchCrawl(playerPed)
-    if not IsPedOnFoot(playerPed) or IsPedJumping(playerPed) or IsPedFalling(playerPed) or IsPedInjured(playerPed) or IsPedInMeleeCombat(playerPed) or IsPedRagdoll(playerPed) then
-        return false
-    end
-
-    return true
-end
-
-local function PlayAnimOnce(playerPed, animDict, animName, blendInSpeed, blendOutSpeed, duration, startTime)
-    LoadAnimDict(animDict)
-    TaskPlayAnim(playerPed, animDict, animName, blendInSpeed or 2.0, blendOutSpeed or 2.0, duration or -1, 0, startTime or 0.0, false, false, false)
-    RemoveAnimDict(animDict)
-end
-
-local function ChangeHeadingSmooth(playerPed, amount, time)
-    local times = math.abs(amount)
-    local test = amount / times
-    local wait = time / times
-
-    for _i = 1, times do
-        Wait(wait)
-        SetEntityHeading(playerPed, GetEntityHeading(playerPed) + test)
-    end
-end
-
 
 -- Crouching --
 local function ResetCrouch()
@@ -63,7 +19,7 @@ local function ResetCrouch()
     -- Applies the previous walk style (or resets to default if non had been set)
     local walkStyle = GetResourceKvpString("walkstyle")
     if walkStyle ~= nil then
-        LoadAnimSet(walkStyle)
+        RequestWalking(walkStyle)
         SetPedMovementClipset(playerPed, walkStyle, 0.6)
         RemoveAnimSet(walkStyle)
     else
@@ -113,7 +69,7 @@ end
 
 local function StartCrouch()
     isCrouched = true
-    LoadAnimSet("move_ped_crouched")
+    RequestWalking("move_ped_crouched")
     local playerPed = PlayerPedId()
 
     -- Force leave stealth mode
@@ -415,8 +371,8 @@ local function CrawlKeyPressed()
     end
 
     -- Load animations that the crawling is going to use
-    LoadAnimDict("move_crawl")
-    LoadAnimDict("move_crawlprone2crawlfront")
+    LoadAnim("move_crawl")
+    LoadAnim("move_crawlprone2crawlfront")
 
     if ShouldPlayerDiveToCrawl(playerPed) then
         PlayAnimOnce(playerPed, "explosions", "react_blown_forwards", nil, 3.0)

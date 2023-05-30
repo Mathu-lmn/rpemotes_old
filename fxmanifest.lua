@@ -38,6 +38,7 @@ server_scripts {
 
 client_scripts {
     'NativeUI.lua',
+    'client/Utils.lua',
     'client/AnimationList.lua',
     'client/AnimationListCustom.lua',
     'client/Binoculars.lua',
