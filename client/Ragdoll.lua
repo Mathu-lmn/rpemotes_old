@@ -17,10 +17,7 @@ if Config.RagdollEnabled then
         end
 
         while not stop do
-            SetPedRagdollForceFall(ped)
-            ResetPedRagdollTimer(ped)
             SetPedToRagdoll(ped, 1000, 1000, 0, false, false, false)
-            ResetPedRagdollTimer(ped)
             Wait(0)
         end
     end
