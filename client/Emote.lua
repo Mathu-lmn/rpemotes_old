@@ -497,19 +497,21 @@ function LoadAnim(dict)
         return false
     end
 
-    local timeout = 2000
-    while not HasAnimDictLoaded(dict) and timeout > 0 do
-        RequestAnimDict(dict)
-        Wait(5)
-        timeout = timeout - 5
-    end
-    if timeout == 0 then
-        DebugPrint("Loading anim dict " .. dict .. " timed out")
-        return false
-    else
-        return true
-    end
+    local timeout, success, error = 2000, true
+    success, error = pcall(function()
+        repeat
+            RequestAnimDict(dict)
+            Wait(5)
+            timeout = timeout - 5
+        until HasAnimDictLoaded(dict) or timeout <= 0
+    end)
+
+    DebugPrint(not success and ("An error occurred while loading the animation dictionary: " .. error) or
+               timeout == 0 and ("Loading anim dict " .. dict .. " timed out") or "")
+    
+    return success and timeout > 0
 end
+
 
 function LoadPropDict(model)
     -- load the model if it's not loaded and wait until it's loaded or timeout
