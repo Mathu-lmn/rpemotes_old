@@ -63,7 +63,7 @@ Config = {
     -- Used to enable or disable the search feature in the menu.
     Search = true,
     -- You can disable the handsup here / change the keybind. It is currently set to Y
-    HandsupEnabled = true,
+    HandsupEnabled = false,
     HandsupKeybind = 'Y', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     HandsupKeybindEnabled = false,
     HandsupKeybindInCarEnabled = false,
