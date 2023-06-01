@@ -31,7 +31,7 @@ function CanPlayerCrouchCrawl(playerPed)
 end
 
 function PlayAnimOnce(playerPed, animDict, animName, blendInSpeed, blendOutSpeed, duration, startTime)
-    LoadAnimDict(animDict)
+    LoadAnim(animDict)
     TaskPlayAnim(playerPed, animDict, animName, blendInSpeed or 2.0, blendOutSpeed or 2.0, duration or -1, 0,
         startTime or 0.0, false, false, false)
     RemoveAnimDict(animDict)
