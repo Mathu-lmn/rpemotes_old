@@ -824,15 +824,26 @@ AddEventHandler('CEventOpenDoor', function(entities, eventEntity, args)
     OnEmotePlay(emote, emote.name)
 end)
 
--- Cancelled emote ? NO
+local isBumpingPed = false
+local timeout = 500
+
 AddEventHandler("CEventPlayerCollisionWithPed", function()
     if not IsInAnimation then
         return
     end
 
+    if isBumpingPed then
+        timeout = 500
+        return
+    end
+    isBumpingPed = true
+    timeout = 500
     -- We wait a bit to avoid collision with the ped resetting the animation again
 
-    Wait(500)
+    while timeout > 0 do
+        Wait(100)
+        timeout = timeout - 100
+    end
 
     if not IsInAnimation then
         return
@@ -849,6 +860,7 @@ AddEventHandler("CEventPlayerCollisionWithPed", function()
 
     emote.name = CurrentAnimationName
 
+    isBumpingPed = false
     ClearPedTasks(PlayerPedId())
     DestroyAllProps()
     OnEmotePlay(emote, emote.name)
