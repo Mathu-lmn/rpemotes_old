@@ -43,7 +43,7 @@ for i = 1, #emoteTypes do
     end
 end
 
-local function RunAnimationThread()
+local function RunAnimationThread(dict, animation)
     local playerId = PlayerId()
     if AnimationThreadStatus then return end
     AnimationThreadStatus = true
@@ -55,6 +55,10 @@ local function RunAnimationThread()
             if IsInAnimation then
                 sleep = 0
                 if IsPlayerAiming(playerId) then
+                    EmoteCancel()
+                end
+                if not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) then
+                    DebugPrint("Animation ended")
                     EmoteCancel()
                 end
             end
@@ -679,7 +683,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
     TaskPlayAnim(PlayerPedId(), ChosenDict, ChosenAnimation, 5.0, 5.0, AnimationDuration, MovementType, 0, false, false, false)
     RemoveAnimDict(ChosenDict)
     IsInAnimation = true
-    RunAnimationThread()
+    RunAnimationThread(ChosenDict, ChosenAnimation)
     MostRecentDict = ChosenDict
     MostRecentAnimation = ChosenAnimation
 
