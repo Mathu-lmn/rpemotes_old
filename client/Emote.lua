@@ -16,6 +16,7 @@ local PtfxWait = 500
 local PtfxCanHold = false
 local PtfxNoProp = false
 local AnimationThreadStatus = false
+local CheckStatus = false
 local CanCancel = true
 local InExitEmote = false
 local ExitAndPlay = false
@@ -82,7 +83,7 @@ local function RunAnimationThread()
     end)
 end
 
-local function CheckStatus(dict, anim)
+local function CheckStatusThread(dict, anim)
     local playerId = PlayerId()
     if CheckStatus then return end
     CheckStatus = true
@@ -703,7 +704,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
     RemoveAnimDict(ChosenDict)
     IsInAnimation = true
     RunAnimationThread()
-    CheckStatus(ChosenDict, ChosenAnimation)
+    CheckStatusThread(ChosenDict, ChosenAnimation)
     MostRecentDict = ChosenDict
     MostRecentAnimation = ChosenAnimation
 
