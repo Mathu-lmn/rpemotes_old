@@ -88,6 +88,7 @@ local function RunAnimationThread(dict, animation)
             while AnimationThreadStatus and IsInAnimation do
                 if not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) then
                     DebugPrint("Animation ended")
+                    DestroyAllProps()
                     EmoteCancel()
                 end
                 Wait(500)
