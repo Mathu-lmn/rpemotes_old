@@ -57,10 +57,6 @@ local function RunAnimationThread(dict, animation)
                 if IsPlayerAiming(playerId) then
                     EmoteCancel()
                 end
-                if not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) then
-                    DebugPrint("Animation ended")
-                    EmoteCancel()
-                end
             end
 
             if PtfxPrompt then
@@ -84,6 +80,20 @@ local function RunAnimationThread(dict, animation)
             Wait(sleep)
         end
     end)
+    if dict ~= nil and animation ~= nil then
+        CreateThread(function()
+            while not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) do
+                Wait(5)
+            end
+            while AnimationThreadStatus and IsInAnimation do
+                if not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) then
+                    DebugPrint("Animation ended")
+                    EmoteCancel()
+                end
+                Wait(500)
+            end
+        end)
+    end
 end
 
 if Config.EnableXtoCancel then
