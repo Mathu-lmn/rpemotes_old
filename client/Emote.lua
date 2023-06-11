@@ -87,13 +87,13 @@ local function CheckStatusThread(dict, anim)
     local playerId = PlayerId()
     if CheckStatus then return end
     CheckStatus = true
-    if dict ~= nil and animation ~= nil then
-        CreateThread(function()
-            while not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) do
+    if dict ~= nil and anim ~= nil then
+        Citizen.CreateThread(function()
+            while not IsEntityPlayingAnim(PlayerPedId(), dict, anim, 3) do
                 Wait(5)
             end
             while CheckStatus and IsInAnimation do
-                if not IsEntityPlayingAnim(PlayerPedId(), dict, animation, 3) then
+                if not IsEntityPlayingAnim(PlayerPedId(), dict, anim, 3) then
                     DebugPrint("Animation ended")
                     DestroyAllProps()
                     EmoteCancel()
