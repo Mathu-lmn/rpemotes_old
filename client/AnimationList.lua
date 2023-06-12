@@ -5142,7 +5142,8 @@ RP.AnimalEmotes = {
 
 RP.Exits = {
 
------- HUMAN ------
+------ HUMAN EXIT EMOTES  ------
+
     ["getup"] = {
         "get_up@sat_on_floor@to_stand",
         "getup_0",
@@ -5184,7 +5185,7 @@ RP.Exits = {
             EmoteDuration = 5700
         }
     },
------- ANIMALS  ------
+------ ANIMAL EXIT EMOTES  ------
     ["sdogup"] = {
         "creatures@pug@amb@world_dog_sitting@exit",
         "exit",
@@ -5215,6 +5216,223 @@ RP.Exits = {
 --- EMOTES NO PROPS ---
 
 RP.Emotes = {
+
+    -----------------------------------------------------------------------------------------------------------
+    ------ The male and female 'interaction menu' emotes from GTA Online can be found under the following animation directories:
+    ------
+    ------ Male: anim@mp_player_intcelebrationmale
+    ------
+    ------ Female: anim@mp_player_intcelebrationfemale
+
+    -----------------------------------------------------------------------------------------------------------
+    ------ THESE ARE SCENARIOS, SOME OF THESE DON'T WORK ON WOMEN AND SOME OTHER ISSUES, BUT STILL GOOD TO HAVE    ------
+    -----------------------------------------------------------------------------------------------------------
+    ["atm"] = {
+        "Scenario",
+        "PROP_HUMAN_ATM",
+        "ATM"
+    },
+    ["bbq"] = {
+        "MaleScenario",
+        "PROP_HUMAN_BBQ",
+        "BBQ"
+    },
+    ["bumbin"] = {
+        "Scenario",
+        "PROP_HUMAN_BUM_BIN",
+        "Bum Bin"
+    },
+    ["cheer"] = {
+        "Scenario",
+        "WORLD_HUMAN_CHEERING",
+        "Cheer"
+    },
+    ["chinup"] = {
+        "Scenario",
+        "PROP_HUMAN_MUSCLE_CHIN_UPS",
+        "Chinup"
+    },
+    ["clipboard2"] = {
+        "MaleScenario",
+        "WORLD_HUMAN_CLIPBOARD",
+        "Clipboard 2"
+    },
+    ["cop"] = {
+        "Scenario",
+        "WORLD_HUMAN_COP_IDLES",
+        "Cop"
+    },
+    ["drill"] = {
+        "Scenario",
+        "WORLD_HUMAN_CONST_DRILL",
+        "Construction Drilling"
+    },
+    ["filmshocking"] = {
+        "Scenario",
+        "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
+        "Film Shocking"
+    },
+    ["flex"] = {
+        "Scenario",
+        "WORLD_HUMAN_MUSCLE_FLEX",
+        "Flex"
+    },
+     ["guard"] = {
+        "Scenario",
+        "WORLD_HUMAN_GUARD_STAND",
+        "Guard"
+    },
+    ["garden"] = {
+        "Scenario",
+        "WORLD_HUMAN_GARDENER_PLANT",
+        "Gardening"
+    },
+    ["hammer"] = {
+        "Scenario",
+        "WORLD_HUMAN_HAMMERING",
+        "Hammer"
+    },
+    ["hangout"] = {
+        "Scenario",
+        "WORLD_HUMAN_HANG_OUT_STREET",
+        "Hangout"
+    },
+    ["impatient"] = {
+        "Scenario",
+        "WORLD_HUMAN_STAND_IMPATIENT",
+        "Impatient"
+    },
+    ["janitor"] = {
+        "Scenario",
+        "WORLD_HUMAN_JANITOR",
+        "Janitor"
+    },
+    ["jog"] = {
+        "Scenario",
+        "WORLD_HUMAN_JOG_STANDING",
+        "Jog"
+    },
+    ["kneel"] = {
+        "Scenario",
+        "CODE_HUMAN_MEDIC_KNEEL",
+        "Kneel"
+    },
+    ["lean"] = {
+        "Scenario",
+        "WORLD_HUMAN_LEANING",
+        "Lean"
+    },
+    ["leanbar"] = {
+        "Scenario",
+        "PROP_HUMAN_BUM_SHOPPING_CART",
+        "Lean Bar"
+    },
+    ["lookout"] = {
+        "Scenario",
+        "CODE_HUMAN_CROSS_ROAD_WAIT",
+        "Lookout"
+    },
+    ["maid"] = {
+        "Scenario",
+        "WORLD_HUMAN_MAID_CLEAN",
+        "Maid"
+    },
+    ["medic"] = {
+        "Scenario",
+        "CODE_HUMAN_MEDIC_TEND_TO_DEAD",
+        "Medic"
+    },
+    ["musician"] = {
+        "MaleScenario",
+        "WORLD_HUMAN_MUSICIAN",
+        "Musician"
+    },
+    -- Ambient Music Doesn't Seem To Work For Female, Hence It's Male Only
+    ["notepad2"] = {
+        "Scenario",
+        "CODE_HUMAN_MEDIC_TIME_OF_DEATH",
+        "Notepad 2"
+    },
+    ["parkingmeter"] = {
+        "Scenario",
+        "PROP_HUMAN_PARKING_METER",
+        "Parking Meter"
+    },
+    ["party"] = {
+        "Scenario",
+        "WORLD_HUMAN_PARTYING",
+        "Party"
+    },
+    ["texting"] = {
+        "Scenario",
+        "WORLD_HUMAN_STAND_MOBILE",
+        "Texting"
+    },
+    ["prosthigh"] = {
+        "Scenario",
+        "WORLD_HUMAN_PROSTITUTE_HIGH_CLASS",
+        "Prostitue High"
+    },
+    ["prostlow"] = {
+        "Scenario",
+        "WORLD_HUMAN_PROSTITUTE_LOW_CLASS",
+        "Prostitue Low"
+    },
+    ["puddle"] = {
+        "Scenario",
+        "WORLD_HUMAN_BUM_WASH",
+        "Puddle"
+    },
+    ["record"] = {
+        "Scenario",
+        "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
+        "Record"
+    },
+
+    -- Sitchair is a litte special, since you want the player to be seated correctly.
+    -- So we set it as "ScenarioObject" and do TaskStartScenarioAtPosition() instead of "AtPlace"
+    ["sitchair"] = {
+        "ScenarioObject",
+        "PROP_HUMAN_SEAT_CHAIR_MP_PLAYER",
+        "Sit Chair"
+    },
+    ["smoke"] = {
+        "Scenario",
+        "WORLD_HUMAN_SMOKING",
+        "Smoke"
+    },
+    ["smokeweed"] = {
+        "MaleScenario",
+        "WORLD_HUMAN_DRUG_DEALER",
+        "Smoke Weed (Male)"
+    },
+    --Female
+    ["smokeweed2"] = {
+        "Scenario",
+        "WORLD_HUMAN_SMOKING_POT",
+        "Smoke Weed (Female)"
+    },
+    -- Female
+    ["statue"] = {
+        "Scenario",
+        "WORLD_HUMAN_HUMAN_STATUE",
+        "Statue"
+    },
+    ["weld"] = {
+        "Scenario",
+        "WORLD_HUMAN_WELDING",
+        "Weld"
+    },
+    ["windowshop"] = {
+        "Scenario",
+        "WORLD_HUMAN_WINDOW_SHOP_BROWSE",
+        "Window Shop"
+    },
+    ["yoga"] = {
+        "Scenario",
+        "WORLD_HUMAN_YOGA",
+        "Yoga"
+    }, ---------- END OF SCENARIOS --------------
     ["dispenser"] = {
         "mini@sprunk",
         "plyr_buy_drink_pt1",
@@ -8532,73 +8750,6 @@ RP.Emotes = {
             EmoteDuration = 5000,
         }
     },
-
-
-    -----------------------------------------------------------------------------------------------------------
-    ------ The male and female 'interaction menu' emotes from GTA Online can be found under the following animation directories:
-    ------
-    ------ Male: anim@mp_player_intcelebrationmale
-    ------
-    ------ Female: anim@mp_player_intcelebrationfemale
-
-    -----------------------------------------------------------------------------------------------------------
-
-
-
-
-    -----------------------------------------------------------------------------------------------------------
-    ------ These are Scenarios, some of these dont work on women and some other issues, but still good to have.
-    -----------------------------------------------------------------------------------------------------------
-    ["atm"] = {
-        "Scenario",
-        "PROP_HUMAN_ATM",
-        "ATM"
-    },
-    ["bbq"] = {
-        "MaleScenario",
-        "PROP_HUMAN_BBQ",
-        "BBQ"
-    },
-    ["bumbin"] = {
-        "Scenario",
-        "PROP_HUMAN_BUM_BIN",
-        "Bum Bin"
-    },
-    ["cheer"] = {
-        "Scenario",
-        "WORLD_HUMAN_CHEERING",
-        "Cheer"
-    },
-    ["chinup"] = {
-        "Scenario",
-        "PROP_HUMAN_MUSCLE_CHIN_UPS",
-        "Chinup"
-    },
-    ["clipboard2"] = {
-        "MaleScenario",
-        "WORLD_HUMAN_CLIPBOARD",
-        "Clipboard 2"
-    },
-    ["cop"] = {
-        "Scenario",
-        "WORLD_HUMAN_COP_IDLES",
-        "Cop"
-    },
-    ["drill"] = {
-        "Scenario",
-        "WORLD_HUMAN_CONST_DRILL",
-        "Construction Drilling"
-    },
-    ["filmshocking"] = {
-        "Scenario",
-        "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
-        "Film Shocking"
-    },
-    ["flex"] = {
-        "Scenario",
-        "WORLD_HUMAN_MUSCLE_FLEX",
-        "Flex"
-    },
     ["flex2"] = { -- Custom Emote By Amnilka
         "frabi@malepose@solo@firstsport",
         "pose_sport_002",
@@ -8606,6 +8757,52 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = true, --- Allows us to flex while performing another animation
+        }
+    },
+    ["gym"] = { -- Custom Female Emote By Souris
+        "mouse@air_squat",
+        "air_squat_clip",
+        "Gym - Squats",
+        AnimationOptions = {
+            EmoteLoop = true,
+        }
+    },
+    ["gym2"] = { -- Custom Female Emote By Souris
+        "mouse@byc_crunch",
+        "byc_crunch_clip",
+        "Gym - Crunches",
+        AnimationOptions = {
+            EmoteLoop = true,
+            StartDelay = 400,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+    },
+    ["gym3"] = { -- Custom Female Emote By Souris
+        "mouse@jump_exc",
+        "jump_exc_clip",
+        "Gym - Jumping",
+        AnimationOptions = {
+            EmoteLoop = true,
+        }
+    },
+    ["gym4"] = { -- Custom Female Emote By Souris
+        "mouse@jump_jack",
+        "jump_jack_clip",
+        "Gym - Jumping Jacks",
+        AnimationOptions = {
+            EmoteLoop = true,
+        }
+    },
+    ["gym5"] = { -- Custom Female Emote By Souris
+        "mouse@situp",
+        "situp_clip",
+        "Gym - Sit Up",
+        AnimationOptions = {
+            EmoteLoop = true,
+            StartDelay = 550,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
     ["gympose"] = { -- Custom Emote By Amnilka
@@ -8639,167 +8836,9 @@ RP.Emotes = {
         "fem_pose_sport_005",
         "Gym Pose 4 - Sit Ups Pose",
         AnimationOptions = {
-
-            EmoteLoop = true
+            EmoteLoop = true,
         }
     },
-    ["guard"] = {
-        "Scenario",
-        "WORLD_HUMAN_GUARD_STAND",
-        "Guard"
-    },
-    ["garden"] = {
-        "Scenario",
-        "WORLD_HUMAN_GARDENER_PLANT",
-        "Gardening"
-    },
-    ["hammer"] = {
-        "Scenario",
-        "WORLD_HUMAN_HAMMERING",
-        "Hammer"
-    },
-    ["hangout"] = {
-        "Scenario",
-        "WORLD_HUMAN_HANG_OUT_STREET",
-        "Hangout"
-    },
-    ["impatient"] = {
-        "Scenario",
-        "WORLD_HUMAN_STAND_IMPATIENT",
-        "Impatient"
-    },
-    ["janitor"] = {
-        "Scenario",
-        "WORLD_HUMAN_JANITOR",
-        "Janitor"
-    },
-    ["jog"] = {
-        "Scenario",
-        "WORLD_HUMAN_JOG_STANDING",
-        "Jog"
-    },
-    ["kneel"] = {
-        "Scenario",
-        "CODE_HUMAN_MEDIC_KNEEL",
-        "Kneel"
-    },
-    ["lean"] = {
-        "Scenario",
-        "WORLD_HUMAN_LEANING",
-        "Lean"
-    },
-    ["leanbar"] = {
-        "Scenario",
-        "PROP_HUMAN_BUM_SHOPPING_CART",
-        "Lean Bar"
-    },
-    ["lookout"] = {
-        "Scenario",
-        "CODE_HUMAN_CROSS_ROAD_WAIT",
-        "Lookout"
-    },
-    ["maid"] = {
-        "Scenario",
-        "WORLD_HUMAN_MAID_CLEAN",
-        "Maid"
-    },
-    ["medic"] = {
-        "Scenario",
-        "CODE_HUMAN_MEDIC_TEND_TO_DEAD",
-        "Medic"
-    },
-    ["musician"] = {
-        "MaleScenario",
-        "WORLD_HUMAN_MUSICIAN",
-        "Musician"
-    },
-    -- Ambient Music Doesn't Seem To Work For Female, Hence It's Male Only
-    ["notepad2"] = {
-        "Scenario",
-        "CODE_HUMAN_MEDIC_TIME_OF_DEATH",
-        "Notepad 2"
-    },
-    ["parkingmeter"] = {
-        "Scenario",
-        "PROP_HUMAN_PARKING_METER",
-        "Parking Meter"
-    },
-    ["party"] = {
-        "Scenario",
-        "WORLD_HUMAN_PARTYING",
-        "Party"
-    },
-    ["texting"] = {
-        "Scenario",
-        "WORLD_HUMAN_STAND_MOBILE",
-        "Texting"
-    },
-    ["prosthigh"] = {
-        "Scenario",
-        "WORLD_HUMAN_PROSTITUTE_HIGH_CLASS",
-        "Prostitue High"
-    },
-    ["prostlow"] = {
-        "Scenario",
-        "WORLD_HUMAN_PROSTITUTE_LOW_CLASS",
-        "Prostitue Low"
-    },
-    ["puddle"] = {
-        "Scenario",
-        "WORLD_HUMAN_BUM_WASH",
-        "Puddle"
-    },
-    ["record"] = {
-        "Scenario",
-        "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
-        "Record"
-    },
-
-    -- Sitchair is a litte special, since you want the player to be seated correctly.
-    -- So we set it as "ScenarioObject" and do TaskStartScenarioAtPosition() instead of "AtPlace"
-    ["sitchair"] = {
-        "ScenarioObject",
-        "PROP_HUMAN_SEAT_CHAIR_MP_PLAYER",
-        "Sit Chair"
-    },
-    ["smoke"] = {
-        "Scenario",
-        "WORLD_HUMAN_SMOKING",
-        "Smoke"
-    },
-    ["smokeweed"] = {
-        "MaleScenario",
-        "WORLD_HUMAN_DRUG_DEALER",
-        "Smoke Weed (Male)"
-    },
-    --Female
-    ["smokeweed2"] = {
-        "Scenario",
-        "WORLD_HUMAN_SMOKING_POT",
-        "Smoke Weed (Female)"
-    },
-    -- Female
-    ["statue"] = {
-        "Scenario",
-        "WORLD_HUMAN_HUMAN_STATUE",
-        "Statue"
-    },
-    ["weld"] = {
-        "Scenario",
-        "WORLD_HUMAN_WELDING",
-        "Weld"
-    },
-    ["windowshop"] = {
-        "Scenario",
-        "WORLD_HUMAN_WINDOW_SHOP_BROWSE",
-        "Window Shop"
-    },
-    ["yoga"] = {
-        "Scenario",
-        "WORLD_HUMAN_YOGA",
-        "Yoga"
-    },
-
     -- CASINO DLC EMOTES (Requires gamebuild 2060 or higher)
     ["karate"] = {
         "anim@mp_player_intcelebrationfemale@karate_chops",
