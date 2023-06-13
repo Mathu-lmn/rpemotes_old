@@ -85,24 +85,25 @@ end
 
 local function CheckStatusThread(dict, anim)
     local playerId = PlayerId()
-    if CheckStatus then return end
-    CheckStatus = true
-    if dict ~= nil and anim ~= nil then
-        Citizen.CreateThread(function()
-            while not IsEntityPlayingAnim(PlayerPedId(), dict, anim, 3) do
-                Wait(5)
+    Citizen.CreateThread(function()
+        if CheckStatus then
+            CheckStatus = false
+            Wait(10)
+        end
+        CheckStatus = true
+        while not IsEntityPlayingAnim(PlayerPedId(), dict, anim, 3) do
+            Wait(5)
+        end
+        while CheckStatus and IsInAnimation do
+            if not IsEntityPlayingAnim(PlayerPedId(), dict, anim, 3) then
+                DebugPrint("Animation ended")
+                DestroyAllProps()
+                EmoteCancel()
+                break
             end
-            while CheckStatus and IsInAnimation do
-                if not IsEntityPlayingAnim(PlayerPedId(), dict, anim, 3) then
-                    DebugPrint("Animation ended")
-                    DestroyAllProps()
-                    EmoteCancel()
-                    break
-                end
-                Wait(0)
-            end
-        end)
-    end
+            Wait(0)
+        end
+    end)
 end
 
 if Config.EnableXtoCancel then
@@ -704,7 +705,11 @@ function OnEmotePlay(EmoteName, name, textureVariation)
     RemoveAnimDict(ChosenDict)
     IsInAnimation = true
     RunAnimationThread()
-    CheckStatusThread(ChosenDict, ChosenAnimation)
+    if animOption and animOption.Prop then
+        -- if there is a prop, don't do the status thread as it's useless and leads to some bugs
+    else
+        CheckStatusThread(ChosenDict, ChosenAnimation)
+    end
     MostRecentDict = ChosenDict
     MostRecentAnimation = ChosenAnimation
 
