@@ -58,6 +58,11 @@ local function RunAnimationThread()
                 if IsPlayerAiming(playerId) then
                     EmoteCancel()
                 end
+                if not Config.AllowPunching then
+                    DisableControlAction(0, 140, true)
+                    DisableControlAction(0, 141, true)
+                    DisableControlAction(0, 142, true)
+                end
             end
 
             if PtfxPrompt then
