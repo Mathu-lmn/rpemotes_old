@@ -19,7 +19,7 @@ function ShowNotification(text)
 end
 
 function IsPlayerAiming(player)
-    return IsPlayerFreeAiming(player) or IsAimCamActive() or IsAimCamThirdPersonActive()
+    return (IsPlayerFreeAiming(player) or IsAimCamActive() or IsAimCamThirdPersonActive() and GetHashKey("WEAPON_UNARMED") ~= GetSelectedPedWeapon(player))
 end
 
 function CanPlayerCrouchCrawl(playerPed)

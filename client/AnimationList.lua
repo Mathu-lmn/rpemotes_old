@@ -9421,38 +9421,38 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["gift"] = { --- Custom Prop & Emote By BzZzi
-        "bz@give_love@anim",
-        "bz_give",
+    ["gift"] = {
+        "hold_flowers@dad", --- Custom Animation By Darks Animations
+        "hold_flowers_clip",
         "Gift",
         AnimationOptions = {
             Prop = 'bzzz_prop_gift_orange',
-            PropBone = 57005,
+            PropBone = 60309,
             PropPlacement = {
-                0.15,
-                -0.03,
-                -0.14,
-                -77.0,
-                -120.0,
-                40.0
+                 0.0180,
+                 0.0390,
+                 0.1160,
+               -82.4097,
+              -157.5768,
+               -27.6738
             },
             EmoteMoving = true
         }
     },
-    ["gift2"] = { --- Custom Prop & Emote By BzZzi
-        "bz@give_love@anim",
-        "bz_give",
+    ["gift2"] = {
+        "hold_flowers@dad", --- Custom Animation By Darks Animations
+        "hold_flowers_clip",
         "Gift 2",
         AnimationOptions = {
             Prop = 'bzzz_prop_gift_purple',
-            PropBone = 57005,
+            PropBone = 60309,
             PropPlacement = {
-                0.15,
-                -0.03,
-                -0.14,
-                -77.0,
-                -120.0,
-                40.0
+                 0.0180,
+                 0.0390,
+                 0.1160,
+               -82.4097,
+              -157.5768,
+               -27.6738
             },
             EmoteMoving = true
         }
@@ -9750,6 +9750,27 @@ RP.PropEmotes = {
              -101.1702,
               28.0243
             },
+            EmoteStuck = true,
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["balloon2"] = {
+        "anim@heists@humane_labs@finale@keycards",
+        "ped_a_enter_loop",
+        "Balloon 2 - Pride",
+        AnimationOptions = {
+            Prop = "pride_heart_balloon",
+            PropBone = 60309,
+            PropPlacement = {
+                1.0600,
+                0.4900,
+                0.0140,
+               73.5103,
+              -30.9638,
+               19.3946
+            },
+            EmoteStuck = true,
             EmoteLoop = true,
             EmoteMoving = true
         }
@@ -13068,27 +13089,27 @@ RP.PropEmotes = {
         }
     },
     ["bouquet"] = {
-        "impexp_int-0",
-        "mp_m_waremech_01_dual-0",
+        "hold_flowers@dad", --- Custom Animation By Darks Animations
+        "hold_flowers_clip",
         "Bouquet",
         AnimationOptions = {
             Prop = 'prop_snow_flower_02',
-            PropBone = 24817,
+            PropBone = 60309,
             PropPlacement = {
-                -0.29,
-                0.40,
-                -0.02,
-                -90.0,
-                -90.0,
-                0.0
+                0.1100,
+               -0.1300,
+                0.1200,
+              -18.7186,
+              121.0529,
+              -11.7724
             },
             EmoteMoving = true,
             EmoteLoop = true
         }
     },
     ["bouquet2"] = {
-        "impexp_int-0",
-        "mp_m_waremech_01_dual-0",
+        "hold_flowers@dad", --- Custom Animation By Darks Animations
+        "hold_flowers_clip",
         "Bouquet 2",
         AnimationOptions = {
             Prop = 'pata_freevalentinesday3',
@@ -17882,19 +17903,19 @@ RP.PropEmotes = {
         }
     },
     ["idcard"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
         "ID Card 1",
         AnimationOptions = {
             Prop = "prop_franklin_dl",
-            PropBone = 57005,
+            PropBone = 28422,
             PropPlacement = {
-                0.1000,
+                0.0840,
                 0.0200,
-               -0.0300,
-              -90.000,
-              170.000,
-               78.999
+               -0.0260,
+             -173.8514,
+              -88.0171,
+               63.0612
             },
             EmoteStuck = true,
             EmoteLoop = false,
@@ -17922,19 +17943,19 @@ RP.PropEmotes = {
         }
     },
     ["idcardc"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
         "ID Card 3",
         AnimationOptions = {
             Prop = "prop_michael_sec_id",
             PropBone = 28422,
             PropPlacement = {
-                0.1000,
+                0.0840,
                 0.0200,
-               -0.0300,
-              -90.00,
-             -180.00,
-               78.999
+               -0.0260,
+             -173.8514,
+              -88.0171,
+               63.0612
             },
             EmoteStuck = true,
             EmoteLoop = false,
@@ -17942,19 +17963,19 @@ RP.PropEmotes = {
         }
     },
     ["idcardd"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
         "ID Card 4",
         AnimationOptions = {
             Prop = "prop_trev_sec_id",
             PropBone = 28422,
             PropPlacement = {
-                0.1000,
+                0.0840,
                 0.0200,
-                -0.0300,
-                -90.00,
-                -180.00,
-                78.999
+               -0.0260,
+             -173.8514,
+              -88.0171,
+               63.0612
             },
             EmoteStuck = true,
             EmoteLoop = false,
@@ -17962,19 +17983,19 @@ RP.PropEmotes = {
         }
     },
     ["idcarde"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
         "ID Card 5",
         AnimationOptions = {
-            Prop = "p_ld_id_card_002",
+            Prop = "prop_casey_sec_id",
             PropBone = 28422,
             PropPlacement = {
-                0.1000,
+                0.0840,
                 0.0200,
-                -0.0300,
-                -90.00,
-                -180.00,
-                78.999
+               -0.0260,
+             -173.8514,
+              -88.0171,
+               63.0612
             },
             EmoteStuck = true,
             EmoteLoop = false,
@@ -17982,19 +18003,19 @@ RP.PropEmotes = {
         }
     },
     ["idcardf"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
         "ID Card 6",
         AnimationOptions = {
             Prop = "prop_cs_r_business_card",
             PropBone = 28422,
             PropPlacement = {
-                0.1000,
+                0.0840,
                 0.0200,
-                -0.0300,
-                -90.00,
-                -180.00,
-                78.999
+               -0.0260,
+             -173.8514,
+              -88.0171,
+               63.0612
             },
             EmoteStuck = true,
             EmoteLoop = false,
@@ -18002,19 +18023,19 @@ RP.PropEmotes = {
         }
     },
     ["idcardg"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
         "ID Card 7",
         AnimationOptions = {
-            Prop = "prop_michael_sec_id",
+            Prop = "p_ld_id_card_002",
             PropBone = 28422,
             PropPlacement = {
-                0.1000,
+                0.0840,
                 0.0200,
-                -0.0300,
-                -90.00,
-                -180.00,
-                78.999
+               -0.0260,
+             -173.8514,
+              -88.0171,
+               63.0612
             },
             EmoteStuck = true,
             EmoteLoop = false,
@@ -18022,23 +18043,23 @@ RP.PropEmotes = {
         }
     },
     ["idcardh"] = {
-        "paper_1_rcm_alt1-8",
-        "player_one_dual-8",
-        "ID Card 8",
+        "cop_badge_1@dad", --- Custom Animation by Darks Animations 
+        "cop_badge_1_clip",
+        "ID Card 8 - Cop Badge",
         AnimationOptions = {
             Prop = "prop_cop_badge",
             PropBone = 28422,
             PropPlacement = {
-                0.0800,
-               -0.0120,
-               -0.0600,
-              -90.00,
-              180.00,
-               69.99
+                0.0390,
+               -0.0100,
+               -0.0590,
+             -103.1785,
+             -176.6694,
+               74.9000
             },
             EmoteStuck = true,
             EmoteLoop = false,
-            EmoteMoving = true
+            EmoteMoving = true,
         }
     },
     ["idcardi"] = {
@@ -18055,26 +18076,6 @@ RP.PropEmotes = {
                -10.8683,
               -177.8499,
                 23.6377
-            },
-            EmoteStuck = true,
-            EmoteLoop = false,
-            EmoteMoving = true
-        }
-    },
-    ["idcardj"] = {
-        "amb@code_human_wander_clipboard@male@base",
-        "static",
-        "ID Card 10 - Passport",
-        AnimationOptions = {
-            Prop = "bkr_prop_fakeid_openpassport",
-            PropBone = 60309,
-            PropPlacement = {
-                -0.0230,
-                 0.0330,
-                -0.0600,
-               -80.7083,
-                90.8670,
-                41.4814
             },
             EmoteStuck = true,
             EmoteLoop = false,
