@@ -45,7 +45,7 @@ for i = 1, #emoteTypes do
 end
 
 local function RunAnimationThread()
-    local playerId = PlayerId()
+    local playerId = PlayerPedId()
     if AnimationThreadStatus then return end
     AnimationThreadStatus = true
     CreateThread(function()
@@ -56,7 +56,6 @@ local function RunAnimationThread()
             if IsInAnimation then
                 sleep = 0
                 if IsPlayerAiming(playerId) then
-                    DebugPrint("Player is aiming with a gun, canceling emote")
                     EmoteCancel()
                 end
                 if not Config.AllowPunching then
@@ -90,7 +89,6 @@ local function RunAnimationThread()
 end
 
 local function CheckStatusThread(dict, anim)
-    local playerId = PlayerId()
     Citizen.CreateThread(function()
         if CheckStatus then
             CheckStatus = false
