@@ -94,6 +94,8 @@ Config = {
     AllowVisionsToggling = true,
     -- If set to true, the /newscam command will be enabled.
     NewscamEnabled = true,
+    -- When set to true, will show a clone of the player to preview the animations
+    EmotePreview = true,
     -- Check for updates
     CheckForUpdates = true,
 }

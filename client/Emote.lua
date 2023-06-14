@@ -609,7 +609,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
         DestroyAllProps()
     end
 
-    if ChosenDict == "MaleScenario" or "Scenario" then
+    if ChosenDict == "MaleScenario" or ChosenDict == "Scenario" then
         CheckGender()
         if ChosenDict == "MaleScenario" then if InVehicle then return end
             if PlayerGender == "male" then
