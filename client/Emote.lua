@@ -45,7 +45,7 @@ for i = 1, #emoteTypes do
 end
 
 local function RunAnimationThread()
-    local playerId = PlayerId()
+    local playerId = PlayerPedId()
     if AnimationThreadStatus then return end
     AnimationThreadStatus = true
     CreateThread(function()
@@ -59,9 +59,9 @@ local function RunAnimationThread()
                     EmoteCancel()
                 end
                 if not Config.AllowPunching then
-                    DisableControlAction(0, 140, true)
-                    DisableControlAction(0, 141, true)
-                    DisableControlAction(0, 142, true)
+                    DisableControlAction(2, 140, true)
+                    DisableControlAction(2, 141, true)
+                    DisableControlAction(2, 142, true)
                 end
             end
 
@@ -89,7 +89,6 @@ local function RunAnimationThread()
 end
 
 local function CheckStatusThread(dict, anim)
-    local playerId = PlayerId()
     Citizen.CreateThread(function()
         if CheckStatus then
             CheckStatus = false
