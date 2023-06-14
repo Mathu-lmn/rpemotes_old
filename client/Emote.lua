@@ -56,15 +56,10 @@ local function RunAnimationThread()
             if IsInAnimation then
                 sleep = 0
                 if IsPlayerAiming(playerId) then
+                    DebugPrint("Player is aiming with a gun, canceling emote")
                     EmoteCancel()
                 end
                 if not Config.AllowPunching then
-                    DisableControlAction(0, 140, true)
-                    DisableControlAction(0, 141, true)
-                    DisableControlAction(0, 142, true)
-                    DisableControlAction(1, 140, true)
-                    DisableControlAction(1, 141, true)
-                    DisableControlAction(1, 142, true)
                     DisableControlAction(2, 140, true)
                     DisableControlAction(2, 141, true)
                     DisableControlAction(2, 142, true)
