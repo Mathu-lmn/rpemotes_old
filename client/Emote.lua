@@ -59,9 +59,21 @@ local function RunAnimationThread()
                     EmoteCancel()
                 end
                 if not Config.AllowPunching then
+                    DisableControlAction(0, 25, true)
+                    DisableControlAction(0, 68, true)
+                    DisableControlAction(0, 69, true)
+                    DisableControlAction(0, 70, true)
+                    DisableControlAction(0, 91, true)
+                    DisableControlAction(0, 92, true)
+                    DisableControlAction(0, 114, true)
                     DisableControlAction(0, 140, true)
                     DisableControlAction(0, 141, true)
                     DisableControlAction(0, 142, true)
+                    DisableControlAction(0, 257, true)
+                    DisableControlAction(0, 263, true)
+                    DisableControlAction(0, 264, true)
+                    DisableControlAction(0, 331, true)
+                    DisableControlAction(0, 347	, true)
                 end
             end
 
