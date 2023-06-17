@@ -2008,7 +2008,7 @@ RP.Dances = {
     ["danceclubh"] = {
         "anim@amb@nightclub_island@dancers@crowddance_facedj@",
         "mi_dance_facedj_17_v2_male^4",
-        "Dance Club 8 ",
+        "Dance Club 8",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2016,7 +2016,7 @@ RP.Dances = {
     ["danceclubi"] = {
         "anim@amb@nightclub_island@dancers@crowddance_single_props@",
         "mi_dance_prop_13_v1_male^3",
-        "Dance Club 9 ",
+        "Dance Club 9",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2024,7 +2024,7 @@ RP.Dances = {
     ["danceclubj"] = {
         "anim@amb@nightclub_island@dancers@crowddance_groups@groupd@",
         "mi_dance_crowd_13_v2_male^1",
-        "Dance Club 10 ",
+        "Dance Club 10",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2032,7 +2032,7 @@ RP.Dances = {
     ["danceclubk"] = {
         "anim@amb@nightclub_island@dancers@crowddance_facedj@",
         "mi_dance_facedj_15_v2_male^4",
-        "Dance Club 11 ",
+        "Dance Club 11",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2048,7 +2048,7 @@ RP.Dances = {
     ["danceclubm"] = {
         "anim@amb@nightclub_island@dancers@crowddance_facedj@",
         "hi_dance_facedj_hu_15_v2_male^5",
-        "Dance Club 13 ",
+        "Dance Club 13",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2056,7 +2056,7 @@ RP.Dances = {
     ["danceclubn"] = {
         "anim@amb@nightclub_island@dancers@crowddance_facedj@",
         "hi_dance_facedj_hu_17_male^5",
-        "Dance Club 14 ",
+        "Dance Club 14",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2064,7 +2064,7 @@ RP.Dances = {
     ["danceclubo"] = {
         "anim@amb@nightclub@mini@dance@dance_solo@shuffle@",
         "high_center",
-        "Dance Club 15 ",
+        "Dance Club 15",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2072,7 +2072,7 @@ RP.Dances = {
     ["danceclubp"] = {
         "anim@amb@nightclub@mini@dance@dance_solo@shuffle@",
         "high_left_down",
-        "Dance Club 16 ",
+        "Dance Club 16",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2864,7 +2864,7 @@ RP.Dances = {
     ["dancemonkey"] = {
         "anim@amb@nightclub@mini@dance@dance_solo@techno_monkey@",
         "high_center",
-        "Monkey Dance  ",
+        "Monkey Dance",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2872,7 +2872,7 @@ RP.Dances = {
     ["dancemonkey2"] = {
         "anim@amb@nightclub@mini@dance@dance_solo@techno_monkey@",
         "high_center_down",
-        "Monkey Dance 2  ",
+        "Monkey Dance 2",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2880,7 +2880,7 @@ RP.Dances = {
     ["dancemonkey3"] = {
         "anim@amb@nightclub@mini@dance@dance_solo@techno_monkey@",
         "med_center_down",
-        "Monkey Dance 3  ",
+        "Monkey Dance 3",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2888,7 +2888,7 @@ RP.Dances = {
     ["boxdance"] = {
         "anim@amb@nightclub@mini@dance@dance_solo@beach_boxing@",
         "med_right_down",
-        "Boxing Dance Solo  ",
+        "Boxing Dance Solo",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2896,7 +2896,7 @@ RP.Dances = {
     ["dancehiphop"] = {
         "anim@amb@nightclub@mini@dance@dance_paired@dance_d@",
         "ped_a_dance_idle",
-        "Hip Hop Dance ",
+        "Hip Hop Dance",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2904,7 +2904,7 @@ RP.Dances = {
     ["dancehiphop2"] = {
         "anim@amb@nightclub@mini@dance@dance_paired@dance_b@",
         "ped_a_dance_idle",
-        "Hip Hop Dance 2 ",
+        "Hip Hop Dance 2",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -2912,7 +2912,7 @@ RP.Dances = {
     ["dancehiphop3"] = {
         "anim@amb@nightclub@mini@dance@dance_paired@dance_a@",
         "ped_a_dance_idle",
-        "Hip Hop Dance 3 ",
+        "Hip Hop Dance 3",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -3065,7 +3065,7 @@ RP.Dances = {
     ["dancepridee"] = {
         "anim@amb@nightclub@lazlow@hi_railing@",
         "ambclub_09_mi_hi_bellydancer_laz",
-        "Dance Pride E - Transgender ",
+        "Dance Pride E - Transgender",
         AnimationOptions = {
             Prop = 'lilprideflag6', -- Transgender
             PropBone = 18905,
@@ -8300,7 +8300,7 @@ RP.Emotes = {
     ["bang"] = {
         "anim@mp_player_intcelebrationfemale@bang_bang",
         "bang_bang",
-        "Bang Bang ",
+        "Bang Bang",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteDuration = 2500
@@ -8309,7 +8309,7 @@ RP.Emotes = {
     ["checkcar"] = {
         "anim@amb@carmeet@checkout_car@male_a@idles",
         "idle_b",
-        "Check Out · Female ",
+        "Check Out · Female",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -8317,7 +8317,7 @@ RP.Emotes = {
     ["checkcar2"] = {
         "anim@amb@carmeet@checkout_car@male_c@idles",
         "idle_a",
-        "Check Out 2 · Male ",
+        "Check Out 2 · Male",
         AnimationOptions = {
             EmoteLoop = true
         }
@@ -8325,7 +8325,7 @@ RP.Emotes = {
     ["showboobs"] = {
         "mini@strip_club@backroom@",
         "stripper_b_backroom_idle_b",
-        "Show Boobs ",
+        "Show Boobs",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteDuration = 6000,
@@ -8345,7 +8345,7 @@ RP.Emotes = {
     ["watchstripper"] = {
         "amb@world_human_strip_watch_stand@male_c@idle_a",
         "idle_b",
-        "Watch Stripper ",
+        "Watch Stripper",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteDuration = 6000,
@@ -8944,7 +8944,7 @@ RP.Emotes = {
     ["relax"] = {
         "lying@on_grass",
         "base",
-        "Relax ",
+        "Relax",
         AnimationOptions = {
             EmoteLoop = true,
             NotInVehicle = true,
@@ -12850,7 +12850,7 @@ RP.PropEmotes = {
     ["guitarcarry3"] = {
         "move_weapon@jerrycan@generic",
         "idle",
-        "Guitar Carry Electric ",
+        "Guitar Carry Electric",
         AnimationOptions = {
             Prop = "prop_el_guitar_01",
             PropBone = 28422,
@@ -12869,7 +12869,7 @@ RP.PropEmotes = {
     ["guitarcarry4"] = {
         "move_weapon@jerrycan@generic",
         "idle",
-        "Guitar Carry Electric 2 ",
+        "Guitar Carry Electric 2",
         AnimationOptions = {
             Prop = "prop_el_guitar_02",
             PropBone = 28422,
@@ -12888,7 +12888,7 @@ RP.PropEmotes = {
     ["guitarcarry5"] = {
         "move_weapon@jerrycan@generic",
         "idle",
-        "Guitar Carry Electric 3 ",
+        "Guitar Carry Electric 3",
         AnimationOptions = {
             Prop = "prop_el_guitar_03",
             PropBone = 28422,
@@ -12907,7 +12907,7 @@ RP.PropEmotes = {
     ["guitarcarry6"] = {
         "move_weapon@jerrycan@generic",
         "idle",
-        "Guitar Carry Electric 4 ",
+        "Guitar Carry Electric 4",
         AnimationOptions = {
             Prop = "vw_prop_casino_art_guitar_01a",
             PropBone = 28422,
@@ -12926,7 +12926,7 @@ RP.PropEmotes = {
     ["guitarcarry7"] = {
         "move_weapon@jerrycan@generic",
         "idle",
-        "Guitar Carry Electric 5 ",
+        "Guitar Carry Electric 5",
         AnimationOptions = {
             Prop = "sf_prop_sf_el_guitar_02a",
             PropBone = 28422,
@@ -13246,14 +13246,71 @@ RP.PropEmotes = {
         "Beg",
         AnimationOptions = {
             Prop = 'prop_beggers_sign_03',
-            PropBone = 58868,
+            PropBone = 28422,
             PropPlacement = {
-                0.19,
-                0.18,
                 0.0,
-                5.0,
                 0.0,
-                40.0
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["beg2"] = {
+        "amb@world_human_bum_freeway@male@base",
+        "base",
+        "Beg 2",
+        AnimationOptions = {
+            Prop = 'prop_beggers_sign_01',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["beg3"] = {
+        "amb@world_human_bum_freeway@male@base",
+        "base",
+        "Beg 3",
+        AnimationOptions = {
+            Prop = 'prop_beggers_sign_02',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0800,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["beg4"] = {
+        "amb@world_human_bum_freeway@male@base",
+        "base",
+        "Beg 4",
+        AnimationOptions = {
+            Prop = 'prop_beggers_sign_04',
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0,
+                0.0800,
+                0.0,
+                0.0,
+                0.0
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -14011,7 +14068,7 @@ RP.PropEmotes = {
     ["protest2"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Protest 2 - Pride ",
+        "Protest 2 - Pride",
         AnimationOptions = {
             Prop = "pride_sign_01",
             PropBone = 57005,
@@ -14324,7 +14381,7 @@ RP.PropEmotes = {
     ["ssign"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Stop Sign ",
+        "Steal Stop Sign",
         AnimationOptions = {
             Prop = "prop_sign_road_01a",
             PropBone = 60309,
@@ -14343,7 +14400,7 @@ RP.PropEmotes = {
     ["ssign2"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Yield Sign ",
+        "Steal Yield Sign",
         AnimationOptions = {
             Prop = "prop_sign_road_02a",
             PropBone = 60309,
@@ -14362,7 +14419,7 @@ RP.PropEmotes = {
     ["ssign3"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Hospital Sign ",
+        "Steal Hospital Sign",
         AnimationOptions = {
             Prop = "prop_sign_road_03d",
             PropBone = 60309,
@@ -14381,7 +14438,7 @@ RP.PropEmotes = {
     ["ssign4"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Parking Sign ",
+        "Steal Parking Sign",
         AnimationOptions = {
             Prop = "prop_sign_road_04a",
             PropBone = 60309,
@@ -14400,7 +14457,7 @@ RP.PropEmotes = {
     ["ssign5"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Parking Sign 2 ",
+        "Steal Parking Sign 2",
         AnimationOptions = {
             Prop = "prop_sign_road_04w",
             PropBone = 60309,
@@ -14419,7 +14476,7 @@ RP.PropEmotes = {
     ["ssign6"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Pedestrian Sign ",
+        "Steal Pedestrian Sign",
         AnimationOptions = {
             Prop = "prop_sign_road_05a",
             PropBone = 60309,
@@ -14438,7 +14495,7 @@ RP.PropEmotes = {
     ["ssign7"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Street Sign ",
+        "Steal Street Sign",
         AnimationOptions = {
             Prop = "prop_sign_road_05t",
             PropBone = 60309,
@@ -14457,7 +14514,7 @@ RP.PropEmotes = {
     ["ssign8"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Freeway Sign ",
+        "Steal Freeway Sign",
         AnimationOptions = {
             Prop = "prop_sign_freewayentrance",
             PropBone = 60309,
@@ -14476,7 +14533,7 @@ RP.PropEmotes = {
     ["ssign9"] = {
         "rcmnigel1d",
         "base_club_shoulder",
-        "Steal Stop Sign Snow ",
+        "Steal Stop Sign Snow",
         AnimationOptions = {
             Prop = "prop_snow_sign_road_01a",
             PropBone = 60309,
@@ -14495,7 +14552,7 @@ RP.PropEmotes = {
     ["conehead"] = {
         "move_m@drunk@verydrunk_idles@",
         "fidget_07",
-        "Cone Head ",
+        "Cone Head",
         AnimationOptions = {
             Prop = "prop_roadcone02b",
             PropBone = 31086,
