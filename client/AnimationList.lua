@@ -5153,12 +5153,13 @@ RP.Exits = {
             StartDelay = 600
         }
     },
-    ["meditateup"] = {
-        "rcmcollect_paperleadinout@",
-        "meditate_getup",
-        "Meditate Get Up",
+    ["standup"] = {
+        "get_up@directional@movement@from_knees@injured",
+        "getup_l_0",
+        "Stand Up",
         AnimationOptions = {
-            EmoteDuration = 2000
+            EmoteDuration = 2000,
+            StartDelay = 600
         }
     },
     ["surrender_exit"] = {
@@ -5392,7 +5393,7 @@ RP.Emotes = {
     -- Sitchair is a litte special, since you want the player to be seated correctly.
     -- So we set it as "ScenarioObject" and do TaskStartScenarioAtPosition() instead of "AtPlace"
     ["sitchair"] = {
-        "ScenarioObject",
+        "Scenario",
         "PROP_HUMAN_SEAT_CHAIR_MP_PLAYER",
         "Sit Chair"
     },
@@ -6470,7 +6471,8 @@ RP.Emotes = {
         "Meditiate",
         AnimationOptions = {
             EmoteLoop = true,
-            ExitEmote = "meditateup",
+            StartDelay = 300,
+            ExitEmote = "standup",
             ExitEmoteType = "Exits"
         }
     },
@@ -6480,7 +6482,8 @@ RP.Emotes = {
         "Meditiate 2",
         AnimationOptions = {
             EmoteLoop = true,
-            ExitEmote = "meditateup",
+            StartDelay = 300,
+            ExitEmote = "standup",
             ExitEmoteType = "Exits"
         }
     },
@@ -6490,7 +6493,8 @@ RP.Emotes = {
         "Meditiate 3",
         AnimationOptions = {
             EmoteLoop = true,
-            ExitEmote = "meditateup",
+            StartDelay = 300,
+            ExitEmote = "standup",
             ExitEmoteType = "Exits"
         }
     },
@@ -8818,8 +8822,10 @@ RP.Emotes = {
         "pose_sport_005",
         "Gym Pose 2 - One Handed Push Up",
         AnimationOptions = {
-
-            EmoteLoop = true
+            EmoteLoop = true,
+            StartDelay = 550,
+            ExitEmote = "standup",
+            ExitEmoteType = "Exits"
         }
     },
     ["gympose3"] = { -- Custom Female Emote By Frabi
@@ -8827,19 +8833,28 @@ RP.Emotes = {
         "fem_pose_sport_004",
         "Gym Pose 3 - Planking Pose",
         AnimationOptions = {
-
-            EmoteLoop = true
+            EmoteLoop = true,
+            StartDelay = 550,
+            ExitEmote = "standup",
+            ExitEmoteType = "Exits"
         }
     },
     ["gympose4"] = { -- Custom Female Emote By Frabi
         "frabi@femalepose@solo@firstsport",
         "fem_pose_sport_005",
         "Gym Pose 4 - Sit Ups Pose",
-        AnimationOptions = {
+         AnimationOptions = {
             EmoteLoop = true,
+            StartDelay = 510,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
         }
     },
+    
+    
     -- CASINO DLC EMOTES (Requires gamebuild 2060 or higher)
+    
+    
     ["karate"] = {
         "anim@mp_player_intcelebrationfemale@karate_chops",
         "karate_chops",
@@ -9416,6 +9431,25 @@ RP.PropEmotes = {
                 -145.0,
                 290.0,
                 0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["crate"] = {
+        "anim@heists@box_carry@",
+        "idle",
+        "Crate",
+        AnimationOptions = {
+            Prop = "prop_cs_lester_crate",
+            PropBone = 57005,
+            PropPlacement = {
+                0.1700,
+               -0.2100,
+               -0.2300,
+              -60.1799,
+              -97.1915,
+                0.4740,
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -10219,7 +10253,7 @@ RP.PropEmotes = {
                 0.0,
                 90.00,
                 0.0,
-                -90.00
+              -90.00
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -10238,7 +10272,7 @@ RP.PropEmotes = {
                 0.0,
                 90.00,
                 0.0,
-                -90.00
+              -90.00
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -10257,7 +10291,26 @@ RP.PropEmotes = {
                 0.0,
                 90.00,
                 0.0,
-                -90.00
+              -90.00
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+     },
+    ["cashbox"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Cash Box",
+        AnimationOptions = {
+            Prop = "m23_1_prop_m31_cashbox_01a",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0550,
+                0.0090,
+               -0.0100,
+                90.00,
+                0.0,
+              -81.0000
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -17807,6 +17860,25 @@ RP.PropEmotes = {
                 -100.00,
                 -180.00,
                 -78.00
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+     },
+    ["medbox"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Medic Box",
+        AnimationOptions = {
+            Prop = "xm_prop_smug_crate_s_medical",
+            PropBone = 28422,
+            PropPlacement = {
+                0.2500,
+                0.0200,
+               -0.0100,
+               90.0000,
+                0.0000,
+              -81.9999
             },
             EmoteLoop = true,
             EmoteMoving = true
