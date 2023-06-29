@@ -582,7 +582,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
         return EmoteChatMessage(Config.Languages[lang]['in_a_vehicle'])
     end
 
-    if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
+    if ChosenAnimOptions and ChosenAnimOptions.ExitEmote and animOption and animOption.ExitEmote then
         if not (animOption and ChosenAnimOptions.ExitEmote == animOption.ExitEmote) and RP.Exits[ChosenAnimOptions.ExitEmote][2] ~= EmoteName[2] then
             return
         end
