@@ -6566,10 +6566,6 @@ RP.Emotes = {
         "re@construction",
         "out_of_breath",
         "Out of Breath",
-        AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
     },
     ["pickup"] = {
         "random@domestic",
@@ -9436,25 +9432,6 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["crate"] = {
-        "anim@heists@box_carry@",
-        "idle",
-        "Crate",
-        AnimationOptions = {
-            Prop = "prop_cs_lester_crate",
-            PropBone = 57005,
-            PropPlacement = {
-                0.1700,
-               -0.2100,
-               -0.2300,
-              -60.1799,
-              -97.1915,
-                0.4740,
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
     ["gift"] = {
         "hold_flowers@dad", --- Custom Animation By Darks Animations
         "hold_flowers_clip",
@@ -9764,6 +9741,25 @@ RP.PropEmotes = {
                 -100.0,
                 0.0,
                 -20.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+     },
+    ["dollar"] = {
+        "anim@heists@humane_labs@finale@keycards",
+        "ped_a_enter_loop",
+        "Dollar",
+        AnimationOptions = {
+            Prop = "p_banknote_onedollar_s",
+            PropBone = 60309,
+            PropPlacement = {
+               -0.0020,
+               -0.0030,
+                0.0320,
+               82.2434,
+             -106.9746,
+                1.3733
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -11308,20 +11304,38 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["eat"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Eat",
+        AnimationOptions = {
+            Prop = 'prop_cs_burger_01',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0000,
+                0.0000,
+               -0.0200,
+               30.0000,
+                0.0000,
+                0.0000,
+            },
+            EmoteMoving = true
+        }
+    },
     ["burger"] = {
         "mp_player_inteat@burger",
         "mp_player_int_eat_burger",
         "Burger",
         AnimationOptions = {
             Prop = 'prop_cs_burger_01',
-            PropBone = 18905,
+            PropBone = 60309,
             PropPlacement = {
-                0.13,
-                0.05,
-                0.02,
-                -50.0,
-                16.0,
-                60.0
+                0.0000,
+                0.0000,
+               -0.0200,
+               30.0000,
+                0.0000,
+                0.0000,
             },
             EmoteMoving = true
         }
@@ -19239,24 +19253,6 @@ RP.PropEmotes = {
         },
         AdultAnimation = true
     },
-    ["eat"] = {
-        "mp_player_inteat@burger",
-        "mp_player_int_eat_burger",
-        "Eat",
-        AnimationOptions = {
-            Prop = 'prop_cs_burger_01',
-            PropBone = 18905,
-            PropPlacement = {
-                0.13,
-                0.05,
-                0.02,
-                -50.0,
-                16.0,
-                60.0
-            },
-            EmoteMoving = true
-        }
-    },
     ["drink"] = {
         "mp_player_intdrink",
         "loop_bottle",
@@ -20445,12 +20441,12 @@ RP.PropEmotes = {
             SecondProp = 'prop_cs_burger_01',
             SecondPropBone = 60309,
             SecondPropPlacement = {
-                0.1240,
-                0.0230,
-                0.0520,
-              89.8585,
-             -179.9282,
-              -39.9999
+                0.0860,
+                0.0030,
+                0.0570,
+              106.1459,
+                8.0371,
+              17.0945
             },
             EmoteLoop = true,
             EmoteMoving = true
