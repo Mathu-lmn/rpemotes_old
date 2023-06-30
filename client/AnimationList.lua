@@ -8959,6 +8959,7 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             NotInVehicle = true,
+            StartDelay = 800,
             ExitEmote = "getup",
             ExitEmoteType = "Exits"
         }
@@ -8970,6 +8971,7 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             NotInVehicle = true,
+            StartDelay = 800,
             ExitEmote = "getup",
             ExitEmoteType = "Exits"
         }
