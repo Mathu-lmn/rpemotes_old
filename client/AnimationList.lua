@@ -13775,6 +13775,25 @@ RP.PropEmotes = {
             PtfxWait = 200
         }
      },
+    ["camera6"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Camera 6 - Carry News Camera",
+        AnimationOptions = {
+            Prop = "prop_v_cam_01",
+            PropBone = 28422,
+            PropPlacement = {
+                0.2100,
+                0.0300,
+               -0.0100,
+               90.0000,
+              176.0000,
+               79.9999
+            },
+            EmoteLoop = false,
+            EmoteMoving = true,
+        }
+    },
     ["champagnespray"] = {
         "anim@mp_player_intupperspray_champagne",
         "idle_a",
