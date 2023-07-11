@@ -9355,7 +9355,7 @@ RP.Emotes = {
     ["aslimgood"] = {
         "ebrwny_sign",
         "ebrwny_imgood",
-        "ASL I am Good 🇺🇸",
+        "ASL I Am Good 🇺🇸",
         AnimationOptions = {
             EmoteMoving = true,
             EmoteDuration = 3940
@@ -9364,7 +9364,7 @@ RP.Emotes = {
     ["aslcya"] = {
         "ebrwny_sign",
         "ebrwny_seeya",
-        "ASL See ya 🇺🇸",
+        "ASL See Ya 🇺🇸",
         AnimationOptions = {
             EmoteMoving = true,
             EmoteDuration = 1200
