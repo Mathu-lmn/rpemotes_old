@@ -5389,14 +5389,6 @@ RP.Emotes = {
         "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
         "Record"
     },
-
-    -- Sitchair is a litte special, since you want the player to be seated correctly.
-    -- So we set it as "ScenarioObject" and do TaskStartScenarioAtPosition() instead of "AtPlace"
-    ["sitchair"] = {
-        "Scenario",
-        "PROP_HUMAN_SEAT_CHAIR_MP_PLAYER",
-        "Sit Chair"
-    },
     ["smoke"] = {
         "Scenario",
         "WORLD_HUMAN_SMOKING",
@@ -6924,6 +6916,16 @@ RP.Emotes = {
             ExitEmoteType = "Exits"
         }
     },
+    ["sitchair"] = {
+        "timetable@ron@ig_3_couch",
+        "base",
+        "Sit Chair",
+        AnimationOptions = {
+            EmoteLoop = true,
+            ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
+        }
+    },
     ["sitchair2"] = {
         "timetable@ron@ig_5_p3",
         "ig_5_p3_base",
@@ -6945,9 +6947,9 @@ RP.Emotes = {
         }
     },
     ["sitchair4"] = {
-        "timetable@ron@ig_3_couch",
-        "base",
-        "Sit Chair 4",
+        "timetable@ron@ron_ig_2_alt1",
+        "ig_2_alt1_base",
+        "Sit Chair 4 - Side",
         AnimationOptions = {
             EmoteLoop = true,
             ExitEmote = "offchair",
@@ -6968,16 +6970,6 @@ RP.Emotes = {
         "timetable@maid@couch@",
         "base",
         "Sit Chair Lean Back",
-        AnimationOptions = {
-            EmoteLoop = true,
-            ExitEmote = "offchair",
-            ExitEmoteType = "Exits"
-        }
-    },
-    ["sitchairside"] = {
-        "timetable@ron@ron_ig_2_alt1",
-        "ig_2_alt1_base",
-        "Sit Chair Side",
         AnimationOptions = {
             EmoteLoop = true,
             ExitEmote = "offchair",
