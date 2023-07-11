@@ -2,12 +2,16 @@
 -- If an emote does not work, you may be on an older gamebuild. --
 -- To get a higher gamebuild, see ReadMe on github repository --
 
+--- RPEmotes by TayMcKenzieNZ, Mathu_lmn and MadsL, maintained by TayMcKenzieNZ ---
+--- Download OFFICIAL version and updates ONLY at https://github.com/TayMcKenzieNZ/rpemotes ---
+--- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
+
 
 RP = {}
 
 -- EXPRESSIONS --
 
-RP.Expressions = {
+RP.Expressions = { ---- MOODS ----
     ["Aiming"] = {
         "mood_aiming_1"
     },
@@ -6505,8 +6509,8 @@ RP.Emotes = {
         "fail",
         "No",
         AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            EmoteDuration = 4000
         }
     },
     ["no2"] = {
@@ -6514,8 +6518,8 @@ RP.Emotes = {
         "mp_player_int_nod_no",
         "No 2",
         AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            EmoteDuration = 1000
         }
     },
     ["nosepick"] = {
@@ -9328,6 +9332,51 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             EmoteMoving = true
+        }
+    },
+    ["aslyes"] = {
+        "ebrwny_sign",
+        "ebrwny_yes",
+        "ASL Yes 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 1030
+        }
+    },
+    ["aslno"] = {
+        "ebrwny_sign",
+        "ebrwny_no",
+        "ASL No 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 2080
+        }
+    },
+    ["aslimgood"] = {
+        "ebrwny_sign",
+        "ebrwny_imgood",
+        "ASL I am Good 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 3940
+        }
+    },
+    ["aslcya"] = {
+        "ebrwny_sign",
+        "ebrwny_seeya",
+        "ASL See ya 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 1200
+        }
+    },
+    ["aslwhat"] = {
+        "ebrwny_sign",
+        "ebrwny_what",
+        "ASL What 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 1480
         }
     },
 }
