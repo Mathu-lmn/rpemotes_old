@@ -1812,7 +1812,7 @@ Config.Languages = {
         ['in_a_vehicle'] = "Anda hanya dapat memainkan animasi ini saat berada di dalam kendaraan :no_pedestrians:",
         ['no_anim_crawling'] = "Anda tidak dapat memutar animasi sambil merayap"
 		},
-	['alb'] = {
+	['sq'] = {
 		['emotes'] = 'Emotet 🎬',
 		['danceemotes'] = "🕺 Emotet e Kërcimit",
 		['animalemotes'] = "🐩 Emotet e Kafshëve",
