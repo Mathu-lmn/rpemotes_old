@@ -34,6 +34,8 @@ RpEmotes is a community driven FiveM emote menu allowing players to express them
 
 # Available in 🌏
 
+* Albanian 🇦🇱
+
 * Brazilian Portuguese 🇧🇷
 
 * Chinese Simplified 🇨🇳
