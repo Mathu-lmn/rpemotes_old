@@ -2,12 +2,16 @@
 -- If an emote does not work, you may be on an older gamebuild. --
 -- To get a higher gamebuild, see ReadMe on github repository --
 
+--- RPEmotes by TayMcKenzieNZ, Mathu_lmn and MadsL, maintained by TayMcKenzieNZ ---
+--- Download OFFICIAL version and updates ONLY at https://github.com/TayMcKenzieNZ/rpemotes ---
+--- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
+
 
 RP = {}
 
 -- EXPRESSIONS --
 
-RP.Expressions = {
+RP.Expressions = { ---- MOODS ----
     ["Aiming"] = {
         "mood_aiming_1"
     },
@@ -5389,14 +5393,6 @@ RP.Emotes = {
         "WORLD_HUMAN_MOBILE_FILM_SHOCKING",
         "Record"
     },
-
-    -- Sitchair is a litte special, since you want the player to be seated correctly.
-    -- So we set it as "ScenarioObject" and do TaskStartScenarioAtPosition() instead of "AtPlace"
-    ["sitchair"] = {
-        "Scenario",
-        "PROP_HUMAN_SEAT_CHAIR_MP_PLAYER",
-        "Sit Chair"
-    },
     ["smoke"] = {
         "Scenario",
         "WORLD_HUMAN_SMOKING",
@@ -6513,8 +6509,8 @@ RP.Emotes = {
         "fail",
         "No",
         AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            EmoteDuration = 4000
         }
     },
     ["no2"] = {
@@ -6522,8 +6518,8 @@ RP.Emotes = {
         "mp_player_int_nod_no",
         "No 2",
         AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            EmoteDuration = 1000
         }
     },
     ["nosepick"] = {
@@ -6566,10 +6562,6 @@ RP.Emotes = {
         "re@construction",
         "out_of_breath",
         "Out of Breath",
-        AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
     },
     ["pickup"] = {
         "random@domestic",
@@ -6928,6 +6920,16 @@ RP.Emotes = {
             ExitEmoteType = "Exits"
         }
     },
+    ["sitchair"] = {
+        "timetable@ron@ig_3_couch",
+        "base",
+        "Sit Chair",
+        AnimationOptions = {
+            EmoteLoop = true,
+            ExitEmote = "offchair",
+            ExitEmoteType = "Exits"
+        }
+    },
     ["sitchair2"] = {
         "timetable@ron@ig_5_p3",
         "ig_5_p3_base",
@@ -6949,9 +6951,9 @@ RP.Emotes = {
         }
     },
     ["sitchair4"] = {
-        "timetable@ron@ig_3_couch",
-        "base",
-        "Sit Chair 4",
+        "timetable@ron@ron_ig_2_alt1",
+        "ig_2_alt1_base",
+        "Sit Chair 4 - Side",
         AnimationOptions = {
             EmoteLoop = true,
             ExitEmote = "offchair",
@@ -6972,16 +6974,6 @@ RP.Emotes = {
         "timetable@maid@couch@",
         "base",
         "Sit Chair Lean Back",
-        AnimationOptions = {
-            EmoteLoop = true,
-            ExitEmote = "offchair",
-            ExitEmoteType = "Exits"
-        }
-    },
-    ["sitchairside"] = {
-        "timetable@ron@ron_ig_2_alt1",
-        "ig_2_alt1_base",
-        "Sit Chair Side",
         AnimationOptions = {
             EmoteLoop = true,
             ExitEmote = "offchair",
@@ -8963,6 +8955,7 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             NotInVehicle = true,
+            StartDelay = 800,
             ExitEmote = "getup",
             ExitEmoteType = "Exits"
         }
@@ -8974,6 +8967,7 @@ RP.Emotes = {
         AnimationOptions = {
             EmoteLoop = true,
             NotInVehicle = true,
+            StartDelay = 800,
             ExitEmote = "getup",
             ExitEmoteType = "Exits"
         }
@@ -9340,6 +9334,51 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
+    ["aslyes"] = {
+        "ebrwny_sign",
+        "ebrwny_yes",
+        "ASL Yes 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 1030
+        }
+    },
+    ["aslno"] = {
+        "ebrwny_sign",
+        "ebrwny_no",
+        "ASL No 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 2080
+        }
+    },
+    ["aslimgood"] = {
+        "ebrwny_sign",
+        "ebrwny_imgood",
+        "ASL I Am Good 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 3940
+        }
+    },
+    ["aslcya"] = {
+        "ebrwny_sign",
+        "ebrwny_seeya",
+        "ASL See Ya 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 1200
+        }
+    },
+    ["aslwhat"] = {
+        "ebrwny_sign",
+        "ebrwny_what",
+        "ASL What 🇺🇸",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteDuration = 1480
+        }
+    },
 }
 
 --- PROP EMOTES GO HERE. CURRENTLY SUPPORTS UP TO 2 PROPS  ---
@@ -9431,25 +9470,6 @@ RP.PropEmotes = {
                 -145.0,
                 290.0,
                 0.0
-            },
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
-    ["crate"] = {
-        "anim@heists@box_carry@",
-        "idle",
-        "Crate",
-        AnimationOptions = {
-            Prop = "prop_cs_lester_crate",
-            PropBone = 57005,
-            PropPlacement = {
-                0.1700,
-               -0.2100,
-               -0.2300,
-              -60.1799,
-              -97.1915,
-                0.4740,
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -9764,6 +9784,25 @@ RP.PropEmotes = {
                 -100.0,
                 0.0,
                 -20.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+     },
+    ["dollar"] = {
+        "anim@heists@humane_labs@finale@keycards",
+        "ped_a_enter_loop",
+        "Dollar",
+        AnimationOptions = {
+            Prop = "p_banknote_onedollar_s",
+            PropBone = 60309,
+            PropPlacement = {
+               -0.0020,
+               -0.0030,
+                0.0320,
+               82.2434,
+             -106.9746,
+                1.3733
             },
             EmoteLoop = true,
             EmoteMoving = true
@@ -11308,20 +11347,38 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["eat"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Eat",
+        AnimationOptions = {
+            Prop = 'prop_cs_burger_01',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0000,
+                0.0000,
+               -0.0200,
+               30.0000,
+                0.0000,
+                0.0000,
+            },
+            EmoteMoving = true
+        }
+    },
     ["burger"] = {
         "mp_player_inteat@burger",
         "mp_player_int_eat_burger",
         "Burger",
         AnimationOptions = {
             Prop = 'prop_cs_burger_01',
-            PropBone = 18905,
+            PropBone = 60309,
             PropPlacement = {
-                0.13,
-                0.05,
-                0.02,
-                -50.0,
-                16.0,
-                60.0
+                0.0000,
+                0.0000,
+               -0.0200,
+               30.0000,
+                0.0000,
+                0.0000,
             },
             EmoteMoving = true
         }
@@ -13759,6 +13816,25 @@ RP.PropEmotes = {
             PtfxWait = 200
         }
      },
+    ["camera6"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Camera 6 - Carry News Camera",
+        AnimationOptions = {
+            Prop = "prop_v_cam_01",
+            PropBone = 28422,
+            PropPlacement = {
+                0.2100,
+                0.0300,
+               -0.0100,
+               90.0000,
+              176.0000,
+               79.9999
+            },
+            EmoteLoop = false,
+            EmoteMoving = true,
+        }
+    },
     ["champagnespray"] = {
         "anim@mp_player_intupperspray_champagne",
         "idle_a",
@@ -19239,24 +19315,6 @@ RP.PropEmotes = {
         },
         AdultAnimation = true
     },
-    ["eat"] = {
-        "mp_player_inteat@burger",
-        "mp_player_int_eat_burger",
-        "Eat",
-        AnimationOptions = {
-            Prop = 'prop_cs_burger_01',
-            PropBone = 18905,
-            PropPlacement = {
-                0.13,
-                0.05,
-                0.02,
-                -50.0,
-                16.0,
-                60.0
-            },
-            EmoteMoving = true
-        }
-    },
     ["drink"] = {
         "mp_player_intdrink",
         "loop_bottle",
@@ -20445,12 +20503,12 @@ RP.PropEmotes = {
             SecondProp = 'prop_cs_burger_01',
             SecondPropBone = 60309,
             SecondPropPlacement = {
-                0.1240,
-                0.0230,
-                0.0520,
-              89.8585,
-             -179.9282,
-              -39.9999
+                0.0860,
+                0.0030,
+                0.0570,
+              106.1459,
+                8.0371,
+              17.0945
             },
             EmoteLoop = true,
             EmoteMoving = true

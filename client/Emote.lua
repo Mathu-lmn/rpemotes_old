@@ -1,3 +1,9 @@
+--- RPEmotes by TayMcKenzieNZ, Mathu_lmn and MadsL, maintained by TayMcKenzieNZ ---
+--- Download OFFICIAL version and updates ONLY at https://github.com/TayMcKenzieNZ/rpemotes ---
+--- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
+
+
+
 -- You probably shouldnt touch these.
 local AnimationDuration = -1
 local ChosenAnimation = ""
@@ -582,7 +588,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
         return EmoteChatMessage(Config.Languages[lang]['in_a_vehicle'])
     end
 
-    if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
+    if ChosenAnimOptions and ChosenAnimOptions.ExitEmote and animOption and animOption.ExitEmote then
         if not (animOption and ChosenAnimOptions.ExitEmote == animOption.ExitEmote) and RP.Exits[ChosenAnimOptions.ExitEmote][2] ~= EmoteName[2] then
             return
         end
