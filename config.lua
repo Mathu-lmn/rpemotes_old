@@ -34,7 +34,7 @@ Config = {
     -- You can change the name of the menu here or leave it blank to remove the text in front of the custom banners
     MenuTitle = "",
     -- You can change the menu position here
-    MenuPosition = "right", -- (left, right)
+    MenuPosition = "left", -- (left, right)
     -- You can enable or disable the Ragdoll keybinding here.
     RagdollEnabled = false,
     RagdollKeybind = 'u', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
@@ -94,6 +94,8 @@ Config = {
     AllowVisionsToggling = true,
     -- If set to true, the /newscam command will be enabled.
     NewscamEnabled = true,
+    -- When set to true, will show a clone of the player to preview the animations
+    EmotePreview = true,
     -- Check for updates
     CheckForUpdates = true,
 }
