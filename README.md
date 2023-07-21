@@ -676,3 +676,7 @@ A huge thank you to the following people for their amazing contributions made to
 You pay a big role in making this script what it is today and we could not do it without you 🙏
 
 -------------------------------------------------------------------------------
+
+# Our Wiki 📜
+
+The official RPEmotes wiki docs can be accessed [here](https://docs.rpemotes.com/)
