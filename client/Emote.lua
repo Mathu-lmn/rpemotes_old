@@ -134,7 +134,6 @@ Citizen.CreateThread(function()
     TriggerEvent('chat:addSuggestion', '/emotemenu', 'Open rpemotes menu (F4) by default. This may differ from server to server.')
     TriggerEvent('chat:addSuggestion', '/emotes', 'List available emotes.')
     TriggerEvent('chat:addSuggestion', '/emotecancel', 'Cancel currently playing emote.')
-    TriggerEvent('chat:addSuggestion', '/handsup', 'Put your arms up.')
 end)
 
 RegisterCommand('e', function(source, args, raw) EmoteCommandStart(source, args, raw) end, false)
@@ -151,6 +150,35 @@ else
 end
 RegisterCommand('emotes', function() EmotesOnCommand() end, false)
 RegisterCommand('emotecancel', function() EmoteCancel() end, false)
+
+local disableHandsupControls = {
+    [24] = true,  -- INPUT_ATTACK
+    [25] = true,  -- INPUT_AIM
+    [36] = true,  -- INPUT_DUCK
+    [37] = true,  -- INPUT_SELECT_WEAPON
+    [44] = true,  -- INPUT_COVER
+    [45] = true,  -- INPUT_RELOAD
+    [47] = true,  -- INPUT_DETONATE
+    [140] = true, -- INPUT_MELEE_ATTACK_LIGHT
+    [141] = true, -- INPUT_MELEE_ATTACK_HEAVY
+    [142] = true, -- INPUT_MELEE_ATTACK_ALTERNATE
+    [143] = true, -- INPUT_MELEE_BLOCK
+    [257] = true, -- INPUT_ATTACK2
+    [263] = true, -- INPUT_MELEE_ATTACK1
+    [264] = true, -- INPUT_MELEE_ATTACK2
+}
+
+local function DisableHandsupControlActions()
+    CreateThread(function()
+        while inHandsup do
+            for control, state in pairs(disableHandsupControls) do
+                DisableControlAction(0, control, state)
+            end
+            Wait(0)
+        end
+    end)
+end
+
 if Config.HandsupEnabled then
     RegisterCommand('handsup', function()
         if IsPedInAnyVehicle(PlayerPedId(), false) and not Config.HandsupKeybindInCarEnabled and not inHandsup then
@@ -159,7 +187,6 @@ if Config.HandsupEnabled then
 
         Handsup()
     end, false)
-
 
     function Handsup()
         inHandsup = not inHandsup
@@ -173,6 +200,7 @@ if Config.HandsupEnabled then
             RequestAnimDict(dict)
             while not HasAnimDictLoaded(dict) do Wait(1) end
             TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.0, 2.0, -1, 49, 0, false, false, false)
+            DisableHandsupControlActions()
         else
             ClearPedSecondaryTask(PlayerPedId())
             if Config.PersistentEmoteAfterHandsup and IsInAnimation then
@@ -194,6 +222,8 @@ if Config.HandsupEnabled then
             end
         end
     end
+
+    TriggerEvent('chat:addSuggestion', '/handsup', 'Put your arms up.')
 
     if Config.HandsupKeybindEnabled then
         RegisterKeyMapping("handsup", "Put your arms up", "keyboard", Config.HandsupKeybind)
