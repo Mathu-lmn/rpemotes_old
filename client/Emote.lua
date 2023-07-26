@@ -195,6 +195,10 @@ if Config.HandsupEnabled then
     end, false)
 
     function Handsup()
+        if IsProne then
+            return
+        end
+
         inHandsup = not inHandsup
         if inHandsup then
             DestroyAllProps()
