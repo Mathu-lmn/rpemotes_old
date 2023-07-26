@@ -89,7 +89,7 @@ local function StartCrouch()
 end
 
 local function AttemptCrouch(playerPed)
-    if CanPlayerCrouchCrawl(playerPed) then
+    if CanPlayerCrouchCrawl(playerPed) and GetPedType(playerPed) ~= 28 then
         StartCrouch()
         return true
     else
@@ -133,6 +133,11 @@ local function CrouchKeyPressed()
     -- Get the player ped
     local playerPed = PlayerPedId()
 
+    -- Check if we can actually crouch and check if we are an animal
+    if not CanPlayerCrouchCrawl(playerPed) or GetPedType(playerPed) == 28 then
+        return
+    end
+
     if Config.CrouchOverride then
         DisableControlAction(0, 36, true) -- Disable INPUT_DUCK this frame
     else
@@ -154,16 +159,18 @@ local function CrouchKeyPressed()
             if GetPedStealthMovement(playerPed) == 1 and timer - lastKeyPress < 1000 then
                 DisableControlAction(0, 36, true) -- Disable INPUT_DUCK this frame
                 lastKeyPress = 0
-                AttemptCrouch(playerPed)
+            else
+                lastKeyPress = timer
                 return
             end
-            lastKeyPress = timer
-            return
         end
     end
 
-    -- Attempt to crouch, if we were successful, then also check if we are prone, if so then play an animaiton
-    if AttemptCrouch(playerPed) and IsProne then
+    -- Start to crouch
+    StartCrouch()
+
+    -- If we are prone play an animation from prone to crouch
+    if IsProne then
         inAction = true
         IsProne = false
         PlayAnimOnce(playerPed, "get_up@directional@transition@prone_to_knees@crawl", "front", nil, nil, 780)
@@ -377,7 +384,7 @@ local function CrawlKeyPressed()
     end
 
     local playerPed = PlayerPedId()
-    if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) then
+    if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) or GetPedType(playerPed) == 28 then
         return
     end
 
