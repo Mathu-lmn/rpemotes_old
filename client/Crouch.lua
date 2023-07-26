@@ -89,7 +89,7 @@ local function StartCrouch()
 end
 
 local function AttemptCrouch(playerPed)
-    if CanPlayerCrouchCrawl(playerPed) and GetPedType(playerPed) ~= 28 then
+    if CanPlayerCrouchCrawl(playerPed) and IsPedHuman(playerPed) then
         StartCrouch()
         return true
     else
@@ -134,7 +134,7 @@ local function CrouchKeyPressed()
     local playerPed = PlayerPedId()
 
     -- Check if we can actually crouch and check if we are an animal
-    if not CanPlayerCrouchCrawl(playerPed) or GetPedType(playerPed) == 28 then
+    if not CanPlayerCrouchCrawl(playerPed) or not IsPedHuman(playerPed) then
         return
     end
 
@@ -384,7 +384,7 @@ local function CrawlKeyPressed()
     end
 
     local playerPed = PlayerPedId()
-    if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) or GetPedType(playerPed) == 28 then
+    if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) or not IsPedHuman(playerPed) then
         return
     end
 
