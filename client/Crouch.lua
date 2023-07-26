@@ -367,6 +367,10 @@ local function CrawlKeyPressed()
         Pointing = false
     end
 
+    if inHandsup then
+        return
+    end
+
     IsProne = true
     SetPedConfigFlag(playerPed, 48, true) -- CPED_CONFIG_FLAG_BlockWeaponSwitching
 
