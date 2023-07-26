@@ -6,7 +6,6 @@ local proneType = "onfront"
 local lastKeyPress = 0
 
 
-
 -- Crouching --
 local function ResetCrouch()
     local playerPed = PlayerPedId()
@@ -381,6 +380,7 @@ local function CrawlKeyPressed()
     if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) then
         return
     end
+
     inAction = true
 
     -- If we are pointing then stop pointing
