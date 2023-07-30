@@ -472,15 +472,19 @@ end
 function AddInfoMenu(menu)
 
     -- if not UpdateAvailable then
-        infomenu = _menuPool:AddSubMenu(menu, Config.Languages[lang]['infoupdate'], "~h~~y~Huge Thank You ❤️~h~~y~", "",
+        infomenu = _menuPool:AddSubMenu(menu, Config.Languages[lang]['infoupdate'], "~h~~y~The RPEmotes Team & Collaborators~h~~y~", "",
             Menuthing, Menuthing)
     -- else
     --     infomenu = _menuPool:AddSubMenu(menu, Config.Languages[lang]['infoupdateav'],
     --         Config.Languages[lang]['infoupdateavtext'], "", Menuthing, Menuthing)
     -- end
  
-    infomenu:AddItem(NativeUI.CreateItem("Join the <font color=\"#00ceff\">Discord 💬</font>",
+    infomenu:AddItem(NativeUI.CreateItem("Join the <font color=\"#00ceff\">Official Discord 💬</font>",
         "Join our official discord! 💬 <font color=\"#00ceff\">https://discord.gg/sw3NwDq6C8</font>"))
+    infomenu:AddItem(NativeUI.CreateItem("Download <font color=\"#FF25B1\">RPEmotes</font> from 💾",
+        "Official download link: <font color=\"#00ceff\">http://rpemotes.com</font>"))
+    infomenu:AddItem(NativeUI.CreateItem("Read the <font color=\"#00ceff\"> Official Wiki Docs 📖</font>",
+        "Check out our official Wiki Docs: <font color=\"#00ceff\">https://docs.rpemotes.com/</font>"))
     infomenu:AddItem(NativeUI.CreateItem("<font color=\"#FF25B1\">TayMcKenzieNZ 🇳🇿</font>",
         "<font color=\"#FF25B1\">TayMcKenzieNZ 🇳🇿</font> Project Manager for RPEmotes"))
     infomenu:AddItem(NativeUI.CreateItem("Thanks ~o~DullPear 🍐~s~", "~o~DullPear~s~ for the original dpemotes ❤️"))
