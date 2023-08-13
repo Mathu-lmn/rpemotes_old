@@ -58,8 +58,31 @@ function WalkCommandStart(source, args, raw)
     end
 end
 
+--- Persistent Walkstyles are stored to KVP. Once the player has spawned, the walkstyle is applied. ---
+--- I've added QBCore and ESX support so hopefully people quit crying about it. derchico  ---
+
 if Config.WalkingStylesEnabled and Config.PersistentWalk then
+    -- Basic Event for Standalone
     AddEventHandler('playerSpawned', function()
+        local kvp = GetResourceKvpString("walkstyle")
+
+        if kvp ~= nil then
+            WalkMenuStart(kvp)
+        end
+    end)
+    -- Event for QB-Core Users.
+    RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+        Citizen.Wait(5000)
+        local kvp = GetResourceKvpString("walkstyle")
+
+        if kvp ~= nil then
+            WalkMenuStart(kvp)
+        end
+    end)
+    -- Event for ESX Users.
+    RegisterNetEvent('esx:playerLoaded')
+    AddEventHandler('esx:playerLoaded', function()
+        Citizen.Wait(5000)
         local kvp = GetResourceKvpString("walkstyle")
 
         if kvp ~= nil then
