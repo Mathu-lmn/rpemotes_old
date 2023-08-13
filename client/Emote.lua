@@ -356,7 +356,7 @@ function EmoteCancel(force)
         CancelSharedEmote(ply)
 
         if ChosenAnimOptions and ChosenAnimOptions.ExitEmote then
-            -- If the emote exit type is not spesifed it defaults to Emotes
+            -- If the emote exit type is not specified, it defaults to Emotes
             local options = ChosenAnimOptions
             local ExitEmoteType = options.ExitEmoteType or "Emotes"
 
