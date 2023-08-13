@@ -104,7 +104,7 @@ Languages can be selected and / or added in the config.lua.
 
 - Shared Dances 🕺💃
 
-- Persistent Walkstyles via client KVP 🚶‍♂️
+- Persistent Walkstyles via client KVP 🚶‍♂️ - Standalone, QB-Core and ESX support!
 
 - Persistent Disabling Of Idle Camera via KVP 🎥
 
