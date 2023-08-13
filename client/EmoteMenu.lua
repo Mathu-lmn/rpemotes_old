@@ -479,13 +479,13 @@ function AddInfoMenu(menu)
     --         Config.Languages[lang]['infoupdateavtext'], "", Menuthing, Menuthing)
     -- end
  
-    infomenu:AddItem(NativeUI.CreateItem("Join the <font color=\"#00ceff\">Official Discord 💬</font>",
-        "Join our official discord! 💬 <font color=\"#00ceff\">https://discord.gg/sw3NwDq6C8</font>"))
-    infomenu:AddItem(NativeUI.CreateItem("Download <font color=\"#FF25B1\">RPEmotes</font> from 💾",
+    infomenu:AddItem(NativeUI.CreateItem("Join the <font color=\"#00ceff\"><b>Official Discord 💬<b></font>",
+        "Join our official discord! 💬 <font color=\"#00ceff\"><b>https://discord.gg/sw3NwDq6C8<b></font>"))
+    infomenu:AddItem(NativeUI.CreateItem("Download <font color=\"#FF25B1\"><b>RPEmotes<b></font> from 💾",
         "Official download link: <font color=\"#00ceff\">http://rpemotes.com</font>"))
-    infomenu:AddItem(NativeUI.CreateItem("Read the <font color=\"#00ceff\"> Official Wiki Docs 📖</font>",
+    infomenu:AddItem(NativeUI.CreateItem("Read the <font color=\"#00ceff\"><b>Official Wiki Docs 📖<b></font>",
         "Check out our official Wiki Docs: <font color=\"#00ceff\">https://docs.rpemotes.com/</font>"))
-    infomenu:AddItem(NativeUI.CreateItem("<font color=\"#FF25B1\">TayMcKenzieNZ 🇳🇿</font>",
+    infomenu:AddItem(NativeUI.CreateItem("<font color=\"#FF25B1\"><b>TayMcKenzieNZ 🇳🇿<b></font>",
         "<font color=\"#FF25B1\">TayMcKenzieNZ 🇳🇿</font> Project Manager for RPEmotes"))
     infomenu:AddItem(NativeUI.CreateItem("Thanks ~o~DullPear 🍐~s~", "~o~DullPear~s~ for the original dpemotes ❤️"))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <b>Kibook 🐩</b>",
@@ -513,7 +513,7 @@ function AddInfoMenu(menu)
     infomenu:AddItem(NativeUI.CreateItem("Thanks ~b~Ultrahacx 🧑‍💻~s~",
 	"~b~Ultrahacx~s~ for the custom emotes ☺️."))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#37DA00\">BzZzi 🤭</font>",
-        "<font color=\"#37DA00\">BzZzi</font> for the custom food props 🍩."))
+        "<font color=\"#37DA00\">BzZzi</font> for the custom props 🍩."))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#C40A7D\">Natty3d 🍭</font>",
         "<font color=\"#C40A7D\">Natty3d</font> for the custom lollipop props 🍭."))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff61a0\">Amnilka 🇵🇱</font>",
@@ -550,8 +550,10 @@ function AddInfoMenu(menu)
         "<font color=\"#de1846\">Dark Animations</font> for the custom animations 🖤"))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#00FF12\">Brum 🇬🇧</font>",
         "<font color=\"#00FF12\">Brum</font> for the custom props  🇬🇧"))
+  infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#017a05\">Chico 💀</font>",
+        "<font color=\"#017a05\">Chico 💀</font> for fixing persistent walkstyles for QB-Core and ESX."))
 
-    infomenu:AddItem(NativeUI.CreateItem("Thanks to the community", "Translations, bug reports and moral support 🌐"))
+    infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
 end
 
 function OpenEmoteMenu()
