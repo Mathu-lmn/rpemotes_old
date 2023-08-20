@@ -23,6 +23,14 @@ dependencies {
 
 --#endregion oxmysql
 
+files {
+    'propsets.meta',
+    'conditionalanims.meta',
+}
+
+data_file 'AMBIENT_PROP_MODEL_SET_FILE' 'propsets.meta'
+data_file 'CONDITIONAL_ANIMS_FILE' 'conditionalanims.meta'
+
 shared_scripts {
     'config.lua',
     'Translations.lua',
