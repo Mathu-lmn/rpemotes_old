@@ -671,6 +671,10 @@ A huge thank you to the following people for their amazing contributions made to
 
 - Thank you [Dark Animations](https://www.gta5-mods.com/users/Darks%20Animations) for the partnership and custom animations. You the goat
 
+- Thank you [Chico](https://forum.cfx.re/u/chico) for implementing natives to reapply persistent moods and walkstyles for ESX and QB-Core frameworks
+
+- Thank you [-EcLiPsE-](https://www.gta5-mods.com/users/-EcLiPsE-) for allowing me to implement [Improved Prop Sets](https://www.gta5-mods.com/misc/improved-propsets-meta) and [GTA Online Biker Idle Anims](https://www.gta5-mods.com/misc/bike-idle-animations)
+
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
 You pay a big role in making this script what it is today and we could not do it without you 🙏

@@ -551,7 +551,9 @@ function AddInfoMenu(menu)
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#00FF12\">Brum 🇬🇧</font>",
         "<font color=\"#00FF12\">Brum</font> for the custom props  🇬🇧"))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#017a05\">Chico 💀</font>",
-        "<font color=\"#017a05\">Chico 💀</font> for fixing persistent walkstyles for QB-Core and ESX."))
+        "<font color=\"#017a05\">Chico 💀</font> for fixing persistent walkstyles and moods for QB-Core and ESX."))
+  infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#194ce6\">-EcLiPsE- 🏍️</font>",
+        "<font color=\"#194ce6\">-EcLiPsE- 🏍️</font> for implementation of improved prop sets and gta online biker animations"))
 
     infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
 end
