@@ -1,6 +1,6 @@
 --- RPEmotes by TayMcKenzieNZ, Mathu_lmn and MadsL, maintained by TayMcKenzieNZ ---
 --- Download OFFICIAL version and updates ONLY at https://github.com/TayMcKenzieNZ/rpemotes ---
---- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
+--- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMERS FOR SOMEONE ELSE'S WORK!!! ---
 
 
 
@@ -38,13 +38,31 @@ if Config.ExpressionsEnabled then
     TriggerEvent('chat:addSuggestion', '/moods', 'List available walking moods/expressions.')
 
     -- Persistent Expressions
+    -- STANDALONE
     if Config.PersistentExpression then
-        AddEventHandler('playerSpawned', function()
-            local expression = GetResourceKvpString("expression")
-            if expression ~= nil then
-                Wait(2500) -- Delay, to ensure the player ped has loaded in
-                SetPlayerPedExpression(expression, false)
-            end
-        end)
-    end
+    AddEventHandler('playerSpawned', function()
+        local expression = GetResourceKvpString("expression")
+        if expression ~= nil then
+            Wait(2500) -- Delay, to ensure the player ped has loaded in
+            SetPlayerPedExpression(expression, false)
+        end
+    end)
+    -- QB-CORE
+    RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+       Citizen.Wait(5000)
+       local expression = GetResourceKvpString("expression")
+       if expression ~= nil then
+           Wait(2500) -- Delay, to ensure the player ped has loaded in
+           SetPlayerPedExpression(expression, false)
+       end    
+    end)
+    -- ESX
+    RegisterNetEvent('esx:playerLoaded')
+        Citizen.Wait(5000)
+        local expression = GetResourceKvpString("expression")
+        if expression ~= nil then
+            Wait(2500) -- Delay, to ensure the player ped has loaded in
+            SetPlayerPedExpression(expression, false)
+        end    
+    end)
 end
