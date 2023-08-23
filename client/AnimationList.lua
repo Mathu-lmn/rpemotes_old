@@ -10618,7 +10618,7 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = false
+            EmoteMoving = true
         }
     },
     ["whiskeyb2"] = {
@@ -12881,6 +12881,82 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
+    ["guitar3"] = {
+        "amb@world_human_musician@guitar@male@idle_a",
+        "idle_b",
+        "Guitar 3 - Pink",
+        AnimationOptions = {
+            Prop = 'prop_tay_guitar_001',
+            PropBone = 24818,
+            PropPlacement = {
+                -0.1,
+                0.31,
+                0.1,
+                0.0,
+                20.0,
+                150.0
+            },
+            EmoteMoving = true,
+            EmoteLoop = true
+        }
+    },
+    ["guitar4"] = {
+        "switch@trevor@guitar_beatdown",
+        "001370_02_trvs_8_guitar_beatdown_idle_busker",
+        "Guitar 4 - Pink",
+        AnimationOptions = {
+            Prop = 'prop_tay_guitar_001',
+            PropBone = 24818,
+            PropPlacement = {
+                -0.05,
+                0.31,
+                0.1,
+                0.0,
+                20.0,
+                150.0
+            },
+            EmoteMoving = true,
+            EmoteLoop = true
+        }
+    },
+    ["guitar5"] = {
+        "amb@world_human_musician@guitar@male@idle_a",
+        "idle_b",
+        "Guitar - Pride",
+        AnimationOptions = {
+            Prop = 'prop_tay_guitar_002',
+            PropBone = 24818,
+            PropPlacement = {
+                -0.1,
+                0.31,
+                0.1,
+                0.0,
+                20.0,
+                150.0
+            },
+            EmoteMoving = true,
+            EmoteLoop = true
+        }
+    },
+    ["guitar6"] = {
+        "switch@trevor@guitar_beatdown",
+        "001370_02_trvs_8_guitar_beatdown_idle_busker",
+        "Guitar - Pride 2",
+        AnimationOptions = {
+            Prop = 'prop_tay_guitar_002',
+            PropBone = 24818,
+            PropPlacement = {
+                -0.05,
+                0.31,
+                0.1,
+                0.0,
+                20.0,
+                150.0
+            },
+            EmoteMoving = true,
+            EmoteLoop = true
+        }
+    },
     ["guitarelectric"] = {
         "amb@world_human_musician@guitar@male@idle_a",
         "idle_b",
@@ -12956,8 +13032,46 @@ RP.PropEmotes = {
             EmoteLoop = true,
             EmoteMoving = true
         }
-    },
+   },
     ["guitarcarry3"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Guitar Carry Accoustic - Pink",
+        AnimationOptions = {
+            Prop = "prop_tay_guitar_001",
+            PropBone = 28422,
+            PropPlacement = {
+                0.1500,
+                -0.1400,
+                -0.0200,
+                -101.5083,
+                5.7251,
+                29.4987
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["guitarcarry4"] = {
+        "move_weapon@jerrycan@generic",
+        "idle",
+        "Guitar Carry Accoustic - Pride",
+        AnimationOptions = {
+            Prop = "prop_tay_guitar_002",
+            PropBone = 28422,
+            PropPlacement = {
+                0.1100,
+                -0.1200,
+                -0.0500,
+                -80.0000,
+                0.0,
+                21.9999
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["guitarcarry5"] = {
         "move_weapon@jerrycan@generic",
         "idle",
         "Guitar Carry Electric",
@@ -12976,7 +13090,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["guitarcarry4"] = {
+    ["guitarcarry6"] = {
         "move_weapon@jerrycan@generic",
         "idle",
         "Guitar Carry Electric 2",
@@ -12995,7 +13109,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["guitarcarry5"] = {
+    ["guitarcarry7"] = {
         "move_weapon@jerrycan@generic",
         "idle",
         "Guitar Carry Electric 3",
@@ -13014,7 +13128,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["guitarcarry6"] = {
+    ["guitarcarry8"] = {
         "move_weapon@jerrycan@generic",
         "idle",
         "Guitar Carry Electric 4",
@@ -13033,7 +13147,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["guitarcarry7"] = {
+    ["guitarcarry9"] = {
         "move_weapon@jerrycan@generic",
         "idle",
         "Guitar Carry Electric 5",
@@ -13058,6 +13172,46 @@ RP.PropEmotes = {
         "Guitar Sit And Play",
         AnimationOptions = {
             Prop = "prop_acc_guitar_01",
+            PropBone = 24818,
+            PropPlacement = {
+                -0.0510,
+                0.2770,
+                -0.0299,
+                -140.3349,
+                166.3300,
+                29.7590
+            },
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+    },
+    ["guitarsit2"] = {
+        "misssnowie@gatlax",
+        "base",
+        "Guitar Sit And Play 2 - Pink",
+        AnimationOptions = {
+            Prop = "prop_tay_guitar_001",
+            PropBone = 24818,
+            PropPlacement = {
+                -0.0510,
+                0.2770,
+                -0.0299,
+                -140.3349,
+                166.3300,
+                29.7590
+            },
+            EmoteLoop = true,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+    },
+    ["guitarsit2"] = {
+        "misssnowie@gatlax",
+        "base",
+        "Guitar Sit And Play 2 - Pride",
+        AnimationOptions = {
+            Prop = "prop_tay_guitar_002",
             PropBone = 24818,
             PropPlacement = {
                 -0.0510,
