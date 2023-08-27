@@ -18057,6 +18057,82 @@ RP.PropEmotes = {
             EmoteMoving = false
         }
     },
+    ['axe'] = {
+        'rcmnigel1d',
+        'base_club_shoulder',
+        'Axe',
+        AnimationOptions = {
+            Prop = 'prop_tool_fireaxe',
+            PropBone = 18905,
+            PropPlacement = {
+                0.0800,
+                -0.2090,
+                0.0900,
+                -82.6677,
+                -141.2988,
+                12.3308
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["axe2"] = {
+        "melee@large_wpn@streamed_core",
+        "ground_attack_on_spot",
+        "Axe - Ground Impact",
+        AnimationOptions = {
+            Prop = "prop_tool_fireaxe",
+            PropBone = 57005,
+            PropPlacement = {
+                0.0160,
+               -0.3140,
+               -0.0860,
+              -97.1455,
+              165.0749,
+               13.9114,
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+    },
+    ['axe3'] = {
+        'rcmnigel1d',
+        'base_club_shoulder',
+        'Axe - Pickaxe',
+        AnimationOptions = {
+            Prop = 'prop_tool_pickaxe',
+            PropBone = 57005,
+            PropPlacement = {
+                0.0400,
+               -0.2550,
+               -0.1380,
+             -109.0238,
+              163.6144,
+               20.6091
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["axe4"] = {
+        "melee@large_wpn@streamed_core",
+        "ground_attack_on_spot",
+        "Axe - Pickaxe Ground Impact",
+        AnimationOptions = {
+            Prop = "prop_tool_pickaxe",
+            PropBone = 57005,
+            PropPlacement = {
+                0.08,
+                -0.4,
+                -0.10,
+                80.0,
+                -20.0,
+                175.0,
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+    },
     ["bongos"] = {
         "amb@world_human_musician@bongos@male@base",
         "base",
