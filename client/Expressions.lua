@@ -39,34 +39,34 @@ if Config.ExpressionsEnabled then
 
 
     -- Load the expression once the player has spawned. Standalone, QBCore and ESX --
-if Config.PersistentExpression then
-    AddEventHandler('playerSpawned', function()
-        local expression = GetResourceKvpString("expression")
-        if expression ~= nil then
-            Wait(2500) -- Delay, to ensure the player ped has loaded in
-            SetPlayerPedExpression(expression, false)
-        end
-    end)
+    if Config.PersistentExpression then
+        AddEventHandler('playerSpawned', function()
+            local expression = GetResourceKvpString("expression")
+            if expression ~= nil then
+                Wait(2500) -- Delay, to ensure the player ped has loaded in
+                SetPlayerPedExpression(expression, false)
+            end
+        end)
 
-    RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
-    AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
-        Citizen.Wait(5000)
-        local expression = GetResourceKvpString("expression")
-        if expression ~= nil then
-            Wait(2500) -- Delay, to ensure the player ped has loaded in
-            SetPlayerPedExpression(expression, false)
-        end
-    end)
+        RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
+        AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
+            Citizen.Wait(5000)
+            local expression = GetResourceKvpString("expression")
+            if expression ~= nil then
+                Wait(2500) -- Delay, to ensure the player ped has loaded in
+                SetPlayerPedExpression(expression, false)
+            end
+        end)
 
-    RegisterNetEvent('esx:playerLoaded')
-    AddEventHandler('esx:playerLoaded', function()
-        Citizen.Wait(5000)
-        local expression = GetResourceKvpString("expression")
-        if expression ~= nil then
-            Wait(2500) -- Delay, to ensure the player ped has loaded in
-            SetPlayerPedExpression(expression, false)
-        end
-    end)
-end
+        RegisterNetEvent('esx:playerLoaded')
+        AddEventHandler('esx:playerLoaded', function()
+            Citizen.Wait(5000)
+            local expression = GetResourceKvpString("expression")
+            if expression ~= nil then
+                Wait(2500) -- Delay, to ensure the player ped has loaded in
+                SetPlayerPedExpression(expression, false)
+            end
+        end)
+    end
 
 end
