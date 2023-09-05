@@ -195,12 +195,12 @@ function AddEmoteMenu(menu)
         favmenu.OnItemSelect = function(sender, item, index)
             if FavEmoteTable[index] == Config.Languages[lang]['rfavorite'] then
                 FavoriteEmote = ""
-                ShowNotification(Config.Languages[lang]['rfavorite'], 2000)
+                SimpleNotify(Config.Languages[lang]['rfavorite'])
                 return
             end
             if Config.FavKeybindEnabled then
                 FavoriteEmote = FavEmoteTable[index]
-                ShowNotification("~o~" .. firstToUpper(FavoriteEmote) .. Config.Languages[lang]['newsetemote'])
+                SimpleNotify("~o~" .. firstToUpper(FavoriteEmote) .. Config.Languages[lang]['newsetemote'])
             end
         end
     end
@@ -337,14 +337,14 @@ if Config.Search then
                     if data == Config.Languages[lang]['sharedanceemotes'] then return end
                     if data == Config.Languages[lang]['rfavorite'] then
                         FavoriteEmote = ""
-                        ShowNotification(Config.Languages[lang]['rfavorite'], 2000)
+                        SimpleNotify(Config.Languages[lang]['rfavorite'])
                         return
                     end
 
                     if favEnabled and IsControlPressed(0, 21) then
                         if data.table ~= "Shared" then
                             FavoriteEmote = data.name
-                            ShowNotification("~o~" .. firstToUpper(data.name) .. Config.Languages[lang]['newsetemote'])
+                            SimpleNotify("~o~" .. firstToUpper(data.name) .. Config.Languages[lang]['newsetemote'])
                         else
                             SimpleNotify(Config.Languages[lang]['searchcantsetfav'])
                         end

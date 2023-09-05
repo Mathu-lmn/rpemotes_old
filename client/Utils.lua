@@ -2,7 +2,16 @@
 --- Download OFFICIAL version and updates ONLY at https://github.com/TayMcKenzieNZ/rpemotes ---
 --- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
 
-
+-- You can edit this function to add support for your favorite notification system
+function SimpleNotify(message)
+    if Config.NotificationsAsChatMessage then
+        TriggerEvent("chat:addMessage", { color = { 255, 255, 255 }, args = { tostring(message) } })
+    else
+        BeginTextCommandThefeedPost("STRING")
+        AddTextComponentSubstringPlayerName(message)
+        EndTextCommandThefeedPostTicker(0, 1)
+    end
+end
 
 function DebugPrint(args)
     if Config.DebugDisplay then
@@ -14,15 +23,6 @@ function firstToUpper(str)
     return (str:gsub("^%l", string.upper))
 end
 
-function ShowNotification(text)
-    if Config.NotificationsAsChatMessage then
-        TriggerEvent("chat:addMessage", { color = { 255, 255, 255 }, args = { tostring(text) } })
-    else
-        BeginTextCommandThefeedPost("STRING")
-        AddTextComponentSubstringPlayerName(text)
-        EndTextCommandThefeedPostTicker(false, false)
-    end
-end
 
 function IsPlayerAiming(player)
     return (IsPlayerFreeAiming(player) or IsAimCamActive() or IsAimCamThirdPersonActive()) and tonumber(GetSelectedPedWeapon(player)) ~= tonumber(GetHashKey("WEAPON_UNARMED"))
@@ -144,16 +144,6 @@ function NearbysOnCommand(source, args, raw)
     end
     EmoteChatMessage(NearbysCommand)
     EmoteChatMessage(Config.Languages[lang]['emotemenucmd'])
-end
-
-function SimpleNotify(message)
-    if Config.NotificationsAsChatMessage then
-        TriggerEvent("chat:addMessage", { color = { 255, 255, 255 }, args = { tostring(message) } })
-    else
-        BeginTextCommandThefeedPost("STRING")
-        AddTextComponentSubstringPlayerName(message)
-        EndTextCommandThefeedPostTicker(0, 1)
-    end
 end
 
 function GetClosestPlayer()
