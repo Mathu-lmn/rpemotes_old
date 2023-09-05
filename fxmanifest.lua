@@ -5,8 +5,8 @@
 fx_version 'cerulean'
 game 'gta5'
 authors { 'TayMcKenzieNZ', 'MadsL', 'Mathu_lmn', 'Community' }
-description 'RPEmotes V1.2.9'
-version '1.2.9'
+description 'RPEmotes V1.3.1'
+version '1.3.1'
 lua54 'yes'
 
 dependencies {
@@ -22,6 +22,14 @@ dependencies {
 -- server_script '@oxmysql/lib/MySQL.lua'
 
 --#endregion oxmysql
+
+files {
+    'propsets.meta',
+    'conditionalanims.meta',
+}
+
+data_file 'AMBIENT_PROP_MODEL_SET_FILE' 'propsets.meta'
+data_file 'CONDITIONAL_ANIMS_FILE' 'conditionalanims.meta'
 
 shared_scripts {
     'config.lua',

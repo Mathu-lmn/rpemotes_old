@@ -12,7 +12,6 @@ local proneType = "onfront"
 local lastKeyPress = 0
 
 
-
 -- Crouching --
 local function ResetCrouch()
     local playerPed = PlayerPedId()
@@ -96,7 +95,7 @@ local function StartCrouch()
 end
 
 local function AttemptCrouch(playerPed)
-    if CanPlayerCrouchCrawl(playerPed) then
+    if CanPlayerCrouchCrawl(playerPed) and IsPedHuman(playerPed) then
         StartCrouch()
         return true
     else
@@ -104,6 +103,19 @@ local function AttemptCrouch(playerPed)
     end
 end
 
+---Disables a control until it's key has been released
+---@param padIndex integer
+---@param control integer
+local function DisableControlUntilReleased(padIndex, control)
+    CreateThread(function()
+        while IsDisabledControlPressed(padIndex, control) do
+            DisableControlAction(padIndex, control, true)
+            Wait(0)
+        end
+    end)
+end
+
+-- Called when the crouch key is pressed
 local function CrouchKeyPressed()
     -- If we already are doing something, then don't continue
     if inAction then
@@ -113,18 +125,37 @@ local function CrouchKeyPressed()
     -- If crouched then stop crouching
     if isCrouched then
         isCrouched = false
+        local crouchKey = GetControlInstructionalButton(0, `+crouch` | 0x80000000, false)
+        local lookBehindKey = GetControlInstructionalButton(0, 26, false)
+
+        -- Disable look behind if the crouch and look behind keys are the same
+        if crouchKey == lookBehindKey then
+            DisableControlUntilReleased(0, 26) -- INPUT_LOOK_BEHIND
+        end
+
         return
     end
 
     -- Get the player ped
     local playerPed = PlayerPedId()
 
+    -- Check if we can actually crouch and check if we are an animal
+    if not CanPlayerCrouchCrawl(playerPed) or not IsPedHuman(playerPed) then
+        return
+    end
+
     if Config.CrouchOverride then
         DisableControlAction(0, 36, true) -- Disable INPUT_DUCK this frame
     else
-        -- Get +crouch and INPUT_DUCK keys
-        local crouchKey = GetControlInstructionalButton(0, 0xD2D0BEBA, false)
+        -- Get +crouch, INPUT_DUCK and INPUT_LOOK_BEHIND keys
+        local crouchKey = GetControlInstructionalButton(0, `+crouch` | 0x80000000, false)
         local duckKey = GetControlInstructionalButton(0, 36, false)
+        local lookBehindKey = GetControlInstructionalButton(0, 26, false)
+
+        -- Disable look behind if the crouch and look behind keys are the same
+        if crouchKey == lookBehindKey then
+            DisableControlUntilReleased(0, 26) -- INPUT_LOOK_BEHIND
+        end
 
         -- If they are the same and we aren't prone, then check if we are in stealth mode and how long ago the last button press was.
         if crouchKey == duckKey and not IsProne then
@@ -134,16 +165,18 @@ local function CrouchKeyPressed()
             if GetPedStealthMovement(playerPed) == 1 and timer - lastKeyPress < 1000 then
                 DisableControlAction(0, 36, true) -- Disable INPUT_DUCK this frame
                 lastKeyPress = 0
-                AttemptCrouch(playerPed)
+            else
+                lastKeyPress = timer
                 return
             end
-            lastKeyPress = timer
-            return
         end
     end
 
-    -- Attempt to crouch, if we were successful, then also check if we are prone, if so then play an animaiton
-    if AttemptCrouch(playerPed) and IsProne then
+    -- Start to crouch
+    StartCrouch()
+
+    -- If we are prone play an animation from prone to crouch
+    if IsProne then
         inAction = true
         IsProne = false
         PlayAnimOnce(playerPed, "get_up@directional@transition@prone_to_knees@crawl", "front", nil, nil, 780)
@@ -357,14 +390,19 @@ local function CrawlKeyPressed()
     end
 
     local playerPed = PlayerPedId()
-    if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) then
+    if not CanPlayerCrouchCrawl(playerPed) or IsEntityInWater(playerPed) or not IsPedHuman(playerPed) then
         return
     end
+
     inAction = true
 
     -- If we are pointing then stop pointing
     if Pointing then
         Pointing = false
+    end
+
+    if inHandsup then
+        return
     end
 
     IsProne = true
