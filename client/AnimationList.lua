@@ -11083,6 +11083,158 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["meat"] = {
+        "move_crouch_proto",
+        "idle",
+        "Meat On A Stick",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_stick_kebab',
+            PropBone = 64080,
+            PropPlacement = {
+               0.0600,
+               0.0500,
+              -0.1600,
+              17.0651,
+             -30.9089,
+              60.0374
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["meat2"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Meat On A Fork",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_food_kebab',
+            PropBone = 18905,
+            PropPlacement = {
+               0.14,
+               0.02,
+               0.01,
+             -24.0,
+             -80.0,
+               9.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["mallow"] = {
+        "move_crouch_proto",
+        "idle",
+        "Marshmallow Stick - White",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_stick_marshmallow',
+            PropBone = 64080,
+            PropPlacement = {
+               0.0600,
+               0.0500,
+              -0.1600,
+              17.0651,
+             -30.9089,
+              60.0374
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["mallow2"] = {
+        "move_crouch_proto",
+        "idle",
+        "Marshmallow Stick - Pink",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_stick_mellopink',
+            PropBone = 64080,
+            PropPlacement = {
+               0.0600,
+               0.0500,
+              -0.1600,
+              17.0651,
+             -30.9089,
+              60.0374
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["mallow3"] = {
+        "move_crouch_proto",
+        "idle",
+        "Marshmallow Stick - Burnt",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_stick_melloburnt',
+            PropBone = 64080,
+            PropPlacement = {
+               0.0600,
+               0.0500,
+              -0.1600,
+              17.0651,
+             -30.9089,
+              60.0374
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["mallow4"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Marshmallow On A Fork - White",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_food_marshmallow',
+            PropBone = 18905,
+            PropPlacement = {
+               0.14,
+               0.02,
+               0.01,
+             -24.0,
+             -80.0,
+               9.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["mallow5"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Marshmallow On A Fork - Pink",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_food_mellopink',
+            PropBone = 18905,
+            PropPlacement = {
+               0.14,
+               0.02,
+               0.01,
+             -24.0,
+             -80.0,
+               9.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["mallow6"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Marshmallow On A Fork - Burnt",
+        AnimationOptions = {
+            Prop = 'bzzz_camp_food_melloburnt',
+            PropBone = 18905,
+            PropPlacement = {
+               0.14,
+               0.02,
+               0.01,
+             -24.0,
+             -80.0,
+               9.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
     ["macaroon"] = { --- Custom Prop by Bzzzi
         "mp_player_inteat@burger",
         "mp_player_int_eat_burger",
