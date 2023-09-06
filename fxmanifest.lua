@@ -74,6 +74,8 @@ data_file 'DLC_ITYP_REQUEST' 'stream/brummie_props.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/bzzz_props.ytyp'
 
+data_file 'DLC_ITYP_REQUEST' 'bzzz_camp_props.ytyp'
+
 data_file 'DLC_ITYP_REQUEST' 'stream/apple_1.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/kaykaymods_props.ytyp'
