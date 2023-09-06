@@ -10867,6 +10867,24 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ["bagel"] = {
+        "mp_player_inteat@burger",
+        "mp_player_int_eat_burger",
+        "Bagel",
+        AnimationOptions = {
+            Prop = 'p_ing_bagel_01',
+            PropBone = 18905,
+            PropPlacement = {
+                0.14,
+                0.05,
+                0.03,
+              145.3975,
+              -53.8984,
+                4.8412
+            },
+            EmoteMoving = true
+        }
+    },
     ["donut"] = {
         "mp_player_inteat@burger",
         "mp_player_int_eat_burger",
@@ -13206,7 +13224,7 @@ RP.PropEmotes = {
             ExitEmoteType = "Exits"
         }
     },
-    ["guitarsit2"] = {
+    ["guitarsit3"] = {
         "misssnowie@gatlax",
         "base",
         "Guitar Sit And Play 2 - Pride",
