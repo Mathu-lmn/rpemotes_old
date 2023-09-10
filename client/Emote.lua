@@ -280,6 +280,8 @@ function Handsup()
         end
         if IsProne then
             return
+	end
+		
 
         inHandsup = not inHandsup
         if inHandsup then
