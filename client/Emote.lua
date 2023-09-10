@@ -267,10 +267,19 @@ if Config.HandsupEnabled then
         Handsup()
     end, false)
 
-    function Handsup()
+function Handsup()
+    local playerPed = PlayerPedId()
+    if not IsPedHuman(playerPed) then
+        return
+    end
+    if IsProne then
+        return
+    end
         if IsProne then
             return
         end
+        if IsProne then
+            return
 
         inHandsup = not inHandsup
         if inHandsup then
