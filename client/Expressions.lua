@@ -24,6 +24,8 @@ if Config.ExpressionsEnabled then
         local expression = firstToUpper(string.lower(args[1]))
         if RP.Expressions[expression] ~= nil then
             SetPlayerPedExpression(RP.Expressions[expression][1], true)
+        elseif expression == "Reset" then
+            ClearFacialIdleAnimOverride(PlayerPedId())
         else
             EmoteChatMessage("'"..expression.."' is not a valid mood, do /moods to see all moods.")
         end
