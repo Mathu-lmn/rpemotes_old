@@ -9379,6 +9379,15 @@ RP.Emotes = {
             EmoteDuration = 1480
         }
     },
+    ["hideback"] = {
+        "fin_a_int-3",
+        "player_one_dual-3",
+        "Hide a gun",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteLoop = true
+        }
+    },
 }
 
 --- PROP EMOTES GO HERE. CURRENTLY SUPPORTS UP TO 2 PROPS  ---
