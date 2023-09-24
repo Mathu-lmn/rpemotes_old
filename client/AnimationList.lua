@@ -9379,9 +9379,9 @@ RP.Emotes = {
             EmoteDuration = 1480
         }
     },
-    ["hidegun"] = {
-        "pistol_b_b@dark",
-        "pistol_b_b_clip",
+    ["hidegun"] = { -- CREDIT TO DARKS ANIMATIONS FOR THIS EXCLUSIVE RPEMOTES ANIMATION 
+        "pistol_b_b@dark", -- CREDIT TO DARKS ANIMATIONS FOR THIS EXCLUSIVE RPEMOTES ANIMATION 
+        "pistol_b_b_clip", -- CREDIT TO DARKS ANIMATIONS FOR THIS EXCLUSIVE RPEMOTES ANIMATION 
         "Hide a gun",
         AnimationOptions = {
             EmoteMoving = true,
