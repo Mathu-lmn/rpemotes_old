@@ -9379,9 +9379,9 @@ RP.Emotes = {
             EmoteDuration = 1480
         }
     },
-    ["hideback"] = {
-        "fin_a_int-3",
-        "player_one_dual-3",
+    ["hidegun"] = {
+        "pistol_b_b@dark",
+        "pistol_b_b_clip",
         "Hide a gun",
         AnimationOptions = {
             EmoteMoving = true,
