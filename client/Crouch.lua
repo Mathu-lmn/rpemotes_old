@@ -145,12 +145,7 @@ local function CrouchKeyPressed()
     end
 
     if Config.CrouchOverride then
-            Citizen.CreateThread(function() -- Thread starts to enforce disabled control action
-                while true do
-                    Citizen.Wait(0) -- Unsure why but this is necessary or you will have stealth inconsistently disabled and then not disabled.. really weird.
-                    DisableControlAction(2, 36, true) -- Disable "Duck" / Stealth on all control groups.
-                end
-            end) -- Thread End
+        DisableControlAction(0, 36, true) -- Disable INPUT_DUCK this frame
     else
         -- Get +crouch, INPUT_DUCK and INPUT_LOOK_BEHIND keys
         local crouchKey = GetControlInstructionalButton(0, `+crouch` | 0x80000000, false)
