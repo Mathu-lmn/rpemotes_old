@@ -681,6 +681,8 @@ A huge thank you to the following people for their amazing contributions made to
 
 - Thank you [MrWitt](https://www.gta5-mods.com/users/MrWitt)for the custom animations
 
+- A huge thank you to [AdoredRose](https://forum.cfx.re/u/adoredrose/summary) for assisting with animations
+
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
 You pay a big role in making this script what it is today and we could not do it without you 🙏
