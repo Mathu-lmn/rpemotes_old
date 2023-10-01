@@ -556,6 +556,8 @@ function AddInfoMenu(menu)
         "<font color=\"#194ce6\">-EcLiPsE- 🏍️</font> for implementation of improved prop sets and gta online biker animations."))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#3488c8\">MrWitt 🦑️</font>",
         "<font color=\"#3488c8\">MrWitt 🦑</font> for the custom animations."))
+  infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff96b6\">AdoredRose 🌹</font>",
+       "<font color=\"#ff96b6\">AdoredRose 🌹</font> for the custom animations."))
     infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
 end
 
