@@ -486,7 +486,7 @@ function AddInfoMenu(menu)
     infomenu:AddItem(NativeUI.CreateItem("Read the <font color=\"#00ceff\"><b>Official Wiki Docs 📖<b></font>",
         "Check out our official Wiki Docs: <font color=\"#00ceff\">https://docs.rpemotes.com/</font>"))
     infomenu:AddItem(NativeUI.CreateItem("<font color=\"#FF25B1\"><b>TayMcKenzieNZ 🇳🇿<b></font>",
-        "<font color=\"#FF25B1\">TayMcKenzieNZ 🇳🇿</font> Project Manager for RPEmotes"))
+        "<font color=\"#FF25B1\">TayMcKenzieNZ 🇳🇿</font> Project Manager for RPEmotes."))
     infomenu:AddItem(NativeUI.CreateItem("Thanks ~o~DullPear 🍐~s~", "~o~DullPear~s~ for the original dpemotes ❤️"))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <b>Kibook 🐩</b>",
         "<b>Kibook</b> for the addition of Animal Emotes 🐩 submenu."))
@@ -553,8 +553,9 @@ function AddInfoMenu(menu)
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#017a05\">Chico 💀</font>",
         "<font color=\"#017a05\">Chico 💀</font> for fixing persistent walkstyles and moods for QB-Core and ESX."))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#194ce6\">-EcLiPsE- 🏍️</font>",
-        "<font color=\"#194ce6\">-EcLiPsE- 🏍️</font> for implementation of improved prop sets and gta online biker animations"))
-
+        "<font color=\"#194ce6\">-EcLiPsE- 🏍️</font> for implementation of improved prop sets and gta online biker animations."))
+  infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#3488c8\">MrWitt 🦑️</font>",
+        "<font color=\"#3488c8\">MrWitt 🦑</font> for the custom animations."))
     infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
 end
 
