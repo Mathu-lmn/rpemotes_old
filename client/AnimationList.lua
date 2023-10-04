@@ -7021,19 +7021,19 @@ RP.Emotes = {
             EmoteLoop = true,
             ExitEmote = "getup",
             ExitEmoteType = "Exits",
-            PtfxAsset = "scr_agencyheistb",
-            PtfxName = "scr_agency3b_elec_box",
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
             PtfxNoProp = false,
             PtfxPlacement = {
-               -0.0760,
-                0.0000,
-                0.0200,
+               -0.07,
                 0.0,
                 0.0,
                 0.0,
-                0.2
+                0.0,
+                0.0,
+                1.0
             },
-            PtfxInfo = Config.Languages[Config.MenuLanguage]['vape'],
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
             PtfxWait = 0.8,
             PtfxCanHold = true
         }
@@ -9706,6 +9706,25 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
+    ['umbrella3'] = { --- Custom Emote Provided To RPEmotes By Mr Witt
+        'mrwitt@rain_dreamy_pose',
+        'mrwitt',
+        'Umbrella 3',
+        AnimationOptions = {
+            Prop = 'p_amb_brolly_01',
+            PropBone = 58867,
+            PropPlacement = {
+                0.0150,
+                0.0340,
+               -0.0340,
+               16.0040,
+               -6.7284,
+               -0.9319
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
     -----------------------------------------------------------------------------------------------------
     ------ This is an example of an emote with 2 props, pretty simple! ----------------------------------
     -----------------------------------------------------------------------------------------------------
@@ -10138,7 +10157,7 @@ RP.PropEmotes = {
         "idle_c",
         "Smoke 2",
         AnimationOptions = {
-            Prop = 'prop_cs_ciggy_01',
+            Prop = 'ng_proc_cigarette01a',
             PropBone = 28422,
             PropPlacement = {
                 0.0,
@@ -10149,7 +10168,22 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+               -0.07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["smoke3"] = {
@@ -10157,7 +10191,7 @@ RP.PropEmotes = {
         "idle_b",
         "Smoke 3",
         AnimationOptions = {
-            Prop = 'prop_cs_ciggy_01',
+            Prop = 'ng_proc_cigarette01a',
             PropBone = 28422,
             PropPlacement = {
                 0.0,
@@ -10168,7 +10202,22 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+               -0.07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["smoke4"] = {
@@ -10176,7 +10225,7 @@ RP.PropEmotes = {
         "idle_b",
         "Smoke 4",
         AnimationOptions = {
-            Prop = 'prop_cs_ciggy_01',
+            Prop = 'ng_proc_cigarette01a',
             PropBone = 28422,
             PropPlacement = {
                 0.0,
@@ -10187,7 +10236,56 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+               -0.07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
+        }
+    },
+    ["smoke5"] = { --- Custom Emote Provided To RPEmotes By Mr Witt
+        "mrwitt@composed_photo_moments",
+        "mrwitt",
+        "Smoke 5",
+        AnimationOptions = {
+            Prop = 'ng_proc_cigarette01a',
+            PropBone = 64097,
+            PropPlacement = {
+                0.0020,
+                0.0010,
+               -0.0090,
+                0.0,
+                0.0,
+                50.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+                0.07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["vape"] = {
@@ -19157,6 +19255,50 @@ RP.PropEmotes = {
             },
             EmoteLoop = false,
             EmoteMoving = true
+        }
+    },
+    ["smssit"] = { --- Custom Emote Provided To RPEmotes By Mr. Witt
+        "mrwitt@phone_time_on_floor",
+        "mrwitt",
+        "SMS Sit",
+        AnimationOptions = {
+            Prop = "prop_phone_taymckenzienz",
+            PropTextureVariations = {
+                {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+                {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+                {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+                {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+                {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+                {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+                {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+                {Name = "Black", Value = 7}
+            },
+            PropBone = 26611,
+            PropPlacement = {
+                 0.0560,
+                -0.0270,
+                 0.0170,
+               -19.9298,
+                -4.6998,
+                 1.7081
+            },
+            EmoteLoop = true,
+            EmoteMoving = false,
+            ExitEmote = "getup",
+            ExitEmoteType = "Exits",
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["tire"] = {
