@@ -949,6 +949,34 @@ RP.Shared = {
             zRot = -1.9999
         }
     },
+    ["bestfriends"] = { -- Female Custom emote by MrWitt
+    "mrwitt@casual_composure_female01",
+    "mrwitt",
+    "Best Friends 1",
+    "bestfriends2",
+    AnimationOptions = {
+        EmoteMoving = false,
+        EmoteLoop = true
+        }
+    },
+    ["bestfriends2"] = { -- Female Custom emote by MrWitt
+    "mrwitt@casual_composure_female02",
+    "mrwitt",
+    "Best Friends 2",
+    "bestfriends",
+    AnimationOptions = {
+        EmoteMoving = false,
+        EmoteLoop = true,
+        Attachto = true,
+        bone = 0,
+        xPos = -0.2500,
+        yPos = 0.1400,
+        zPos = 0.0200,
+        xRot = 0.0000,
+        yRot = 0.0000,
+        zRot = -0.0000
+        },
+    },
     ["bff"] = {
         "anim@male_couple_03_b",
         "m_couple_03_b_clip",
@@ -5442,6 +5470,123 @@ RP.Emotes = {
         {
             EmoteLoop = false
         }
+    },
+["femalestandcute"] = {
+    "stand_cute_6@dark",
+    "stand_cute_6_clip",
+    "Female Stand Cute Pose",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femalestandcute1"] = {
+    "stand_fem_1@darksj",
+    "stand_fem_1_clip",
+    "Female Stand Cute Pose 1",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["femalestandcute2"] = {
+    "feet_stand_w@darksj",
+    "feet_stand_w_clip",
+    "Female Stand Cute Pose 2",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["femalestandcute3"] = {
+    "anim@female_model_14",
+    "f_model_14_clip",
+    "Female Stand Cute Pose 3",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["femalestandcutefinger"] = {
+    "anim@female_model_15",
+    "f_model_15_clip",
+    "Female Stand Cute Pose Finger",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femalestandcute4"] = {
+    "anim@female_model_17",
+    "f_model_17_clip",
+    "Female Stand Cute Pose 4",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["malestandpose"] = {
+    "anim@male_model_11",
+    "m_model_11_clip",
+    "Male Stand Pose",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femalesitcute"] = {
+    "sit_cute_1@dark",
+    "sit_cute_1_clip",
+    "Female Sit Cute",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femalesitcute1"] = {
+    "mrwitt@chin_support_on_floor",
+    "mrwitt",
+    "Female Sit Cute 1",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["femalesitcute2"] = {
+    "beach_1@janina234",
+    "beach_1_clip",
+    "Female Sit Cute 2",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femaleonknees"] = {
+    "beach_4@janina234",
+    "beach_4_clip",
+    "Female On Knees Pose",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femaleonknees1"] = {
+    "on_the_knees@darksj",
+    "on_the_knees_clip",
+    "Female On Knees Pose 1",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["femaleonknees2"] = {
+    "anim@female_model_21",
+    "f_model_21_clip",
+    "Female On Knees Pose 2",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
     },
     ["beast"] = {
         "anim@mp_fm_event@intro",
