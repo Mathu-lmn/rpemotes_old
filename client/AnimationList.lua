@@ -18528,6 +18528,332 @@ RP.PropEmotes = {
             PtfxWait = 200
         }
     },
+    ["femalemirrorselfie"] = {
+    "mirror_selfie_1@janina234",
+    "mirror_selfie_1_clip",
+    "Female Mirror Selfie",
+    AnimationOptions = { -- Custom emote by Janina234
+        Prop = "prop_phone_taymckenzienz",
+        PropTextureVariations = {
+            {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+            {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+            {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+            {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+            {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+            {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+            {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+            {Name = "Black", Value = 7}
+        },
+        PropBone = 4089,
+        PropPlacement = {
+            0.0890,
+           -0.0350,
+            0.0200,
+           -161.7778308,
+           -54.5014945,
+           -12.0985177
+        },
+        EmoteLoop = true,
+        EmoteMoving = false,
+        PtfxAsset = "scr_tn_meet",
+        PtfxName = "scr_tn_meet_phone_camera_flash",
+        PtfxPlacement = {
+            -0.015,
+            0.0,
+            0.041,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
+    ["femalemirrorselfie1"] = {
+    "mirror_selfie_8@daj",
+    "mirror_selfie_8_clip",
+    "Female Mirror Selfie 1",
+    AnimationOptions = { -- Custom emote by Dark
+    Prop = "prop_phone_taymckenzienz",
+    PropTextureVariations = {
+        {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+        {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+        {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+        {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+        {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+        {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+        {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+        {Name = "Black", Value = 7}
+    },
+    PropBone = 4153,
+    PropPlacement = {
+          0.0400,
+          0.00000,
+          0.0500,
+         -37.4803963,
+          33.2648588,
+          18.6732448
+    },
+    EmoteLoop = true,
+    EmoteMoving = false,
+    PtfxAsset = "scr_tn_meet",
+    PtfxName = "scr_tn_meet_phone_camera_flash",
+    PtfxPlacement = {
+        -0.015,
+        0.0,
+        0.041,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+    },
+    PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+    PtfxWait = 200
+        }
+    },
+    ["cameraphotography"] = { -- Custom emote by MrWitt
+    "mrwitt@photographic_journey_f",
+    "mrwitt",
+    "Camera Photography",
+    AnimationOptions = {
+        Prop = 'prop_pap_camera_01',
+        PropBone = 26613,
+        PropPlacement = {
+            0.0280,
+            -0.1350,
+            0.1120,
+            -86.9428843,
+            157.9882355,
+            80.8053557
+        },
+        EmoteLoop = true,
+        EmoteMoving = true,
+        PtfxAsset = "scr_bike_business",
+        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxPlacement = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
+    ["malemirrorselfie"] = { -- Custom emote by Struggleville
+    "anim@male_model_08",
+    "m_model_08_clip",
+    "Male Mirror Selfie",
+    AnimationOptions = {
+        Prop = 'prop_phone_taymckenzienz',
+        PropTextureVariations = {
+            {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+            {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+            {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+            {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+            {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+            {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+            {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+            {Name = "Black", Value = 7}
+        },
+        PropBone = 4169,
+        PropPlacement = {
+            0.0300,
+            -0.0200,
+            0.0200,
+            -64.2080926,
+            3.367247,
+            0.0711684
+        },
+        EmoteLoop = true,
+        EmoteMoving = false,
+        PtfxAsset = "scr_bike_business",
+        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxPlacement = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
+    ["malemirrorselfie1"] = { -- Custom emote by Struggleville
+    "anim@male_selfie_08",
+    "m_selfie_08_clip",
+    "Male Mirror Selfie 1",
+    AnimationOptions = {
+        Prop = 'prop_phone_taymckenzienz',
+        PropTextureVariations = {
+            {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+            {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+            {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+            {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+            {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+            {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+            {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+            {Name = "Black", Value = 7}
+        },
+        PropBone = 4169,
+        PropPlacement = {
+            0.0100,
+            -0.0400,
+            0.0000,
+            -32.8072134,
+            11.7427793,
+            32.5772863
+        },
+        EmoteLoop = true,
+        EmoteMoving = false,
+        PtfxAsset = "scr_bike_business",
+        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxPlacement = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
+    ["malemirrorselfie2"] = { -- Custom emote by Struggleville
+    "anim@male_selfie_06",
+    "m_selfie_06_clip",
+    "Male Mirror Selfie 2",
+    AnimationOptions = {
+        Prop = 'prop_phone_taymckenzienz',
+        PropTextureVariations = {
+            {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+            {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+            {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+            {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+            {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+            {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+            {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+            {Name = "Black", Value = 7}
+        },
+        PropBone = 4169,
+        PropPlacement = {
+            0.0200,
+            -0.0200,
+            0.0100,
+            -69.7707963,
+            3.10072,
+            -8.4531301
+        },
+        EmoteLoop = true,
+        EmoteMoving = false,
+        PtfxAsset = "scr_bike_business",
+        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxPlacement = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
+    ["malemirrorselfie4"] = { -- Custom emote by Struggleville
+    "anim@male_model_03",
+    "m_model_03_clip",
+    "Male Mirror Selfie 4",
+    AnimationOptions = {
+        Prop = 'prop_phone_taymckenzienz',
+        PropTextureVariations = {
+            {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+            {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+            {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+            {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+            {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+            {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+            {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+            {Name = "Black", Value = 7}
+        },
+        PropBone = 4169,
+        PropPlacement = {
+            0.0100,
+            -0.0600,
+            -0.0100,
+            -23.7215768,
+            66.9464998,
+            -62.7303262
+        },
+        EmoteLoop = true,
+        EmoteMoving = false,
+        PtfxAsset = "scr_bike_business",
+        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxPlacement = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
+    ["malemirrorselfie3"] = { -- Custom emote by Struggleville
+    "anim@male_selfie_09",
+    "m_selfie_09_clip",
+    "Male Mirror Selfie 3",
+    AnimationOptions = {
+        Prop = 'prop_phone_taymckenzienz',
+        PropTextureVariations = {
+            {Name = "<font color=\"#00A0F4\">Blue", Value = 0},
+            {Name = "<font color=\"#1AA20E\">Green", Value = 1},
+            {Name = "<font color=\"#800B0B\">Dark Red", Value = 2},
+            {Name = "<font color=\"#FF7B00\">Orange", Value = 3},
+            {Name = "<font color=\"#5F5F5F\">Grey", Value = 4},
+            {Name = "<font color=\"#a356fa\">Purple", Value = 5},
+            {Name = "<font color=\"#FF0099\">Pink", Value = 6},
+            {Name = "Black", Value = 7}
+        },
+        PropBone = 4169,
+        PropPlacement = {
+            0.0400,
+            -0.0300,
+            0.0000,
+            -46.0563529,
+            -0.6965831,
+            -4.2803096
+        },
+        EmoteLoop = true,
+        EmoteMoving = false,
+        PtfxAsset = "scr_bike_business",
+        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxPlacement = {
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+        },
+        PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+        PtfxWait = 200
+        }
+    },
     ["sittv"] = {
         "anim@heists@heist_safehouse_intro@variations@male@tv",
         "tv_part_one_loop",
