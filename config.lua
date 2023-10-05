@@ -75,6 +75,7 @@ Config = {
     PointingEnabled = false,
     PointingKeybindEnabled = true,
     PointingKeybind = 'B', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    PointingKeybindInCarEnabled = false,
     PersistentEmoteAfterPointing = true, -- If true, you will play the emote you were playing previously after you stop pointing.
     -- If crouching should be enabled.
     CrouchEnabled = true,
