@@ -1,5 +1,5 @@
 Config.Languages = {
-['sq'] = { -- Albanian
+    ['sq'] = { -- Albanian
 		['emotes'] = "~h~~p~ Emotet 🎬",
 		['danceemotes'] = "~h~~p~ 🕺 Emotet e Kërcimit",
 		['animalemotes'] = "~h~~p~ 🐩 Emotet e Kafshëve",
@@ -827,7 +827,7 @@ Config.Languages = {
         ['makeitrain'] = "Appuyez sur ~y~G~w~ pour jeter de l'argent.",
         ['pee'] = "Appuyez sur ~y~G~w~ pour faire pipi.",
         ['spraychamp'] = "Appuyez sur ~y~G~w~ pour vaporiser du champagne.",
-        ['smoke'] = "Press ~y~G~w~ to smoke.",
+        ['smoke'] = "Appuyez sur ~y~G~w~ pour fumer.",
         ['vape'] = "Appuyez sur ~y~G~w~ pour vapoter.",
         ['bound'] = "Liée ",
         ['to'] = "à",
@@ -864,7 +864,7 @@ Config.Languages = {
         ['in_a_vehicle'] = "Vous ne pouvez jouer cette animation que dans un véhicule 🚷",
         ['no_anim_crawling'] = "Vous ne pouvez pas jouer d'animations pendant que vous rampez",
     },
-    	['de'] = { -- German 🇩🇪
+    ['de'] = { -- German 🇩🇪
         ['emotes'] = "~h~~p~ Emotes 🎬",
         ['danceemotes'] = "~h~~p~ 🕺 Tanz-Emotes",
         ['animalemotes'] = "~h~~p~ 🐩 Tier Emotes",
@@ -2061,7 +2061,6 @@ Config.Languages = {
         ['in_a_vehicle'] = "Anda hanya dapat memainkan animasi ini saat berada di dalam kendaraan :no_pedestrians:",
         ['no_anim_crawling'] = "Anda tidak dapat memutar animasi sambil merayap"
     },
-
     ['lt'] = { -- Lithuanian (LT)
         ['emotes'] = '~h~~p~ Animacijos 🎬',
         ['danceemotes'] = "~h~~p~ 🕺 Sokiu animacijos",
@@ -2142,5 +2141,4 @@ Config.Languages = {
         ['in_a_vehicle'] = "Sia animacija galite leisti tik budami transporto priemoneje 🚷",
         ['no_anim_crawling'] = "Narsydami negalite leisti animacijos",
     },
-
 }
