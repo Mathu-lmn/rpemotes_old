@@ -26,7 +26,7 @@ function ResetWalk()
     ResetPedMovementClipset(PlayerPedId())
 end
 
-function WalksOnCommand(source, args, raw)
+function WalksOnCommand()
     local WalksCommand = ""
     for a in pairsByKeys(RP.Walks) do
         WalksCommand = WalksCommand .. "" .. string.lower(a) .. ", "
@@ -35,16 +35,16 @@ function WalksOnCommand(source, args, raw)
     EmoteChatMessage("To reset do /walk reset")
 end
 
-function WalkCommandStart(source, args, raw)
-
+function WalkCommandStart(name)
     if not canChange then
         EmoteChatMessage(unable_message)
         return
     end
-    local name = firstToUpper(string.lower(args[1]))
+    name = firstToUpper(string.lower(name))
 
     if name == "Reset" then
         ResetPedMovementClipset(PlayerPedId())
+        DeleteResourceKvp("walkstyle")
         return
     end
 
@@ -93,7 +93,7 @@ end
 
 if Config.WalkingStylesEnabled then
     RegisterCommand('walks', function() WalksOnCommand() end, false)
-    RegisterCommand('walk', function(source, args, raw) WalkCommandStart(source, args, raw) end, false)
+    RegisterCommand('walk', function(source, args, raw) WalkCommandStart(tostring(args[1])) end, false)
     TriggerEvent('chat:addSuggestion', '/walk', 'Set your walkingstyle.', { { name = "style", help = "/walks for a list of valid styles" } })
     TriggerEvent('chat:addSuggestion', '/walks', 'List available walking styles.')
 end
