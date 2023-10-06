@@ -36,7 +36,6 @@ function WalksOnCommand(source, args, raw)
 end
 
 function WalkCommandStart(source, args, raw)
-
     if not canChange then
         EmoteChatMessage(unable_message)
         return
@@ -45,6 +44,7 @@ function WalkCommandStart(source, args, raw)
 
     if name == "Reset" then
         ResetPedMovementClipset(PlayerPedId())
+        DeleteResourceKvp("walkstyle")
         return
     end
 
