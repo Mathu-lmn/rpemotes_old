@@ -146,7 +146,9 @@ Languages can be selected and / or added in the config.lua.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Exports
+# Exports 
+
+When using our emote menu with other scripts, using the `TriggerEvent('animations:client:EmoteCommandStart` won't do anything because the events do not exist. These have simply been replaced with the following exports:
 
 ```lua
 exports["rpemotes"]:EmoteCommandStart(emoteName, textureVariation)
@@ -229,7 +231,7 @@ Much like everything else in the menu, server owners can change these keybinds t
 |COMMAND: | ACTION:|
 |---|---|
 | B | Toggle Finger Pointing |
-| Y| Toggle Hands Up |
+| Y | Toggle Hands Up |
 | /pointing | Toggle Finger Pointing |
 | /handsup | Toggle Hands Up |
 
@@ -237,14 +239,13 @@ Much like everything else in the menu, server owners can change these keybinds t
 
 # Crouching & Crawling
 
-**Crawling:**
-
-Server owners can opt in to either overriding the stealth/action animation when pressing the LEFT CONTROL keybind or have players tap LEFT CONTROL twice to switch from stealth to crouch (when enabled in the config.lua file)
-
-
 **Crouching:**
 
 RIGHT CONTROL. Players can move forward, back, left and right as well as turning around. Press SPACEBAR to switch from stomach to back. Pressing RIGHT CONTROL key while running will have the player "dive into" a crouching animation.
+
+**Crawling:**
+
+Server owners can opt in to either overriding the stealth / action animation when pressing the LEFT CONTROL keybind or have players tap LEFT CONTROL twice to switch from stealth to crouch (when enabled in the config.lua file)
 
 # Chat Commands
 
@@ -266,9 +267,8 @@ Moods and walkstyles can be set from the menu. These will save to your character
 | F4 | Opens RPEmotes menu |
 | /walks | See A List Of Walkstyles In Chat |
 | /moods | See A List Of Walkstyles In Chat |
-
-
-
+| /reset mood | Remove preferred mood and set default |
+| /reset walk | Remove last walkstyle and set default |
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
