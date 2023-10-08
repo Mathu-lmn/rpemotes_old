@@ -22111,4 +22111,42 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
    },
+    ["businessbag"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+       "mrwitt@dark_appearance_with_bag_male",
+       "mrwitt",
+        "Business Bag",
+        AnimationOptions = {
+            Prop = 'prop_med_bag_01b',
+            PropBone = 60309,
+            PropPlacement = {
+               0.3050,
+               0.0200,
+               0.0790,
+              43.8282,
+             -54.1834,
+             -88.4424
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+   },
+    ["businessbag2"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+       "mrwitt@dark_appearance_with_bag_male",
+       "mrwitt",
+        "Business Bag - Pose",
+        AnimationOptions = {
+            Prop = 'prop_med_bag_01b',
+            PropBone = 60309,
+            PropPlacement = {
+               0.3050,
+               0.0200,
+               0.0790,
+              43.8282,
+             -54.1834,
+             -88.4424
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
 }
