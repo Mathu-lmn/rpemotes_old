@@ -5540,7 +5540,9 @@ RP.Emotes = {
     "Female Sit Cute",
     AnimationOptions = {
         EmoteLoop = true,
-        EmoteMoving = false
+        EmoteMoving = false,
+        ExitEmote = "getup",
+        ExitEmoteType = "Exits"
         }
     },
     ["femalesitcute1"] = {
@@ -5549,7 +5551,9 @@ RP.Emotes = {
     "Female Sit Cute 1",
     AnimationOptions = {
         EmoteLoop = true,
-        EmoteMoving = false
+        EmoteMoving = false,
+        ExitEmote = "getup",
+        ExitEmoteType = "Exits"
          }
     },
     ["femalesitcute2"] = {
@@ -5558,7 +5562,9 @@ RP.Emotes = {
     "Female Sit Cute 2",
     AnimationOptions = {
         EmoteLoop = true,
-        EmoteMoving = false
+        EmoteMoving = false,
+        ExitEmote = "getup",
+        ExitEmoteType = "Exits"
         }
     },
     ["femaleonknees"] = {
@@ -5567,7 +5573,9 @@ RP.Emotes = {
     "Female On Knees Pose",
     AnimationOptions = {
         EmoteLoop = true,
-        EmoteMoving = false
+        EmoteMoving = false,
+        ExitEmote = "standup",
+        ExitEmoteType = "Exits"
         }
     },
     ["femaleonknees1"] = {
@@ -5576,7 +5584,9 @@ RP.Emotes = {
     "Female On Knees Pose 1",
     AnimationOptions = {
         EmoteLoop = true,
-        EmoteMoving = false
+        EmoteMoving = false,
+        ExitEmote = "standup",
+        ExitEmoteType = "Exits"
          }
     },
     ["femaleonknees2"] = {
@@ -5585,7 +5595,9 @@ RP.Emotes = {
     "Female On Knees Pose 2",
     AnimationOptions = {
         EmoteLoop = true,
-        EmoteMoving = false
+        EmoteMoving = false,
+        ExitEmote = "getup",
+        ExitEmoteType = "Exits"
          }
     },
     ["beast"] = {
@@ -18671,12 +18683,12 @@ RP.PropEmotes = {
         },
         EmoteLoop = true,
         EmoteMoving = false,
-        PtfxAsset = "scr_bike_business",
-        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxAsset = "scr_tn_meet",
+        PtfxName = "scr_tn_meet_phone_camera_flash",
         PtfxPlacement = {
+            -0.015,
             0.0,
-            0.0,
-            0.0,
+            0.041,
             0.0,
             0.0,
             0.0,
@@ -18713,12 +18725,12 @@ RP.PropEmotes = {
         },
         EmoteLoop = true,
         EmoteMoving = false,
-        PtfxAsset = "scr_bike_business",
-        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxAsset = "scr_tn_meet",
+        PtfxName = "scr_tn_meet_phone_camera_flash",
         PtfxPlacement = {
+            -0.015,
             0.0,
-            0.0,
-            0.0,
+            0.041,
             0.0,
             0.0,
             0.0,
@@ -18755,12 +18767,14 @@ RP.PropEmotes = {
         },
         EmoteLoop = true,
         EmoteMoving = false,
-        PtfxAsset = "scr_bike_business",
-        PtfxName = "scr_bike_cfid_camera_flash",
+        ExitEmote = "getup",
+        ExitEmoteType = "Exits",
+        PtfxAsset = "scr_tn_meet",
+        PtfxName = "scr_tn_meet_phone_camera_flash",
         PtfxPlacement = {
+            -0.015,
             0.0,
-            0.0,
-            0.0,
+            0.041,
             0.0,
             0.0,
             0.0,
@@ -18797,12 +18811,12 @@ RP.PropEmotes = {
         },
         EmoteLoop = true,
         EmoteMoving = false,
-        PtfxAsset = "scr_bike_business",
-        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxAsset = "scr_tn_meet",
+        PtfxName = "scr_tn_meet_phone_camera_flash",
         PtfxPlacement = {
+            -0.015,
             0.0,
-            0.0,
-            0.0,
+            0.041,
             0.0,
             0.0,
             0.0,
@@ -18836,15 +18850,15 @@ RP.PropEmotes = {
             -46.0563529,
             -0.6965831,
             -4.2803096
-        },
+       },
         EmoteLoop = true,
         EmoteMoving = false,
-        PtfxAsset = "scr_bike_business",
-        PtfxName = "scr_bike_cfid_camera_flash",
+        PtfxAsset = "scr_tn_meet",
+        PtfxName = "scr_tn_meet_phone_camera_flash",
         PtfxPlacement = {
+            -0.015,
             0.0,
-            0.0,
-            0.0,
+            0.041,
             0.0,
             0.0,
             0.0,
