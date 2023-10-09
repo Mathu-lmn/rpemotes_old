@@ -2219,5 +2219,5 @@ Config.Languages = {
         ['not_in_a_vehicle'] = "Ne možeš raditi ovu animaciju dok si u vozilu",
         ['in_a_vehicle'] = "Ovu animaciju možeš raditi samo dok si u vozilu 🚷",
         ['no_anim_crawling'] = "Ne možeš raditi animacije dok pužeš",
-},
+    },
 }
