@@ -17839,7 +17839,7 @@ RP.PropEmotes = {
     ["selfiesexy3"] = { -- Custom Emote By Little Spoon, designed for a custom iFruit phone model, however I am sticking with default game props for now
         "littlespoon@selfie003",
         "selfie003",
-        "Selfie Sexy 3",
+        "Selfie Sexy 3 - Squat",
         AnimationOptions = {
             Prop = "prop_phone_taymckenzienz",
             PropTextureVariations = {
@@ -22149,4 +22149,188 @@ RP.PropEmotes = {
             EmoteMoving = false
         }
    },
+    ["squatcash"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+       "mrwitt@checked_shirt_squat_male",
+       "mrwitt",
+        "Squat Cash - Pose",
+        AnimationOptions = {
+            Prop = 'prop_cash_pile_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0880,
+               0.0440,
+               0.0030,
+             149.6422,
+            -164.7312,
+              25.2203
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+  },
+    ["squatmask"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+        "mrwitt@selfie02_male",
+        "mrwitt",
+        "Squat Mask Red - Pose",
+        AnimationOptions = {
+            Prop = 'scarymask1',
+            PropBone = 64065,
+            PropPlacement = {
+               0.0200,
+               0.1700,
+              -0.0210,
+               0.0000,
+               0.0000,
+               0.0000,
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["squatmask1"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+        "mrwitt@selfie02_male",
+        "mrwitt",
+        "Squat Mask White - Pose",
+        AnimationOptions = {
+            Prop = 'scarymask2',
+            PropBone = 64065,
+            PropPlacement = {
+               0.0200,
+               0.1700,
+              -0.0210,
+               0.0000,
+               0.0000,
+               0.0000,
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["squatmask2"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+        "mrwitt@selfie02_male",
+        "mrwitt",
+        "Squat Mask Black - Pose",
+        AnimationOptions = {
+            Prop = 'scarymask3',
+            PropBone = 64065,
+            PropPlacement = {
+               0.0200,
+               0.1700,
+              -0.0210,
+               0.0000,
+               0.0000,
+               0.0000,
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+   },
+    ["selfiesquat"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Mr Witt
+        "mrwitt@selfie02_male",
+        "mrwitt",
+        "Selfie Squat Male",
+        AnimationOptions = {
+            Prop = 'prop_cash_pile_02',
+            PropBone = 26614,
+            PropPlacement = {
+                0.0300,
+               -0.0300,
+                0.0700,
+              -90.0000,
+             -180.0000,
+                6.9999
+            },
+            SecondProp = 'prop_phone_taymckenzienz',
+            PropTextureVariations = {
+                { Name = "<font color=\"#00A0F4\">Blue", Value = 0 },
+                { Name = "<font color=\"#1AA20E\">Green", Value = 1 },
+                { Name = "<font color=\"#800B0B\">Dark Red", Value = 2 },
+                { Name = "<font color=\"#FF7B00\">Orange", Value = 3 },
+                { Name = "<font color=\"#5F5F5F\">Grey", Value = 4 },
+                { Name = "<font color=\"#a356fa\">Purple", Value = 5 },
+                { Name = "<font color=\"#FF0099\">Pink", Value = 6 },
+                { Name = "Black", Value = 7 },
+            },
+            SecondPropBone = 64112,
+            SecondPropPlacement = {
+                0.0180,
+                0.0380,
+                0.0260,
+              179.6474,
+             -177.9691,
+                9.9938
+            },
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200,
+            EmoteLoop = true,
+        }
+   },
+    ["femscaremask"] = { -- Animation by MrWitt
+        "mrwitt@helloween4_f",
+        "mrwitt",
+        "Female Scary Mask Red - Pose",
+        AnimationOptions = {
+            Prop = 'scarymask1', -- Prop by Vedere
+            PropBone = 64064,
+            PropPlacement = {
+                -0.0460,
+                0.1170,
+                0.0850,
+                21.9542799,
+                -81.9467213,
+                9.0687101
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+            }
+   },
+    ["femscaremask2"] = { -- Animation by MrWitt
+    "mrwitt@helloween4_f",
+    "mrwitt",
+    "Female Scary Mask Black - Pose",
+        AnimationOptions = {
+        Prop = 'scarymask2', -- Prop by Vedere
+        PropBone = 64064,
+        PropPlacement = {
+        -0.0460,
+        0.1170,
+        0.0850,
+        21.9542799,
+        -81.9467213,
+        9.0687101
+        },
+        EmoteLoop = true,
+        EmoteMoving = true
+        }
+   },
+    ["femscaremask3"] = { -- Animation by MrWitt
+    "mrwitt@helloween4_f",
+    "mrwitt",
+    "Female Scary Mask White - Pose",
+        AnimationOptions = {
+        Prop = 'scarymask3', -- Prop by Vedere
+        PropBone = 64064,
+        PropPlacement = {
+        -0.0460,
+        0.1170,
+        0.0850,
+        21.9542799,
+        -81.9467213,
+        9.0687101
+        },
+        EmoteLoop = true,
+        EmoteMoving = true
+        },
+    }
 }
