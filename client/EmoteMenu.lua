@@ -552,13 +552,17 @@ function AddInfoMenu(menu)
         "<font color=\"#00FF12\">Brum</font> for the custom props  🇬🇧"))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#017a05\">Chico 💀</font>",
         "<font color=\"#017a05\">Chico 💀</font> for fixing persistent walkstyles and moods for QB-Core and ESX."))
-  infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#194ce6\">-EcLiPsE- 🏍️</font>",
-        "<font color=\"#194ce6\">-EcLiPsE- 🏍️</font> for implementation of improved prop sets and gta online biker animations."))
+  infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#194ce6\">-EcLiPsE- ✌🏻</font>",
+        "<font color=\"#194ce6\">-EcLiPsE- ✌🏻 </font> for NPC prop sets and GTA Online biker animations"))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#3488c8\">MrWitt 🦑️</font>",
         "<font color=\"#3488c8\">MrWitt 🦑</font> for the custom animations."))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff96b6\">AdoredRose 🌹</font>",
        "<font color=\"#ff96b6\">AdoredRose 🌹</font> for the custom animations."))
-    infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
+    infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff451d\">DRX Animations 👑</font>",
+        "<font color=\"#ff451d\">DRX Animations 👑</font> for the custom animations"))
+        
+  infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
+    
 end
 
 function OpenEmoteMenu()
