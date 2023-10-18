@@ -5,8 +5,8 @@
 fx_version 'cerulean'
 game 'gta5'
 authors { 'TayMcKenzieNZ', 'MadsL', 'Mathu_lmn', 'Community' }
-description 'RPEmotes V1.3.6'
-version '1.3.6'
+description 'RPEmotes V1.3.7'
+version '1.3.7'
 lua54 'yes'
 
 dependencies {
