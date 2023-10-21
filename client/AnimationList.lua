@@ -3329,7 +3329,7 @@ RP.AnimalEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
-            PtfxWait = 200,
+            PtfxWait = 0,
             PtfxCanHold = true
         }
     },
@@ -3380,7 +3380,7 @@ RP.AnimalEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
-            PtfxWait = 3000,
+            PtfxWait = 0,
             PtfxCanHold = true
         }
     },
@@ -3403,7 +3403,7 @@ RP.AnimalEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
-            PtfxWait = 3000,
+            PtfxWait = 0,
             PtfxCanHold = true
         }
     },
@@ -5086,7 +5086,7 @@ RP.AnimalEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
-            PtfxWait = 3000,
+            PtfxWait = 0,
             PtfxCanHold = true
         }
     },
@@ -5108,10 +5108,10 @@ RP.AnimalEmotes = {
                 0.0,
                 0.0,
                 0.0,
-                0.4
+                0.5
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
-            PtfxWait = 2000,
+            PtfxWait = 0,
             PtfxCanHold = true
         }
     },
@@ -8712,7 +8712,7 @@ RP.Emotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
-            PtfxWait = 3000,
+            PtfxWait = 0,
             PtfxCanHold = true,
         },
         AdultAnimation = true
@@ -8721,6 +8721,31 @@ RP.Emotes = {
         "missbigscore1switch_trevor_piss",
         "piss_loop",
         "Pee 2 (Male)",
+        AnimationOptions = {
+            EmoteMoving = true,
+            EmoteLoop = true,
+            PtfxAsset = "scr_amb_chop",
+            PtfxName = "ent_anim_dog_peeing",
+            PtfxNoProp = true,
+            PtfxPlacement = {
+                0.0130,
+                0.1030,
+                0.0,
+                0.0,
+                90.0,
+                90.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
+            PtfxWait = 0,
+            PtfxCanHold = true,
+        },
+        AdultAnimation = true
+    },
+    ["pee3"] = {
+        "missbigscore1switch_trevor_piss",
+        "piss_loop",
+        "Pee 3 Static (Male)",
         AnimationOptions = {
             EmoteMoving = false,
             EmoteLoop = true,
@@ -8737,7 +8762,7 @@ RP.Emotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['pee'],
-            PtfxWait = 3000,
+            PtfxWait = 0,
             PtfxCanHold = true,
         },
         AdultAnimation = true
@@ -16904,14 +16929,50 @@ RP.PropEmotes = {
             PtfxPlacement = {
                 0.0,
                 0.0,
-                -0.1,
+               -0.1,
                 0.0,
                 0.0,
                 0.0,
-                1.0
+                1.3
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
-            PtfxWait = 200,
+            PtfxWait = 0,
+            PtfxCanHold = true
+        }
+    },
+    ["shit2"] = {
+        "missfbi3ig_0",
+        "nill",
+        "Shit While Walking",
+        AnimationOptions = {
+            Prop = "prop_toilet_roll_01",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0700,
+                -0.02000,
+                -0.2100,
+                0,
+                0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+            PtfxAsset = "scr_amb_chop",
+            PtfxName = "ent_anim_dog_poo",
+            PtfxNoProp = true,
+            PtfxBone = 11816,
+            PtfxPlacement = {
+                0.0,
+                0.0,
+               -0.1,
+                0.0,
+                0.0,
+                0.0,
+                1.4
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['poop'],
+            PtfxWait = 0,
             PtfxCanHold = true
         }
     },
@@ -20686,6 +20747,25 @@ RP.PropEmotes = {
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
             PtfxWait = 200,
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ['old2'] = { -- Custom Animation By Darks Animations, Added To And Requested By TayMcKenzieNZ Exclusively For RPEmotes and is not to be extracted or added to another scripts and / or menus
+        'zimmerframe_walk@dark',
+        'zimmerframe_walk_clip',
+        'Old Man Zimmerframe',
+        AnimationOptions = {
+            Prop = 'v_res_d_zimmerframe',
+            PropBone = 28252,
+            PropPlacement = {
+                0.9500,
+               -0.6640,
+               -0.5470,
+             -122.4053,
+               85.0955,
+               23.1787,
+            },
             EmoteLoop = true,
             EmoteMoving = true
         }
