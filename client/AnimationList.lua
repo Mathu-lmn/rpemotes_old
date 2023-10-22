@@ -19605,7 +19605,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["guccibag"] = { -- Custom prop by crowded1337, unbranded by TayMcKenzieNZ
+    ["handbag"] = { -- Custom prop by crowded1337, unbranded by TayMcKenzieNZ
         "move_weapon@jerrycan@generic",
         "idle",
         "Gucci Bag",
