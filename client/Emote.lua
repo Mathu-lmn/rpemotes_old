@@ -267,10 +267,21 @@ if Config.HandsupEnabled then
         Handsup()
     end, false)
 
-    function Handsup()
+function Handsup()
+    local playerPed = PlayerPedId()
+    if not IsPedHuman(playerPed) then
+        return
+    end
+    if IsProne then
+        return
+    end
         if IsProne then
             return
         end
+        if IsProne then
+            return
+	end
+		
 
         inHandsup = not inHandsup
         if inHandsup then
@@ -280,7 +291,7 @@ if Config.HandsupEnabled then
             while not HasAnimDictLoaded(dict) do
                 Wait(0)
             end
-            TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.0, 2.0, -1, 49, 0, false, false, false)
+            TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.0, 2.0, -1, 49, 0, false, IsThisModelABike(GetEntityModel(GetVehiclePedIsIn(PlayerPedId(), false))) and 4127 or false, false)
             HandsUpLoop()
         else
             ClearPedSecondaryTask(PlayerPedId())
