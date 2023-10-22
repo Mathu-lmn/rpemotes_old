@@ -6693,7 +6693,7 @@ RP.Emotes = {
     ["meditate"] = {
         "rcmcollect_paperleadinout@",
         "meditiate_idle",
-        "Meditiate",
+        "Meditate",
         AnimationOptions = {
             EmoteLoop = true,
             StartDelay = 300,
@@ -6704,7 +6704,7 @@ RP.Emotes = {
     ["meditate2"] = {
         "rcmepsilonism3",
         "ep_3_rcm_marnie_meditating",
-        "Meditiate 2",
+        "Meditate 2",
         AnimationOptions = {
             EmoteLoop = true,
             StartDelay = 300,
@@ -6715,7 +6715,7 @@ RP.Emotes = {
     ["meditate3"] = {
         "rcmepsilonism3",
         "base_loop",
-        "Meditiate 3",
+        "Meditate 3",
         AnimationOptions = {
             EmoteLoop = true,
             StartDelay = 300,
