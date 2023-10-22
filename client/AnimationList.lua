@@ -14265,25 +14265,6 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
-    ["teddy2"] = {
-        "impexp_int-0",
-        "mp_m_waremech_01_dual-0",
-        "Teddy 2 - Gremlin",
-        AnimationOptions = {
-            Prop = 'gremlin_plush',
-            PropBone = 57005,
-            PropPlacement = {
-                0.2610,
-               -0.1220,
-               -0.0290,
-              -96.2588,
-              62.8313,
-               9.2446
-            },
-            EmoteMoving = true,
-            EmoteLoop = true
-        }
-    },
     ["backpack"] = {
         "move_p_m_zero_rucksack",
         "nill",
