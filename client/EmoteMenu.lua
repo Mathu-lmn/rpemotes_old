@@ -852,7 +852,7 @@ if Config.EmotePreview then
         local heading = math.atan(ncoords.x, ncoords.y) * 180.0 / math.pi
 
         local clone = ClonePed(ped, false, false, false)
-
+        SetPedAudioFootstepLoud(clone, false)
         -- big dog
         RequestModel(GetHashKey("a_c_husky"))
         while not HasModelLoaded(GetHashKey("a_c_husky")) do
@@ -897,7 +897,7 @@ if Config.EmotePreview then
         local targetCoords = nil
         local targetHeading = nil
         local interpolationInterval = 1
-        local lerpSpeed = 0.4
+        local lerpSpeed = 0.3
 
         CreateThread(function()
             while DoesEntityExist(clone) do
@@ -973,11 +973,6 @@ if Config.EmotePreview then
 
         if ChosenDict == "MaleScenario" or ChosenDict == "Scenario" then
             return
-        end
-
-        -- Small delay at the start
-        if animOption and animOption.StartDelay then
-            Wait(animOption.StartDelay)
         end
 
         if not LoadAnim(ChosenDict) then
@@ -1114,11 +1109,6 @@ if Config.EmotePreview then
             end
         end
 
-        -- Small delay at the start
-        if animOption and animOption.StartDelay then
-            Wait(animOption.StartDelay)
-        end
-
         if not LoadAnim(ChosenDict) then
             EmoteChatMessage("'" .. ename .. "' " .. Config.Languages[lang]['notvalidemote'] .. "")
             return
@@ -1206,7 +1196,9 @@ if Config.EmotePreview then
         local emote2 = tostring(EmoteName[4]) or emote
         -- create a new ped clonedPed2 and make it do the shared emote with the clonedPed
         clonedPed2 = ClonePed(clonedPed, 0.0, false, false)
-        SetEntityNoCollisionEntity(clonedPed2, PlayerPedId(), true)
+        SetEntityNoCollisionEntity(clonedPed2, PlayerPedId(), false)
+        SetEntityNoCollisionEntity(clonedPed2, clonedPed, false)
+        SetEntityAlpha(clonedPed2, 230, false)
         FreezeEntityPosition(clonedPed2, true)
         local SyncOffsetFront = 1.0
         local SyncOffsetSide = 0.0
