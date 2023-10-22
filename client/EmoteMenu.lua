@@ -853,12 +853,14 @@ if Config.EmotePreview then
 
         local clone = ClonePed(ped, false, false, false)
         SetPedAudioFootstepLoud(clone, false)
+        SetEntityAlpha(clone, 0, false)
         -- big dog
         RequestModel(GetHashKey("a_c_husky"))
         while not HasModelLoaded(GetHashKey("a_c_husky")) do
             Citizen.Wait(0)
         end
         local dog = CreatePed(28, GetHashKey("a_c_husky"), scoords.x, scoords.y, scoords.z, heading, false, false)
+        SetEntityAlpha(dog, 0, false)
 
         -- small dog
         RequestModel(GetHashKey("a_c_poodle"))
@@ -867,8 +869,6 @@ if Config.EmotePreview then
         end
         local dog2 = CreatePed(28, GetHashKey("a_c_poodle"), scoords.x, scoords.y, scoords.z, heading, false, false)
 
-        SetEntityAlpha(clone, 0, false)
-        SetEntityAlpha(dog, 0, false)
         SetEntityAlpha(dog2, 0, false)
         FreezeEntityPosition(clone, true)
         FreezeEntityPosition(dog, true)
