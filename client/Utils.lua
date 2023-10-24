@@ -97,7 +97,7 @@ function LoadAnim(dict)
     end
 end
 
-function LoadPropDict(model)
+function LoadModel(model)
     -- load the model if it's not loaded and wait until it's loaded or timeout
     if not HasModelLoaded(joaat(model)) then
         RequestModel(joaat(model))
@@ -123,6 +123,27 @@ function RequestWalking(set)
         RequestAnimSet(set)
         Wait(5)
     end
+end
+
+function VectorLerp(startVec, endVec, t)
+    return startVec + (endVec - startVec) * t
+end
+
+-----------------------------------------------------------------------------------------------------
+-- V -- This could be a whole lot better, i tried messing around with "IsPedMale(ped)"
+-- V -- But i never really figured it out, if anyone has a better way of gender checking let me know.
+-- V -- Since this way doesnt work for ped models.
+-- V -- in most cases its better to replace the scenario with an animation bundled with prop instead.
+-----------------------------------------------------------------------------------------------------
+
+function CheckPedGender(ped)
+    local gender = "male"
+    if GetEntityModel(ped) == joaat("mp_f_freemode_01") then
+        gender = "female"
+    end
+    DebugPrint("Set gender as = (" .. gender .. ")")
+
+    return gender
 end
 
 

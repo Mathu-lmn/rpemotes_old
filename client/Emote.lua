@@ -627,7 +627,7 @@ function AddPropToPlayer(prop1, bone, off1, off2, off3, rot1, rot2, rot3, textur
     end
 
     if not HasModelLoaded(prop1) then
-        LoadPropDict(prop1)
+        LoadModel(prop1)
     end
 
     prop = CreateObject(joaat(prop1), x, y, z + 0.2, true, true, true)
@@ -643,24 +643,6 @@ function AddPropToPlayer(prop1, bone, off1, off2, off3, rot1, rot2, rot3, textur
     return true
 end
 
------------------------------------------------------------------------------------------------------
--- V -- This could be a whole lot better, i tried messing around with "IsPedMale(ped)"
--- V -- But i never really figured it out, if anyone has a better way of gender checking let me know.
--- V -- Since this way doesnt work for ped models.
--- V -- in most cases its better to replace the scenario with an animation bundled with prop instead.
------------------------------------------------------------------------------------------------------
-
-function CheckGender()
-    local playerPed = PlayerPedId()
-
-    if GetEntityModel(playerPed) == joaat("mp_f_freemode_01") then
-        PlayerGender = "female"
-    else
-        PlayerGender = "male"
-    end
-
-    DebugPrint("Set gender as = (" .. PlayerGender .. ")")
-end
 
 -----------------------------------------------------------------------------------------------------
 ------ This is the major function for playing emotes! -----------------------------------------------
@@ -732,7 +714,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
     end
 
     if ChosenDict == "MaleScenario" or ChosenDict == "Scenario" or ChosenDict == "ScenarioObject" then
-        CheckGender()
+        PlayerGender = CheckPedGender(PlayerPedId())
         if ChosenDict == "MaleScenario" then if InVehicle then return end
             if PlayerGender == "male" then
                 ClearPedTasks(PlayerPedId())

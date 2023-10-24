@@ -221,16 +221,15 @@ function AddEmoteMenu(menu)
 
     if Config.EmotePreview then
         dancemenu.OnIndexChange = function(menu, newindex)
-            -- play the emote on ClonedPed
             PlayCloneEmote(DanceTable[newindex], "dances")
         end
 
         dancemenu.OnMenuClosed = function(menu, index)
-            -- stop the emote on ClonedPed
-            ClearPedTasksImmediately(ClonedPed)
+            ClearPedTasksImmediately(clonedPed)
             SetEntityAlpha(clonedPed, 0, false)
             SetEntityAlpha(clonedBDog, 0, false)
             SetEntityAlpha(clonedSDog, 0, false)
+            DestroyAllCloneProps()
         end
     end
 
@@ -240,8 +239,7 @@ function AddEmoteMenu(menu)
         end
 
         animalmenu.OnIndexChange = function(menu, newindex)
-            -- play the emote on ClonedPed
-            ClearPedTasksImmediately(ClonedPed)
+            ClearPedTasksImmediately(clonedPed)
             ClearPedTasksImmediately(clonedBDog)
             ClearPedTasksImmediately(clonedSDog)
             SetEntityAlpha(clonedBDog, 0, false)
@@ -251,8 +249,7 @@ function AddEmoteMenu(menu)
         end
 
         animalmenu.OnMenuClosed = function(menu, index)
-            -- stop the emote on ClonedPed
-            ClearPedTasksImmediately(ClonedPed)
+            ClearPedTasksImmediately(clonedPed)
             ClearPedTasksImmediately(clonedBDog)
             ClearPedTasksImmediately(clonedSDog)
             SetEntityAlpha(clonedPed, 0, false)
@@ -287,58 +284,59 @@ function AddEmoteMenu(menu)
             end
         end
 
-        if Config.EmotePreview then
-            sharemenu.OnIndexChange = function(menu, newindex)
-                -- play the emote on ClonedPed
-                if newindex == 1 then
-                    ClearPedTasksImmediately(clonedPed)
-                    SetEntityAlpha(clonedPed, 0, false)
-                    SetEntityAlpha(clonedBDog, 0, false)
-                    SetEntityAlpha(clonedSDog, 0, false)
-                    if clonedPed2 ~= nil then
-                        DeleteEntity(clonedPed2)
-                        clonedPed2 = nil
-                    end
-                    return
-                end
-                if clonedPed2 ~= nil then
-                    DeleteEntity(clonedPed2)
-                    clonedPed2 = nil
-                end
-                PlayCloneEmote(ShareTable[newindex], "shared")
-            end
+        -- if Config.EmotePreview then
+        --     sharemenu.OnIndexChange = function(menu, newindex)
+        --         if newindex == 1 then
+        --             ClearPedTasksImmediately(clonedPed)
+        --             SetEntityAlpha(clonedPed, 0, false)
+        --             SetEntityAlpha(clonedBDog, 0, false)
+        --             SetEntityAlpha(clonedSDog, 0, false)
+        --             if clonedPed2 ~= nil then
+        --                 DeleteEntity(clonedPed2)
+        --                 clonedPed2 = nil
+        --             end
+        --             return
+        --         end
+        --         if clonedPed2 ~= nil then
+        --             DeleteEntity(clonedPed2)
+        --             clonedPed2 = nil
+        --         end
+        --         DetachEntity(clonedPed, true, false)
+        --         ClearPedTasksImmediately(clonedPed2)
+        --         ClearPedTasksImmediately(clonedPed)
+        --         PlayCloneEmote(ShareTable[newindex], "shared")
+        --     end
 
-            shareddancemenu.OnIndexChange = function(menu, newindex)
-                -- play the emote on ClonedPed
-                if clonedPed2 ~= nil then
-                    DeleteEntity(clonedPed2)
-                    clonedPed2 = nil
-                end
-                PlayCloneEmote(DanceTable[newindex], "shared")
-            end
+        --     shareddancemenu.OnIndexChange = function(menu, newindex)
+        --         if clonedPed2 ~= nil then
+        --             DeleteEntity(clonedPed2)
+        --             clonedPed2 = nil
+        --         end
+        --         PlayCloneEmote(DanceTable[newindex], "shared")
+        --     end
 
-            sharemenu.OnMenuClosed = function(menu)
-                ClearPedTasksImmediately(clonedPed)
-                SetEntityAlpha(clonedPed, 0, false)
-                SetEntityAlpha(clonedBDog, 0, false)
-                SetEntityAlpha(clonedSDog, 0, false)
-                if clonedPed2 ~= nil then
-                    DeleteEntity(clonedPed2)
-                    clonedPed2 = nil
-                end
-            end
+        --     sharemenu.OnMenuClosed = function(menu)
+        --         ClearPedTasksImmediately(clonedPed)
+        --         SetEntityAlpha(clonedPed, 0, false)
+        --         SetEntityAlpha(clonedBDog, 0, false)
+        --         SetEntityAlpha(clonedSDog, 0, false)
+        --         if clonedPed2 ~= nil then
+        --             DeleteEntity(clonedPed2)
+        --             clonedPed2 = nil
+        --         end
+        --     end
 
-            shareddancemenu.OnMenuClosed = function(menu)
-                ClearPedTasksImmediately(clonedPed)
-                SetEntityAlpha(clonedPed, 0, false)
-                SetEntityAlpha(clonedBDog, 0, false)
-                SetEntityAlpha(clonedSDog, 0, false)
-                if clonedPed2 ~= nil then
-                    DeleteEntity(clonedPed2)
-                    clonedPed2 = nil
-                end
-            end
-        end
+        --     shareddancemenu.OnMenuClosed = function(menu)
+        --         ClearPedTasksImmediately(clonedPed)
+        --         SetEntityAlpha(clonedPed, 0, false)
+        --         SetEntityAlpha(clonedBDog, 0, false)
+        --         SetEntityAlpha(clonedSDog, 0, false)
+        --         if clonedPed2 ~= nil then
+        --             DeleteEntity(clonedPed2)
+        --             clonedPed2 = nil
+        --         end
+        --     end
+        -- end
     end
 
     propmenu.OnItemSelect = function(sender, item, index)
@@ -347,12 +345,10 @@ function AddEmoteMenu(menu)
 
     if Config.EmotePreview then
         propmenu.OnIndexChange = function(menu, newindex)
-            -- play the emote on ClonedPed
             PlayCloneEmote(PropETable[newindex], "props")
         end
 
         propmenu.OnMenuClosed = function(menu)
-            -- stop the emote on ClonedPed
             ClearPedTasksImmediately(clonedPed)
             SetEntityAlpha(clonedPed, 0, false)
             SetEntityAlpha(clonedBDog, 0, false)
@@ -845,53 +841,49 @@ Citizen.CreateThread(function()
     end
 end)
 
+function InitPed(ped)
+    SetPedAudioFootstepLoud(ped, false)
+    SetPedAudioFootstepQuiet(ped, false)
+    SetPedFleeAttributes(ped, 0, 0)
+    SetEntityAlpha(ped, 0, false)
+    SetBlockingOfNonTemporaryEvents(ped, true)
+    SetPedCanRagdollFromPlayerImpact(ped, false)
+    SetPedCanRagdoll(ped, false)
+    SetPedDiesWhenInjured(ped, false)
+    FreezeEntityPosition(ped, true)
+    SetEntityInvincible(ped, true)
+    DisablePedPainAudio(ped, true)
+end
+
 if Config.EmotePreview then
     function CreateClone()
+        local dogModels = { `a_c_husky`, `a_c_poodle` }
         local ped = PlayerPedId()
         local scoords, ncoords = GetWorldCoordFromScreenCoord(clonedPosition.x, clonedPosition.y)
         local heading = math.atan(ncoords.x, ncoords.y) * 180.0 / math.pi
 
         local clone = ClonePed(ped, false, false, false)
-        SetPedAudioFootstepLoud(clone, false)
-        SetEntityAlpha(clone, 0, false)
+        InitPed(clone)
+
         -- big dog
-        RequestModel(GetHashKey("a_c_husky"))
-        while not HasModelLoaded(GetHashKey("a_c_husky")) do
-            Citizen.Wait(0)
-        end
-        local dog = CreatePed(28, GetHashKey("a_c_husky"), scoords.x, scoords.y, scoords.z, heading, false, false)
-        SetEntityAlpha(dog, 0, false)
+        LoadModel(dogModels[1])
+        local dog = CreatePed(28, dogModels[1], scoords.x, scoords.y, scoords.z, heading, false, false)
+        SetModelAsNoLongerNeeded(dogModels[1])
+        InitPed(dog)
 
         -- small dog
-        RequestModel(GetHashKey("a_c_poodle"))
-        while not HasModelLoaded(GetHashKey("a_c_poodle")) do
-            Citizen.Wait(0)
-        end
-        local dog2 = CreatePed(28, GetHashKey("a_c_poodle"), scoords.x, scoords.y, scoords.z, heading, false, false)
-
-        SetEntityAlpha(dog2, 0, false)
-        FreezeEntityPosition(clone, true)
-        FreezeEntityPosition(dog, true)
-        FreezeEntityPosition(dog2, true)
-        SetEntityInvincible(clone, true)
-        SetEntityInvincible(dog, true)
-        SetEntityInvincible(dog2, true)
-        SetBlockingOfNonTemporaryEvents(clone, true)
-        SetBlockingOfNonTemporaryEvents(dog, true)
-        SetBlockingOfNonTemporaryEvents(dog2, true)
+        LoadModel(dogModels[2])
+        local dog2 = CreatePed(28, dogModels[2], scoords.x, scoords.y, scoords.z, heading, false, false)
+        SetModelAsNoLongerNeeded(dogModels[2])
+        InitPed(dog2)
 
         SetEntityHeading(clone, 180 - heading)
         local coords = scoords + ncoords * 4.0
         SetEntityCoordsNoOffset(clone, coords.x, coords.y, coords.z - 0.5, 0.0, 0.0, 0.0)
-        SetEntityCollision(clone, false, false)
-        SetEntityCollision(dog, false, false)
-        SetEntityCollision(dog2, false, false)
-        SetEntityNoCollisionEntity(clone, PlayerPedId(), false)
-        SetEntityNoCollisionEntity(clone, dog, false)
-        SetEntityNoCollisionEntity(clone, dog2, false)
-        SetEntityNoCollisionEntity(dog, PlayerPedId(), false)
-        SetEntityNoCollisionEntity(dog2, PlayerPedId(), false)
-        SetEntityNoCollisionEntity(dog, dog2, false)
+        SetEntityCompletelyDisableCollision(clone, false, false)
+        SetEntityCompletelyDisableCollision(dog, false, false)
+        SetEntityCompletelyDisableCollision(dog2, false, false)
+
         local currentCoords = nil
         local currentHeading = nil
         local targetCoords = nil
@@ -927,24 +919,9 @@ if Config.EmotePreview then
         return clone, dog, dog2
     end
 
-    function VectorLerp(startVec, endVec, t)
-        return startVec + (endVec - startVec) * t
-    end
-
     local cloneProps = {}
     local cloneHasProps = false
-    local cloneGender = "male"
 
-    function CheckCloneGender()
-
-        if GetEntityModel(clonedPed) == GetHashKey("mp_f_freemode_01") then
-            cloneGender = "female"
-        else
-            cloneGender = "male"
-        end
-
-        DebugPrint("Set clone gender as = (" .. cloneGender .. ")")
-    end
 
     function OnCloneEmotePlay(EmoteName, name, textureVariation)
         local animOption = EmoteName.AnimationOptions
@@ -1025,12 +1002,8 @@ if Config.EmotePreview then
             end
         end
 
-        TaskPlayAnim(tempPed, ChosenDict, ChosenAnimation, 5.0, 5.0, AnimationDuration, MovementType, 0, false, false,
-            false)
+        TaskPlayAnim(tempPed, ChosenDict, ChosenAnimation, 5.0, 5.0, AnimationDuration, MovementType, 0, false, false, false)
         RemoveAnimDict(ChosenDict)
-
-        MostRecentDict = ChosenDict
-        MostRecentAnimation = ChosenAnimation
 
         if animOption and animOption.Prop then
             PropName = animOption.Prop
@@ -1071,7 +1044,6 @@ if Config.EmotePreview then
         end
 
         if ChosenDict == "MaleScenario" or ChosenDict == "Scenario" then
-            CheckCloneGender()
             if ChosenDict == "MaleScenario" then
                 if InVehicle then return end
                 if PlayerGender == "male" then
@@ -1080,7 +1052,6 @@ if Config.EmotePreview then
                     TaskStartScenarioInPlace(clonedPed2, ChosenAnimation, 0, true)
                     DebugPrint("Playing scenario = (" .. ChosenAnimation .. ")")
                     IsInAnimation = true
-                    RunAnimationThread()
                 else
                     DestroyAllCloneProps()
                     EmoteCancel()
@@ -1095,7 +1066,6 @@ if Config.EmotePreview then
                     BehindPlayer['z'], GetEntityHeading(clonedPed2), 0, true, false)
                 DebugPrint("Playing scenario = (" .. ChosenAnimation .. ")")
                 IsInAnimation = true
-                RunAnimationThread()
                 return
             elseif ChosenDict == "Scenario" then
                 if InVehicle then return end
@@ -1104,7 +1074,6 @@ if Config.EmotePreview then
                 TaskStartScenarioInPlace(clonedPed2, ChosenAnimation, 0, true)
                 DebugPrint("Playing scenario = (" .. ChosenAnimation .. ")")
                 IsInAnimation = true
-                RunAnimationThread()
                 return
             end
         end
@@ -1159,12 +1128,8 @@ if Config.EmotePreview then
             end
         end
 
-        TaskPlayAnim(clonedPed2, ChosenDict, ChosenAnimation, 5.0, 5.0, AnimationDuration, MovementType, 0, false, false,
-            false)
+        TaskPlayAnim(clonedPed2, ChosenDict, ChosenAnimation, 5.0, 5.0, AnimationDuration, MovementType, 0, false, false, false)
         RemoveAnimDict(ChosenDict)
-
-        MostRecentDict = ChosenDict
-        MostRecentAnimation = ChosenAnimation
 
         if animOption and animOption.Prop then
             PropName = animOption.Prop
@@ -1196,10 +1161,10 @@ if Config.EmotePreview then
         local emote2 = tostring(EmoteName[4]) or emote
         -- create a new ped clonedPed2 and make it do the shared emote with the clonedPed
         clonedPed2 = ClonePed(clonedPed, 0.0, false, false)
-        SetEntityNoCollisionEntity(clonedPed2, PlayerPedId(), false)
-        SetEntityNoCollisionEntity(clonedPed2, clonedPed, false)
+        InitPed(clonedPed2)
+        SetEntityCompletelyDisableCollision(clonedPed2, false, false)
         SetEntityAlpha(clonedPed2, 230, false)
-        FreezeEntityPosition(clonedPed2, true)
+
         local SyncOffsetFront = 1.0
         local SyncOffsetSide = 0.0
         local SyncOffsetHeight = 0.0
@@ -1246,11 +1211,11 @@ if Config.EmotePreview then
                     false, false, false, true, 1, true)
             end
         end
-        if RP[etype][emote] ~= nil then
-            OnCloneEmotePlay(RP[etype][emote], emote)
-        end
         if RP[etype][emote2] ~= nil then
             OnClone2EmotePlay(RP[etype][emote2], emote2)
+        end
+        if RP[etype][emote] ~= nil then
+            OnCloneEmotePlay(RP[etype][emote], emote)
         end
 
         CreateThread(function()
@@ -1285,7 +1250,7 @@ if Config.EmotePreview then
         end
 
         if not HasModelLoaded(prop1) then
-            LoadPropDict(prop1)
+            LoadModel(prop1)
         end
 
         prop = CreateObject(joaat(prop1), x, y, z + 0.2, true, true, true)

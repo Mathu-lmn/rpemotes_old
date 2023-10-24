@@ -75,7 +75,7 @@ if Config.NewscamEnabled then
                 local boneIndex = GetPedBoneIndex(PlayerPedId(), 28422)
                 local x, y, z = table.unpack(GetEntityCoords(PlayerPedId(), true))
                 if not HasModelLoaded("prop_v_cam_01") then
-                    LoadPropDict("prop_v_cam_01")
+                    LoadModel("prop_v_cam_01")
                 end
                 prop_newscam = CreateObject(GetHashKey("prop_v_cam_01"), x, y, z + 0.2, true, true, true)
                 AttachEntityToEntity(prop_newscam, PlayerPedId(), boneIndex, 0.0, 0.03, 0.01, 0.0, 0.0, 0.0, true, true,

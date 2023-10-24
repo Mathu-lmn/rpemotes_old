@@ -73,7 +73,7 @@ if Config.BinocularsEnabled then
                 local boneIndex = GetPedBoneIndex(PlayerPedId(), 28422)
                 local x, y, z = table.unpack(GetEntityCoords(PlayerPedId(), true))
                 if not HasModelLoaded("prop_binoc_01") then
-                    LoadPropDict("prop_binoc_01")
+                    LoadModel("prop_binoc_01")
                 end
                 prop_binoc = CreateObject(GetHashKey("prop_binoc_01"), x, y, z + 0.2 , true, true, true)
                 AttachEntityToEntity(prop_binoc, PlayerPedId(), boneIndex, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, true, true, false, true, 1, true)
