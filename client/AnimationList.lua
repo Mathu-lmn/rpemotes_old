@@ -10578,7 +10578,7 @@ RP.PropEmotes = {
             PtfxName = "ent_anim_cig_smoke",
             PtfxNoProp = false,
             PtfxPlacement = {
-                0.07,
+               -0.07,
                 0.0,
                 0.0,
                 0.0,
