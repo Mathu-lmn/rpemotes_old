@@ -16978,7 +16978,7 @@ RP.PropEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-            PtfxWait = 200,
+            PtfxWait = 0.8,
             PtfxCanHold = true
         },
     },
@@ -17002,7 +17002,7 @@ RP.PropEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-            PtfxWait = 200,
+            PtfxWait = 0.8,
             PtfxCanHold = true
         },
     },
@@ -17026,7 +17026,7 @@ RP.PropEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-            PtfxWait = 200,
+            PtfxWait = 0.8,
             PtfxCanHold = true
         },
     },
