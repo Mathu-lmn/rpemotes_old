@@ -1,9 +1,9 @@
-# RpEmotes 🏋️
+# RPEmotes 🏋️
 
-RpEmotes is a community driven FiveM emote menu allowing players to express themselves in roleplay with custom animations, countless facial expressions, walkstyles and props, inspired by [DullPear](https://github.com/andristum/dpemotes).
+RPEmotes is a community driven FiveM emote menu allowing players to express themselves in roleplay with custom animations, countless facial expressions, walkstyles and props, inspired by [DullPear](https://github.com/andristum/dpemotes).
 
 <p align="center">
-  <img src="https://media.giphy.com/media/kL2WStvEEokt0MioqC/giphy.gif" alt="Alt Text" width="800" height="auto"> 
+  <img src="https://i.imgur.com/L91BLP6.png" alt="Alt Text" width="800" height="auto"> 
 </p>
 
 
@@ -182,7 +182,7 @@ The keybind uses RegisterKeyMapping. By default the configured keybind in the *i
 
 Server owners can change this in the `config.lua`.
 
-Alternatively, the player base can set their own menu keybind to open RpEmotes
+Alternatively, the player base can set their own menu keybind to open RPEmotes
 
 `Esc > settings > keybinds > fivem`
 
@@ -536,7 +536,7 @@ If no prop is used in the animation or you require the particle effect to be in 
 
 Alternatively, you can use the `PtfxBone =` AnimationOption to attach the PTFX to the ped's bone, simiarly to how you attach props.
 
-Using Menyoo, spawn down a tennis ball and attach it to human, by default menyoo will attach it to the SKEL_ROOT bone (stomach), so from that, what we can do is is either offset the coordinates, say, up to the human ped's mouth, or change the bone all together. Once we've got it correct, we can transfer those coordinates over to rpemotes, and tah dah, we have our Ptfx Placement.
+Using Menyoo, spawn down a tennis ball and attach it to human, by default menyoo will attach it to the SKEL_ROOT bone (stomach), so from that, what we can do is is either offset the coordinates, say, up to the human ped's mouth, or change the bone all together. Once we've got it correct, we can transfer those coordinates over to RPEmotes, and tah dah, we have our Ptfx Placement.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -576,7 +576,7 @@ This repository was created by **TayMcKenzieNZ** for strict usage with the Grand
 
 All custom props and animations were provided to RPEmotes **by the community** with **express permission** and must **not** be extracted from [RpEmotes](https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers without permission **and** credits given.
 
-If you want to modify RpEmotes ***(does not apply if you want to use it for personal purposes)*** you are free to do so, however the RPEmotes Project Team will **not** assist you with this. All **unofficial** copies and modifications of RPEmotes void any support.
+If you want to modify RPEmotes ***(does not apply if you want to use it for personal purposes)*** you are free to do so, however the RPEmotes Project Team will **not** assist you with this. All **unofficial** copies and modifications of RPEmotes void any support.
 
 Pull requests are actively reviewed and discussed with TayMcKenzieNZ and the RPEmotes Project Team, and will be accepted so long as they do not contain animation / prop files *(we need permission before adding them)* breaking changes or suspicious and / or malicious code.
 

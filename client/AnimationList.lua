@@ -6693,7 +6693,7 @@ RP.Emotes = {
     ["meditate"] = {
         "rcmcollect_paperleadinout@",
         "meditiate_idle",
-        "Meditiate",
+        "Meditate",
         AnimationOptions = {
             EmoteLoop = true,
             StartDelay = 300,
@@ -6704,7 +6704,7 @@ RP.Emotes = {
     ["meditate2"] = {
         "rcmepsilonism3",
         "ep_3_rcm_marnie_meditating",
-        "Meditiate 2",
+        "Meditate 2",
         AnimationOptions = {
             EmoteLoop = true,
             StartDelay = 300,
@@ -6715,7 +6715,7 @@ RP.Emotes = {
     ["meditate3"] = {
         "rcmepsilonism3",
         "base_loop",
-        "Meditiate 3",
+        "Meditate 3",
         AnimationOptions = {
             EmoteLoop = true,
             StartDelay = 300,
@@ -10578,7 +10578,7 @@ RP.PropEmotes = {
             PtfxName = "ent_anim_cig_smoke",
             PtfxNoProp = false,
             PtfxPlacement = {
-                0.07,
+               -0.07,
                 0.0,
                 0.0,
                 0.0,
@@ -14265,25 +14265,6 @@ RP.PropEmotes = {
             EmoteLoop = true
         }
     },
-    ["teddy2"] = {
-        "impexp_int-0",
-        "mp_m_waremech_01_dual-0",
-        "Teddy 2 - Gremlin",
-        AnimationOptions = {
-            Prop = 'gremlin_plush',
-            PropBone = 57005,
-            PropPlacement = {
-                0.2610,
-               -0.1220,
-               -0.0290,
-              -96.2588,
-              62.8313,
-               9.2446
-            },
-            EmoteMoving = true,
-            EmoteLoop = true
-        }
-    },
     ["backpack"] = {
         "move_p_m_zero_rucksack",
         "nill",
@@ -16997,7 +16978,7 @@ RP.PropEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-            PtfxWait = 200,
+            PtfxWait = 0.8,
             PtfxCanHold = true
         },
     },
@@ -17021,7 +17002,7 @@ RP.PropEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-            PtfxWait = 200,
+            PtfxWait = 0.8,
             PtfxCanHold = true
         },
     },
@@ -17045,7 +17026,7 @@ RP.PropEmotes = {
                 1.0
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
-            PtfxWait = 200,
+            PtfxWait = 0.8,
             PtfxCanHold = true
         },
     },
@@ -19624,7 +19605,7 @@ RP.PropEmotes = {
             EmoteMoving = true
         }
     },
-    ["guccibag"] = { -- Custom prop by crowded1337, unbranded by TayMcKenzieNZ
+    ["handbag"] = { -- Custom prop by crowded1337, unbranded by TayMcKenzieNZ
         "move_weapon@jerrycan@generic",
         "idle",
         "Gucci Bag",

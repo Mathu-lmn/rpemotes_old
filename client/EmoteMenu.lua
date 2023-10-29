@@ -737,7 +737,7 @@ function AddInfoMenu(menu)
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#3488c8\">MrWitt 🦑️</font>",
         "<font color=\"#3488c8\">MrWitt 🦑</font> for the custom animations."))
   infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff96b6\">AdoredRose 🌹</font>",
-       "<font color=\"#ff96b6\">AdoredRose 🌹</font> for the custom animations."))
+       "<font color=\"#ff96b6\">AdoredRose 🌹</font> for assistance with adding animations."))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff451d\">DRX Animations 👑</font>",
         "<font color=\"#ff451d\">DRX Animations 👑</font> for the custom animations"))
         
