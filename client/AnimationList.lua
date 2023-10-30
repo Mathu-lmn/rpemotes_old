@@ -17037,10 +17037,35 @@ RP.PropEmotes = {
             PtfxCanHold = true
         }
     },
-    ["puke"] = {
+    ["puke"] = { -- Custom Emotes By Darks Animations Provided To RPEmotes 01/08/2023
+    "cross_arms@dark",
+    "cross_arms_clip",
+    "Puke",
+    AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true,
+            PtfxAsset = "scr_paletoscore",
+            PtfxName = "scr_trev_puke",
+            PtfxNoProp = true,
+            PtfxBone = 31086,
+            PtfxPlacement = {
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['puke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
+        },
+    },
+    ["puke2"] = {
         "missheistpaletoscore1leadinout",
         "trv_puking_leadout",
-        "Puke",
+        "Puke 2",
         AnimationOptions = {
             EmoteLoop = false,
             EmoteMoving = true,
@@ -17062,10 +17087,10 @@ RP.PropEmotes = {
             PtfxCanHold = true
         },
     },
-    ["puke2"] = {
+    ["puke3"] = {
         "anim@scripted@ulp_missions@injured_agent@",
         "idle",
-        "Puke 2",
+        "Puke 3",
         AnimationOptions = {
             EmoteLoop = true,
             PtfxAsset = "scr_paletoscore",
@@ -17086,10 +17111,10 @@ RP.PropEmotes = {
             PtfxCanHold = true
         },
     },
-    ["puke3"] = {
+    ["puke4"] = {
         "anim@scripted@freemode@throw_up_toilet@male@",
         "vomit",
-        "Puke 3",
+        "Puke 4",
         AnimationOptions = {
             EmoteLoop = true,
             PtfxAsset = "scr_paletoscore",
