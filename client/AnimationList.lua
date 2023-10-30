@@ -5218,6 +5218,46 @@ RP.Exits = {
             EmoteDuration = 5700
         }
     },
+    ["phoneaway"] = {
+        "amb@world_human_stand_mobile@male@text@exit",
+        "exit",
+        "Phone Away",
+        AnimationOptions = {
+            EmoteDuration = 1780,
+            StartDelay = 1150,
+            EmoteMoving = true
+        }
+    },
+    ["breakfreefont"] = {
+        "mp_arresting",
+        "a_uncuff",
+        "Break Free Front",
+        AnimationOptions = {
+            EmoteDuration = 6099,
+            StartDelay = 450,
+            EmoteMoving = true
+        }
+    },
+    ["breakfreeback"] = {
+        "mp_arresting",
+        "b_uncuff",
+        "Break Free Back",
+        AnimationOptions = {
+            EmoteDuration = 6099,
+            StartDelay = 450,
+            EmoteMoving = true
+        }
+    },
+    ["shakeitoffhuman"] = {
+        "move_m@_idles@shake_off",
+        "shakeoff_1",
+        "Shake Off The Rain",
+        AnimationOptions = {
+            EmoteDuration = 2899,
+            StartDelay = 850,
+            EmoteMoving = true
+        }
+    },
 ------ ANIMAL EXIT EMOTES  ------
     ["sdogup"] = {
         "creatures@pug@amb@world_dog_sitting@exit",
@@ -5471,7 +5511,29 @@ RP.Emotes = {
             EmoteLoop = false
         }
     },
-["femalestandcute"] = {
+    ["cuffedfront"] = {
+    "anim@move_m@prisoner_cuffed",
+    "idle",
+    "Handcuffed - Front",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = true,
+        ExitEmote = "breakfreefont",
+        ExitEmoteType = "Exits"
+        }
+    },
+    ["cuffedback"] = {
+    "mp_arresting",
+    "idle",
+    "Handcuffed - Back",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = true,
+        ExitEmote = "breakfreeback",
+        ExitEmoteType = "Exits"
+        }
+    },
+    ["femalestandcute"] = {
     "stand_cute_6@dark",
     "stand_cute_6_clip",
     "Female Stand Cute Pose",
@@ -8250,15 +8312,6 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["uncuff"] = {
-        "mp_arresting",
-        "a_uncuff",
-        "Uncuff",
-        AnimationOptions = {
-            EmoteLoop = true,
-            EmoteMoving = true
-        }
-    },
     ["namaste"] = {
         "timetable@amanda@ig_4",
         "ig_4_base",
@@ -9974,26 +10027,28 @@ RP.PropEmotes = {
     ["umbrella"] = {
         "amb@world_human_drinking@coffee@male@base",
         "base",
-        "Umbrella",
+        "Umbrella - Middle",
         AnimationOptions = {
             Prop = "p_amb_brolly_01",
-            PropBone = 57005,
+            PropBone = 28422,
             PropPlacement = {
-                0.15,
-                0.005,
                 0.0,
-                87.0,
-                -20.0,
-                180.0
+                0.0200,
+               -0.0360,
+                0.0,
+                10.0,
+                0.0,
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            ExitEmote = "shakeitoffhuman",
+            ExitEmoteType = "Exits"
         }
     },
     ['umbrella2'] = {
         'rcmnigel1d',
         'base_club_shoulder',
-        'Umbrella 2',
+        'Umbrella 2 - Right Shoulder',
         AnimationOptions = {
             Prop = 'p_amb_brolly_01',
             PropBone = 28422,
@@ -10006,13 +10061,15 @@ RP.PropEmotes = {
                 57.3374916
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            ExitEmote = "shakeitoffhuman",
+            ExitEmoteType = "Exits"
         }
     },
     ['umbrella3'] = { --- Custom Emote Provided To RPEmotes By Mr Witt
         'mrwitt@rain_dreamy_pose',
         'mrwitt',
-        'Umbrella 3',
+        'Umbrella 3 - Rain Check',
         AnimationOptions = {
             Prop = 'p_amb_brolly_01',
             PropBone = 58867,
@@ -10025,7 +10082,30 @@ RP.PropEmotes = {
                -0.9319
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            ExitEmote = "shakeitoffhuman",
+            ExitEmoteType = "Exits"
+        }
+    },
+    ['umbrella4'] = { --- Custom Emote  By Mr ultrahacx
+        'custom@hold_umbrella',
+        'hold_left',
+        'Umbrella 4 - Hold Left',
+        AnimationOptions = {
+            Prop = 'p_amb_brolly_01',
+            PropBone = 60309,
+            PropPlacement = {
+                0.0600,
+               -0.0100,
+                0.0200,
+              -94.3996,
+               -1.7343,
+                9.9656
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+            ExitEmote = "shakeitoffhuman",
+            ExitEmoteType = "Exits"
         }
     },
     -----------------------------------------------------------------------------------------------------
@@ -17056,7 +17136,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfie2"] = {
@@ -17085,7 +17178,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfie3"] = {
@@ -17114,7 +17220,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfie4"] = {
@@ -17143,7 +17262,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfie5"] = {
@@ -17172,7 +17304,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfie6"] = {
@@ -17201,7 +17346,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfie7"] = {
@@ -17230,7 +17388,20 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["selfiehigh"] = { -- Custom Emote By Darks Animations
@@ -19858,8 +20029,23 @@ RP.PropEmotes = {
                 0.0,
                 0.0
             },
-            EmoteLoop = true,
-            EmoteMoving = true
+            EmoteLoop = false,
+            EmoteMoving = true,
+            ExitEmote = "phoneaway",
+            ExitEmoteType = "Exits",
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["sms2"] = {
@@ -19887,8 +20073,23 @@ RP.PropEmotes = {
                 00.00,
                 00.00
             },
-            EmoteLoop = true,
-            EmoteMoving = true
+            EmoteLoop = false,
+            EmoteMoving = true,
+            ExitEmote = "phoneaway",
+            ExitEmoteType = "Exits",
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["sms3"] = {
@@ -19917,7 +20118,22 @@ RP.PropEmotes = {
                 6.39
             },
             EmoteLoop = false,
-            EmoteMoving = true
+            EmoteMoving = true,
+            ExitEmote = "phoneaway",
+            ExitEmoteType = "Exits",
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["sms4"] = {
@@ -19947,6 +20163,8 @@ RP.PropEmotes = {
             },
             EmoteLoop = false,
             EmoteMoving = true,
+            ExitEmote = "phoneaway",
+            ExitEmoteType = "Exits",
             PtfxAsset = "scr_tn_meet",
             PtfxName = "scr_tn_meet_phone_camera_flash",
             PtfxPlacement = {
@@ -19988,7 +20206,22 @@ RP.PropEmotes = {
                 29.979
             },
             EmoteLoop = false,
-            EmoteMoving = true
+            EmoteMoving = true,
+            ExitEmote = "phoneaway",
+            ExitEmoteType = "Exits",
+            PtfxAsset = "scr_tn_meet",
+            PtfxName = "scr_tn_meet_phone_camera_flash",
+            PtfxPlacement = {
+                -0.015,
+                0.0,
+                0.041,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['camera'],
+            PtfxWait = 200
         }
     },
     ["smssit"] = { --- Custom Emote Provided To RPEmotes By Mr. Witt
