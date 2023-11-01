@@ -13756,8 +13756,24 @@ RP.PropEmotes = {
                 0.0,
                 -80.0
             },
+            EmoteDuration = 2600,
+            EmoteLoop = true,
             EmoteMoving = true,
-            EmoteDuration = 2600
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+                0.0750,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.3
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["cigar2"] = {
@@ -13773,10 +13789,26 @@ RP.PropEmotes = {
                 0.0,
                 50.0,
                 0.0,
-                -80.0
+               -80.0
             },
+            EmoteDuration = 2600,
+            EmoteLoop = true,
             EmoteMoving = true,
-            EmoteDuration = 2600
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+                0.06,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.5
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["guitar"] = {
@@ -14954,7 +14986,22 @@ RP.PropEmotes = {
                 110.0
             },
             EmoteMoving = true,
-            EmoteDuration = 2600
+            EmoteDuration = 2600,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+               -0.097,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.3
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["cig"] = {
@@ -14962,7 +15009,7 @@ RP.PropEmotes = {
         "enter",
         "Cig",
         AnimationOptions = {
-            Prop = 'prop_amb_ciggy_01',
+            Prop = 'ng_proc_cigarette01a',
             PropBone = 47419,
             PropPlacement = {
                 0.015,
@@ -14972,8 +15019,24 @@ RP.PropEmotes = {
                 0.0,
                 110.0
             },
+            EmoteDuration = 2600,
+            EmoteLoop = true,
             EmoteMoving = true,
-            EmoteDuration = 2600
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+               -0.07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["brief"] = {
@@ -16879,7 +16942,8 @@ RP.PropEmotes = {
                 0.0,
                 0.0
             },
-            EmoteLoop = true
+            EmoteLoop = true,
+            EmoteMoving = false
         }
     },
     ["broom2"] = {
@@ -16897,7 +16961,8 @@ RP.PropEmotes = {
                 0.0,
                 0.0
             },
-            EmoteLoop = true
+            EmoteLoop = true,
+            EmoteMoving = false
         }
     },
     ["broom3"] = {
@@ -16915,7 +16980,8 @@ RP.PropEmotes = {
                 0.0,
                 0.0
             },
-            EmoteLoop = true
+            EmoteLoop = true,
+            EmoteMoving = false
         }
     },
     ["broom4"] = {
@@ -16933,7 +16999,8 @@ RP.PropEmotes = {
                 0.0,
                 0.0
             },
-            EmoteLoop = true
+            EmoteLoop = true,
+            EmoteMoving = false
         }
     },
     ["champw"] = {
@@ -22358,7 +22425,22 @@ RP.PropEmotes = {
                 0.0
             },
             EmoteLoop = true,
-            EmoteMoving = true
+            EmoteMoving = true,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+                0.0615,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.5
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
         }
     },
     ["shield"] = {
