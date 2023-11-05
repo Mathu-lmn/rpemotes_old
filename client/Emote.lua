@@ -117,7 +117,7 @@ local function CheckStatusThread(dict, anim)
     end)
 end
 
-if Config.EnableXtoCancel then
+if Config.EnableCancelKeybind then
     RegisterKeyMapping("emotecancel", "Cancel current emote", "keyboard", Config.CancelEmoteKey)
 end
 
