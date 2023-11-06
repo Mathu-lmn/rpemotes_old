@@ -11,7 +11,7 @@ Config = {
     -- Set this to true to enable some extra prints
     DebugDisplay = false,
     -- Set this to false if you have something else on X, and then just use /e c to cancel emotes.
-    EnableCancelKeybind = true,
+    EnableXtoCancel = true,
     CancelEmoteKey = 'x', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     -- Set this to true if you want to disarm the player when they play an emote.
     DisarmPlayer = false,
@@ -47,8 +47,10 @@ Config = {
     PersistentExpression = true,
     -- You can disable the Walking Styles menu here.
     WalkingStylesEnabled = true,
-    -- Saves walk styles to client and applies them on joining
+    -- Saves walk styles to client and applies them periodically
     PersistentWalk = true,
+    -- Polling period to apply persistent walkstyles
+    PersistencePollPeriod = 60000,
     -- You can disable the Shared Emotes here.
     SharedEmotesEnabled = true,
     -- If you have the SQL imported enable this to turn on keybinding.

@@ -5713,6 +5713,51 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
+	["uwu2"] = { --- Custom Emote By EnchantedBrownie
+        "ebrwny_peposhy",
+        "ebrwny_shypepo",
+        "UwU 2",
+        AnimationOptions = {
+			EmoteLoop = true,
+			EmoteMoving = true,
+			EmoteDuration = 2600
+        }
+    },
+    ["rawr"] = {
+        "ebrwny_pack000",
+        "ebrwny_rawr",
+        "Rawr",
+        AnimationOptions = {
+            EmoteStuck = true
+        }
+    },
+    ["stop"] = {
+        "ebrwny_pack000",
+        "ebrwny_stop",
+        "Stop",
+        AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["sassy"] = {
+        "ebrwny_pack000",
+        "ebrwny_sass",
+        "Sassy",
+        AnimationOptions = {
+			EmoteStuck = true
+        }
+    },
+    ["bend"] = {
+        "ebrwny_pack000",
+        "ebrwny_bend",
+        "Bent over",
+        AnimationOptions = {
+            EmoteLoop = true,
+            EmoteMoving = true
+        },
+    AdultAnimation = true
+    },
     ["prone"] = {
         "missfbi3_sniping",
         "prone_dave",
@@ -6581,7 +6626,7 @@ RP.Emotes = {
     },
     ["lean5"] = {
         "amb@world_human_leaning@male@wall@back@hands_together@idle_b",
-        "idle_b",
+        "idle_e",
         "Lean 5",
         AnimationOptions = {
             EmoteLoop = true
@@ -7164,7 +7209,7 @@ RP.Emotes = {
     ["sitsad2"] = {
         "anim@female_sit_01",
         "f_sit_01_clip",
-        "Sit S 2",
+        "Sit Sad 2",
         AnimationOptions = {
             EmoteLoop = true,
             ExitEmote = "getup",
@@ -10196,6 +10241,95 @@ RP.PropEmotes = {
                -27.6738
             },
             EmoteMoving = true
+        }
+    },
+	["k12saw"] = {
+        "anim@heists@fleeca_bank@drilling",
+        "drill_straight_end",
+        "Firefighter K12 Saw",
+        AnimationOptions = {
+            Prop = "prop_tool_consaw",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0,
+                0.0900,
+                0.0500,
+                -70.3009797,
+                71.0092017,
+                83.759421
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+			PtfxAsset = "scr_paletoscore",
+            PtfxName = "scr_paleto_box_sparks",
+            PtfxNoProp = true,
+            PtfxPlacement = {
+                0.20,
+                0.88,
+                0.25,
+                0.0,
+                90.0,
+                180.0,
+                1.1
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['vape'],
+            PtfxWait = 0.8,
+            PtfxCanHold = false -- we set this to false, but yet it allows us to hold, which is the OPPOSITE of what it claims to do!? HUH!?? AVANOX!! 
+        }
+    },
+	["carryextinguisher"] = {
+        "amb@lo_res_idles@",
+        "world_human_musician_bongos_lo_res_base",
+        "Firefighter Extinguisher",
+        AnimationOptions = {
+            Prop = "prop_fire_exting_1a",
+            PropBone = 28422,
+            PropPlacement = {
+                0.1500,
+                0.1400,
+                -0.5200,
+                179.7874004,
+                -178.5954846,
+                4.5961806
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        }
+    },
+	["maskup"] = {
+        "anim@mp_helmets@on_foot",
+        "visor_up",
+        "Firefighter Unmask",
+        AnimationOptions = {
+			EmoteDuration = 800, --- Even with EmoteLoop = false, this emote still loops, so we add a duration to force it to stop after a set amount of milliseconds.
+			EmoteMoving = true,
+        }
+    },
+	["maskdown"] = {
+        "anim@mp_helmets@on_foot",
+        "visor_down",
+        "Firefighter Mask",
+        AnimationOptions = {
+			EmoteDuration = 800, --- Even with EmoteLoop = false, this emote still loops, so we add a duration to force it to stop after a set amount of milliseconds.
+			EmoteMoving = true,
+        }
+    },
+	["adjustbag"] = {
+        "amb@world_human_hiker_standing@male@idle_a",
+        "idle_b",
+        "Firefighter Adjust Tank / Bag",
+        AnimationOptions = {
+			EmoteMoving = true,
+			EmoteDuration = 9500
+        }
+    },
+	["adjustpanel"] = {
+        "anim@scripted@heist@ig9_control_tower@male@",
+        "loop",
+        "Firefighter Pump PSI",
+        AnimationOptions = {
+            EmoteLoop = true,
+			EmoteMoving = true
         }
     },
     ["cake"] = { --- Custom Prop & Emote By BzZzi
@@ -21075,7 +21209,97 @@ RP.PropEmotes = {
             EmoteLoop = true,
             EmoteMoving = true
         }
-    },
+   },
+    ['lighter'] = {
+        'ebrwny_pack000',
+        'ebrwny_spark',
+        'Lighter - Cigar',
+        AnimationOptions = {
+            Prop = 'lux_prop_lighter_luxe',
+            PropBone = 26612,
+            PropPlacement = {
+                0.0300,
+               -0.0360,
+                0.0270,
+             -168.0000,
+             -180.0000,
+                8.0000
+           },
+            SecondProp = 'prop_cigar_01',
+            SecondPropBone = 17188,
+            SecondPropPlacement = {
+                0.0450,
+                0.0130,
+                0.0170,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+                0.0615,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.5
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
+       }
+  },
+    ['lighter2'] = {
+        'ebrwny_pack000',
+        'ebrwny_spark',
+        'Lighter - Cigar Sit',
+        AnimationOptions = {
+            Prop = 'lux_prop_lighter_luxe',
+            PropBone = 26612,
+            PropPlacement = {
+                0.0300,
+               -0.0360,
+                0.0270,
+             -168.0000,
+             -180.0000,
+                8.0000
+           },
+            SecondProp = 'prop_cigar_01',
+            SecondPropBone = 17188,
+            SecondPropPlacement = {
+                0.0450,
+                0.0130,
+                0.0170,
+                0.0,
+                0.0,
+                0.0
+            },
+            EmoteLoop = true,
+            EmoteMoving = false,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+			ExitEmote = "getup",
+			ExitEmoteType = "Exits",
+            PtfxPlacement = {
+                0.0615,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.5
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.8,
+            PtfxCanHold = true
+       }
+   },
     ['digiscan'] = {
         'weapons@misc@digi_scanner',
         'aim_med_loop',
