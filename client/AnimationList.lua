@@ -10272,7 +10272,7 @@ RP.PropEmotes = {
                 180.0,
                 1.1
             },
-            PtfxInfo = Config.Languages[Config.MenuLanguage]['vape'],
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['cut'],
             PtfxWait = 0.8,
             PtfxCanHold = false -- we set this to false, but yet it allows us to hold, which is the OPPOSITE of what it claims to do!? HUH!?? AVANOX!! 
         }
