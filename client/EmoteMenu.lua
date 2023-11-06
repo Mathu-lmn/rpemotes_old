@@ -560,6 +560,8 @@ function AddInfoMenu(menu)
        "<font color=\"#ff96b6\">AdoredRose 🌹</font> for assistance with adding animations."))
     infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#ff451d\">DRX Animations 👑</font>",
         "<font color=\"#ff451d\">DRX Animations 👑</font> for the custom animations"))
+	infomenu:AddItem(NativeUI.CreateItem("Thanks <font color=\"#12ab0a\">Radial 🫡</font>",
+       "<font color=\"#12ab0a\">Radial</font> on discord for contributing animations code"))
         
   infomenu:AddItem(NativeUI.CreateItem("<b>Thanks to the community<b>", "Translations, bug reports and moral support 🌐"))
     
