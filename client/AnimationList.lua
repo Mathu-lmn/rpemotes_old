@@ -5713,25 +5713,34 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
+	["khands"] = { --- Custom Emote By EnchantedBrownie
+        "ebrwny_heart000",
+        "ebrwny_hrt000",
+        "Korean Hand Hearts 🇰🇷",
+        AnimationOptions = {
+			EmoteLoop = true,
+			EmoteMoving = true,
+        }
+    },
 	["uwu2"] = { --- Custom Emote By EnchantedBrownie
-        "ebrwny_peposhy",
-        "ebrwny_shypepo",
+        "ebrwny_pack000",
+        "ebrwny_shy",
         "UwU 2",
         AnimationOptions = {
 			EmoteLoop = true,
 			EmoteMoving = true,
-			EmoteDuration = 2600
         }
     },
-    ["rawr"] = {
+    ["rawr"] = { --- Custom Emote By EnchantedBrownie
         "ebrwny_pack000",
         "ebrwny_rawr",
         "Rawr",
         AnimationOptions = {
-            EmoteStuck = true
+            EmoteLoop = true,
+            EmoteMoving = true
         }
     },
-    ["stop"] = {
+    ["stop"] = { --- Custom Emote By EnchantedBrownie
         "ebrwny_pack000",
         "ebrwny_stop",
         "Stop",
@@ -5740,12 +5749,34 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["sassy"] = {
+    ["sassy"] = { --- Custom Emote By EnchantedBrownie
         "ebrwny_pack000",
         "ebrwny_sass",
         "Sassy",
         AnimationOptions = {
-			EmoteStuck = true
+			EmoteLoop = true,
+            EmoteMoving = true
+        }
+    },
+    ["sitsad3"] = { --- Custom Emote By EnchantedBrownie
+        "ebrwny_pack000",
+        "ebrwny_sitf000",
+        "Sit Sad 3",
+        AnimationOptions = {
+			EmoteLoop = true,
+			ExitEmote = "getup",
+			ExitEmoteType = "Exits"
+        }
+    },
+    ["sitsad4"] = { --- Custom Emote By EnchantedBrownie
+        "ebrwny_pack000",
+        "ebrwny_sitf001",
+        "Sit Sad 4",
+        AnimationOptions = {
+			StartDelay = 600,
+			EmoteLoop = true,
+			ExitEmote = "getup",
+			ExitEmoteType = "Exits"
         }
     },
     ["bend"] = {
@@ -5753,6 +5784,7 @@ RP.Emotes = {
         "ebrwny_bend",
         "Bent over",
         AnimationOptions = {
+			StartDelay = 600,
             EmoteLoop = true,
             EmoteMoving = true
         },
@@ -23296,6 +23328,103 @@ RP.PropEmotes = {
         },
         EmoteLoop = true,
         },
-    }
+    },
+    ["rap2"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "mic_pose_1@darksj",
+       "mic_pose_1_clip",
+        "Rap / Sing 2 - Microhpone",
+        AnimationOptions = {
+            Prop = 'sf_prop_sf_mic_01a',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0680,
+               0.0190,
+              -0.0220,
+               0.0000,
+               0.0000,
+             170.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+  },
+    ["rap3"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "mic_pose_2@darksj",
+       "mic_pose_2_clip",
+        "Rap / Sing 3 - Microhpone Rock Hand Sign",
+        AnimationOptions = {
+            Prop = 'sf_prop_sf_mic_01a',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0680,
+               0.0190,
+              -0.0220,
+               0.0000,
+               0.0000,
+             170.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true
+        }
+  },
+    ["rap4"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "mic_pose_3@darksj",
+       "mic_pose_3_clip",
+        "Rap / Sing 4 - Microhpone Bend Back",
+        AnimationOptions = {
+            Prop = 'sf_prop_sf_mic_01a',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0680,
+               0.0190,
+              -0.0220,
+               0.0000,
+               0.0000,
+             170.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = false
+        }
+  },
+    ["rap5"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "mic_pose_4@darksj",
+       "mic_pose_4_clip",
+        "Rap / Sing 5 - Microhpone Kneel",
+        AnimationOptions = {
+            Prop = 'sf_prop_sf_mic_01a',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0680,
+               0.0190,
+              -0.0220,
+               0.0000,
+               0.0000,
+             170.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = false,
+			ExitEmote = "getup",
+            ExitEmoteType = "Exits"
+        }
+  },
+    ["rap6"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "mic_pose_5_a@darksj",
+       "mic_pose_5_a_clip",
+        "Rap / Sing 6 - Microhpone",
+        AnimationOptions = {
+            Prop = 'sf_prop_sf_mic_01a',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0680,
+               0.0190,
+              -0.0220,
+               0.0000,
+               0.0000,
+             170.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        }
+  }
 
 }
