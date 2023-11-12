@@ -681,13 +681,15 @@ A huge thank you to the following people for their amazing contributions made to
 
 - Thank you [-EcLiPsE-](https://www.gta5-mods.com/users/-EcLiPsE-) for allowing me to implement [Improved Prop Sets](https://www.gta5-mods.com/misc/improved-propsets-meta) and [GTA Online Biker Idle Anims](https://www.gta5-mods.com/misc/bike-idle-animations)
 
-- Thank you [MrWitt](https://www.gta5-mods.com/users/MrWitt)for the custom animations
+- Thank you [MrWitt](https://www.gta5-mods.com/users/MrWitt)for the custom animations and partnership
 
 - A huge thank you to [AdoredRose](https://forum.cfx.re/u/adoredrose/summary) for assisting with animations
 
 - Thank you [Vedere](https://discord.gg/XMywAMQ8Ef) for the custom props
 
-- Thank you to [DRX Animations](https://www.gta5-mods.com/users/DRX%2DAnimations) for the custom animations
+- Thank you to [DRX Animations](https://www.gta5-mods.com/users/DRX%2DAnimations) for the custom animations and partnership
+
+- Thank you to [VNSIanims](https://discord.gg/cTNrjYSXXG) for the custom animations and partnership
 
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
