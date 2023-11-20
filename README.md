@@ -572,6 +572,8 @@ Below is an example:
 
 # 📜 LICENSE & DISCLAIMER
 
+## Aligned with Rockstar Games' [acquisition](https://www.rockstargames.com/newswire/article/8971o8789584a4/roleplay-community-update?utm_source=twitter&utm_medium=o_social&utm_campaign=rockstar_announcement_cfxre-20230811) of Cfxre and FiveM, RPEmotes will abstain from including copyrighted material and animations tailored for child characters, as outlined in bulletpoint 4 of the [November 2023 community pulse](https://forum.cfx.re/t/community-pulse-november-2023/5185781).
+
 This repository was created by **TayMcKenzieNZ** for strict usage with the Grand Theft Auto 5 unofficial multiplayer platform 'FiveM', and is under the GNU General Public License v3.0 license.
 
 All custom props and animations were provided to RPEmotes **by the community** with **express permission** and must **not** be extracted from [RpEmotes](https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers without permission **and** credits given.
