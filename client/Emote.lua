@@ -268,21 +268,14 @@ if Config.HandsupEnabled then
         Handsup()
     end, false)
 
-function Handsup()
-    local playerPed = PlayerPedId()
-    if not IsPedHuman(playerPed) then
-        return
-    end
-    if IsProne then
-        return
-    end
-        if IsProne then
+    function Handsup()
+        local playerPed = PlayerPedId()
+        if not IsPedHuman(playerPed) then
             return
         end
-        if IsProne then
+        if isInActionWithErrorMessage() then
             return
-	end
-		
+        end
 
         inHandsup = not inHandsup
         if inHandsup then
@@ -711,8 +704,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
         end
     end
 
-    if IsProne then
-        EmoteChatMessage(Config.Languages[lang]['no_anim_crawling'])
+    if isInActionWithErrorMessage() then
         return false
     end
 

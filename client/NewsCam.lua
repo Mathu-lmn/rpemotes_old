@@ -3,6 +3,7 @@
 --- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
 
 
+IsUsingNewscam = false
 
 if Config.NewscamEnabled then
     RegisterCommand("newscam", function()
@@ -17,7 +18,6 @@ if Config.NewscamEnabled then
     local speed_lr = 8.0   -- speed by which the camera pans left-right
     local speed_ud = 8.0   -- speed by which the camera pans up-down
     local fov = (fov_max + fov_min) * 0.5
-    local newscam = false
     local index = 0
     prop_newscam = nil
     local msg = "YOUR TEXT HERE"
@@ -60,9 +60,12 @@ if Config.NewscamEnabled then
         if IsPedSittingInAnyVehicle(PlayerPedId()) then
             return
         end
-        newscam = not newscam
+        if isInActionWithErrorMessage({ ['IsUsingNewscam'] = true }) then
+            return
+        end
+        IsUsingNewscam = not IsUsingNewscam
 
-        if newscam then
+        if IsUsingNewscam then
             Citizen.CreateThread(function()
                 DestroyAllProps()
                 ClearPedTasks(PlayerPedId())
@@ -129,16 +132,16 @@ if Config.NewscamEnabled then
 
             local scaleform_instructions = SetupButtons({
                 { key = 177, text = 'exit_news' },
-                { key = 19, text = 'toggle_news_vision' },
-                { key = 74, text = "edit_values_newscam"},
+                { key = 19,  text = 'toggle_news_vision' },
+                { key = 74,  text = "edit_values_newscam" },
                 { key = 47,  text = 'toggle_instructions' }
             })
 
             -- MAIN LOOP
-            while newscam and not IsEntityDead(PlayerPedId()) and not IsPedSittingInAnyVehicle(PlayerPedId()) do
+            while IsUsingNewscam and not IsEntityDead(PlayerPedId()) and not IsPedSittingInAnyVehicle(PlayerPedId()) do
                 if IsControlJustPressed(0, 177) then
                     PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
-                    newscam = false
+                    IsUsingNewscam = false
                 end
 
                 local zoomvalue = (1.0 / (fov_max - fov_min)) * (fov - fov_min)
@@ -197,7 +200,7 @@ if Config.NewscamEnabled then
         end
 
         -- RESET EVERYTHING
-        newscam = false
+        IsUsingNewscam = false
         index = 0
         ClearPedTasks(PlayerPedId())
         ClearTimecycleModifier()
@@ -268,7 +271,6 @@ if Config.NewscamEnabled then
         PushScaleformMovieMethodParameterInt(0) -- Top ticker
         PushScaleformMovieMethodParameterInt(0) -- Index of string
         EndScaleformMovieMethod()
-
     end
 
     -- UTILS
@@ -329,7 +331,7 @@ if Config.NewscamEnabled then
 
     AddEventHandler('onResourceStop', function(resource)
         if resource == GetCurrentResourceName() then
-            if newscam then
+            if IsUsingNewscam then
                 ClearPedTasks(PlayerPedId())
                 ClearTimecycleModifier()
                 RenderScriptCams(false, false, 0, 1, 0)

@@ -95,9 +95,7 @@ local function PointingThread()
 end
 
 local function StartPointing()
-    -- Don't start to point if we are prone
-    if IsProne then
-        EmoteChatMessage("You can't point while crawling.")
+    if isInActionWithErrorMessage() then
         return
     end
 
