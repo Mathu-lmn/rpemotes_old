@@ -78,7 +78,8 @@ Config.Languages = {
 		['edit_values_newscam'] = "Ndrysho tekstin e lajmeve",
 		['not_in_a_vehicle'] = "Nuk mund të luash këtë animacion në këndin e një mjete",
 		['in_a_vehicle'] = "Mund të luash këtë animacion vetëm në këndin e një mjete 🚷",
-		['no_anim_crawling'] = "Nuk mund të luash animacione ndërsa shtrihesh"
+		['no_anim_crawling'] = "Nuk mund të luash animacione ndërsa shtrihesh",
+		['no_anim_right_now'] = "You can't play an animation right now",
 	},
     ['ar'] = { -- Arabic
         ['emotes'] = " ~h~~p~حركات 🎬",
@@ -226,7 +227,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['zhcn'] = {  -- Chinese simplified
         ['emotes'] = "~h~~p~ 动作 🎬",
@@ -307,7 +309,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "更改新闻说明文字",
         ['not_in_a_vehicle'] = "您无法在载具中使用此动作",
         ['in_a_vehicle'] = "您只能在载具中使用此动作 🚷",
-        ['no_anim_crawling'] = "您无法在爬行时使用此动作"
+        ['no_anim_crawling'] = "您无法在爬行时使用此动作",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['zhtw'] = { -- Chinese Traditional
         ['emotes'] = "~h~~p~ 動作 🎬",
@@ -388,7 +391,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "編輯新聞文本",
         ['not_in_a_vehicle'] = "您無法在車輛中使用此動作",
         ['in_a_vehicle'] = "您只能在車輛中使用此動作 🚷",
-        ['no_anim_crawling'] = "您無法在爬行時使用此動作"
+        ['no_anim_crawling'] = "您無法在爬行時使用此動作",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['cs'] = { -- Czech 🇨🇿
         ['emotes'] = "~h~~p~ Animace 🎬",
@@ -469,7 +473,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Úprava textu zprávy",
         ['not_in_a_vehicle'] = "Tuto animaci nelze přehrávat ve vozidle.",
         ['in_a_vehicle'] = "Tuto animaci lze přehrát pouze ve vozidle.",
-        ['no_anim_crawling'] = "Při plazení nelze přehrávat animace"
+        ['no_anim_crawling'] = "Při plazení nelze přehrávat animace",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['da'] = { -- Danish 🇩🇰
         ['emotes'] = "~h~~p~ Animationer",
@@ -550,7 +555,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['nl'] = { -- Dutch 🇳🇱
         ['emotes'] = "~h~~p~ Animaties 🎬",
@@ -631,7 +637,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['en'] = { -- English 🇬🇧
         ['emotes'] = '~h~~p~ Emotes 🎬',
@@ -713,6 +720,7 @@ Config.Languages = {
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
         ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['fi'] = { -- Finnish 🇫🇮
         ['emotes'] = "~h~~p~ Animaatiot 🎬",
@@ -793,7 +801,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Muokkaa uutistekstiä",
         ['not_in_a_vehicle'] = "Et voi toistaa tätä animaatiota ajoneuvossa",
         ['in_a_vehicle'] = "Voit toistaa tämän animaation vain ajoneuvossa",
-        ['no_anim_crawling'] = "Animaatiota ei voi toistaa ryömiessä"
+        ['no_anim_crawling'] = "Animaatiota ei voi toistaa ryömiessä",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['fr'] = { -- French 🇫🇷
         ['emotes'] = "~h~~p~ Emotes 🎬",
@@ -874,6 +883,7 @@ Config.Languages = {
         ['not_in_a_vehicle'] = "Vous ne pouvez pas jouer cette animation dans un véhicule",
         ['in_a_vehicle'] = "Vous ne pouvez jouer cette animation que dans un véhicule 🚷",
         ['no_anim_crawling'] = "Vous ne pouvez pas jouer d'animations pendant que vous rampez",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['de'] = { -- German 🇩🇪
         ['emotes'] = "~h~~p~ Emotes 🎬",
@@ -953,7 +963,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Text der Nachricht bearbeiten",
         ['not_in_a_vehicle'] = "Du kannst diese Animation nicht abspielen, während du dich in einem Fahrzeug befindest",
         ['in_a_vehicle'] = "Du kannst diese Animation nur abspielen, wenn du dich in einem Fahrzeug befindest 🚷",
-        ['no_anim_crawling'] = "Du kannst keine Animationen abspielen, während du kriechst"
+        ['no_anim_crawling'] = "Du kannst keine Animationen abspielen, während du kriechst",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
 	['el'] = { -- Greek 🇬🇷
         ['emotes'] = '~h~~p~ Κινήσεις 🎬',
@@ -1035,6 +1046,7 @@ Config.Languages = {
         ['not_in_a_vehicle'] = "Δεν μπορείς να κάνεις αυτή τη κίνηση ενώ είσαι σε όχημα ",
         ['in_a_vehicle'] = "Μπορείς να κάνεις αυτή τη κίνηση μόνο ενώ είσαι σε όχημα 🚷",
         ['no_anim_crawling'] = "Δεν μπορείς να κάνεις κάποια κίνηση ενώ σέρνεσαι",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['hu'] = { -- Hungarian 🇭🇺
         ['emotes'] = "~h~~p~ Animációs Menü 🎬",
@@ -1114,7 +1126,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['it'] = { -- Italian 🇮🇹
         ['emotes'] = " ~h~~p~ Animazioni 🎬",
@@ -1195,7 +1208,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['no'] = { -- Norwegian 🇳🇴
         ['emotes'] = " ~h~~p~Animasjoner 🎬",
@@ -1276,7 +1290,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Rediger nyhetsteksten",
         ['not_in_a_vehicle'] = "Du kan ikke bruke denne animasjonen mens du er i et kjøretøy",
         ['in_a_vehicle'] = "Du kan kun bruke denne animasjonen menst du er i et kjøretøy",
-        ['no_anim_crawling'] = "Du kan ikke starte animasjoner mens du kryper"
+        ['no_anim_crawling'] = "Du kan ikke starte animasjoner mens du kryper",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['fa'] = { -- persian 🇮🇷
         ['emotes'] = "~h~~p~ Emotes 🎬",
@@ -1357,7 +1372,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['pl'] = { -- Polish 🇵🇱
         ['emotes'] = "~h~~p~ Animacje 🎬",
@@ -1437,7 +1453,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['ro'] = { -- Romanian 🇷🇴
         ['emotes'] = "~h~~p~ Emote-uri 🎬",
@@ -1518,7 +1535,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['ru'] = { -- Russian 🇷🇺
         ['emotes'] = "~h~~p~ Эмоции 🎬",
@@ -1599,7 +1617,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Редактировать текст новости",
         ['not_in_a_vehicle'] = "Вы не можете проигрывать эту эмоцию в машине",
         ['in_a_vehicle'] = "Вы можете проигрывать эту эмоцию в машине",
-        ['no_anim_crawling'] = "Вы не можете проигрывать эмоцию во время ползания"
+        ['no_anim_crawling'] = "Вы не можете проигрывать эмоцию во время ползания",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['lk'] = { -- Sinhala 🇱🇰
         ['emotes'] = "~h~~p~ Emotes 🎬",
@@ -1680,7 +1699,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['es'] = { -- Spanish 🇪🇸
         ['emotes'] = "~h~~p~ Animaciones 🎬",
@@ -1760,7 +1780,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit the news text",
         ['not_in_a_vehicle'] = "You can't play this animation while in a vehicle",
         ['in_a_vehicle'] = "You can only play this animation while in a vehicle 🚷",
-        ['no_anim_crawling'] = "You can't play animations while crawling"
+        ['no_anim_crawling'] = "You can't play animations while crawling",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['sv'] = { -- Swedish 🇸🇪
         ['emotes'] = "~h~~p~ Emotes 🎬",
@@ -1841,7 +1862,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Redigera nyhetstexten",
         ['not_in_a_vehicle'] = "Du kan inte använda den här animationen när du är i ett fordon",
         ['in_a_vehicle'] = "Du kan bara använda den här animationen när du är i ett fordon",
-        ['no_anim_crawling'] = "Du kan inte andända animationer när du säker genom"
+        ['no_anim_crawling'] = "Du kan inte andända animationer när du säker genom",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['tr'] = { -- Turkish 🇹🇷
         ['emotes'] = " ~h~~p~ Animasyonlar 🎬",
@@ -1922,7 +1944,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Haber yazısını değiştir",
         ['not_in_a_vehicle'] = "Bu animasyonu araç içindeyken kullanamazsın",
         ['in_a_vehicle'] = "Bu animasyonu sadece araç içinde kullanabilirsin 🚷",
-        ['no_anim_crawling'] = "Sürünürken bu animasyonu kullanamazsın"
+        ['no_anim_crawling'] = "Sürünürken bu animasyonu kullanamazsın",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['vi'] = { -- Tiếng việt
         ['emotes'] = "~h~~p~ Hành động 🎬",
@@ -2003,7 +2026,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Chỉnh sửa văn bản tin tức",
         ['not_in_a_vehicle'] = "Bạn không thể hành động này khi đang ở trong xe",
         ['in_a_vehicle'] = "Bạn chỉ có thể hành động này khi ở trong xe 🚷",
-        ['no_anim_crawling'] = "Bạn không thể chơi hình ảnh động trong khi bò"
+        ['no_anim_crawling'] = "Bạn không thể chơi hình ảnh động trong khi bò",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['id'] = { -- Indonesian 🇮🇩
         ['emotes'] = " ~h~~p~ Emote 🎬",
@@ -2084,7 +2108,8 @@ Config.Languages = {
         ['edit_values_newscam'] = "Edit teks berita",
         ['not_in_a_vehicle'] = "Anda tidak dapat memainkan animasi ini saat berada di dalam kendaraan",
         ['in_a_vehicle'] = "Anda hanya dapat memainkan animasi ini saat berada di dalam kendaraan :no_pedestrians:",
-        ['no_anim_crawling'] = "Anda tidak dapat memutar animasi sambil merayap"
+        ['no_anim_crawling'] = "Anda tidak dapat memutar animasi sambil merayap",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['lt'] = { -- Lithuanian (LT)
         ['emotes'] = '~h~~p~ Animacijos 🎬',
@@ -2166,6 +2191,7 @@ Config.Languages = {
         ['not_in_a_vehicle'] = "Negalite leisti sios animacijos budami transporto priemoneje",
         ['in_a_vehicle'] = "Sia animacija galite leisti tik budami transporto priemoneje 🚷",
         ['no_anim_crawling'] = "Narsydami negalite leisti animacijos",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['sr'] = { -- Serbian
         ['emotes'] = 'Animacije 🎬',
@@ -2246,6 +2272,7 @@ Config.Languages = {
         ['not_in_a_vehicle'] = "Ne možeš raditi ovu animaciju dok si u vozilu",
         ['in_a_vehicle'] = "Ovu animaciju možeš raditi samo dok si u vozilu 🚷",
         ['no_anim_crawling'] = "Ne možeš raditi animacije dok pužeš",
+        ['no_anim_right_now'] = "You can't play an animation right now",
     },
     ['sl'] = { -- Slovenia
 		['emotes'] = '~h~~p~ Emote 🎬',
@@ -2327,5 +2354,6 @@ Config.Languages = {
 		['not_in_a_vehicle'] = "Te animacije ne morete predvajati med vožnjo",
 		['in_a_vehicle'] = "To animacijo lahko predvajate samo med vožnjo 🚷",
 		['no_anim_crawling'] = "Med plazenjem ne morete predvajati animacij",
+		['no_anim_right_now'] = "You can't play an animation right now",
     },
 }
