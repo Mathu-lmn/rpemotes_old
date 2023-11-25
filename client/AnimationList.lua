@@ -1145,7 +1145,7 @@ RP.Shared = {
             zRot = 94.0000
         }
     },
-    ["couplewed1a"] = { -- Male Custom emote by EnchantedBrownie
+    ["couplewed1a"] = { -- Male Custom emote by EnchantedBrwny
         "EnchantedBrwny@wedding1a",
         "wedding1a",
         "Couple Wedding Pose 1A",
@@ -1155,7 +1155,7 @@ RP.Shared = {
             EmoteLoop = true
         }
     },
-    ["couplewed1b"] = { -- Female Custom emote by EnchantedBrownie
+    ["couplewed1b"] = { -- Female Custom emote by EnchantedBrwny
         "EnchantedBrwny@wedding1b",
         "wedding1b",
         "Couple Wedding Pose 1B",
@@ -1173,7 +1173,7 @@ RP.Shared = {
             zRot = 130.0000
         }
     },
-    ["couplewed2a"] = { -- Male Custom emote by EnchantedBrownie
+    ["couplewed2a"] = { -- Male Custom emote by EnchantedBrwny
         "EnchantedBrwny@wedding2b",
         "wedding2b",
         "Couple Wedding Pose 2A",
@@ -1183,7 +1183,7 @@ RP.Shared = {
             EmoteLoop = true
         }
     },
-    ["couplewed2b"] = { -- Female Custom emote by EnchantedBrownie
+    ["couplewed2b"] = { -- Female Custom emote by EnchantedBrwny
         "EnchantedBrwny@wedding2a",
         "wedding2a",
         "Couple Wedding Pose 2B",
@@ -5713,7 +5713,7 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-	["khands"] = { --- Custom Emote By EnchantedBrownie
+	["khands"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_heart000",
         "ebrwny_hrt000",
         "Korean Hand Hearts 🇰🇷",
@@ -5722,7 +5722,7 @@ RP.Emotes = {
 			EmoteMoving = true,
         }
     },
-	["uwu2"] = { --- Custom Emote By EnchantedBrownie
+	["uwu2"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_pack000",
         "ebrwny_shy",
         "UwU 2",
@@ -5731,7 +5731,7 @@ RP.Emotes = {
 			EmoteMoving = true,
         }
     },
-    ["rawr"] = { --- Custom Emote By EnchantedBrownie
+    ["rawr"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_pack000",
         "ebrwny_rawr",
         "Rawr",
@@ -5740,7 +5740,7 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["stop"] = { --- Custom Emote By EnchantedBrownie
+    ["stop"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_pack000",
         "ebrwny_stop",
         "Stop",
@@ -5749,7 +5749,7 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["sassy"] = { --- Custom Emote By EnchantedBrownie
+    ["sassy"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_pack000",
         "ebrwny_sass",
         "Sassy",
@@ -5758,7 +5758,7 @@ RP.Emotes = {
             EmoteMoving = true
         }
     },
-    ["sitsad3"] = { --- Custom Emote By EnchantedBrownie
+    ["sitsad3"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_pack000",
         "ebrwny_sitf000",
         "Sit Sad 3",
@@ -5768,7 +5768,7 @@ RP.Emotes = {
 			ExitEmoteType = "Exits"
         }
     },
-    ["sitsad4"] = { --- Custom Emote By EnchantedBrownie
+    ["sitsad4"] = { --- Custom Emote By EnchantedBrwny
         "ebrwny_pack000",
         "ebrwny_sitf001",
         "Sit Sad 4",
@@ -9987,6 +9987,197 @@ RP.Emotes = {
         EmoteMoving = false,
         }
     },
+	["femaleposeq"] = { --- Custom Emote By DRX Animations
+    "drx@femalestand13",
+    "xrd",
+    "Female Pose Q",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+         }
+    },
+    ["femaleposer"] = { --- Custom Emote By DRX Animations
+    "drx@femalestand14",
+    "xrd",
+    "Female Pose R",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femaleposes"] = { --- Custom Emote By DRX Animations
+    "drx@femalestand15",
+    "xrd",
+    "Female Pose S",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femaleposet"] = { --- Custom Emote By DRX Animations
+    "drx@femalestand16",
+    "xrd",
+    "Female Pose T",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femaleposeu"] = { --- Custom Emote By DRX Animations
+    "drx@f_sitcool",
+    "drx",
+    "Female Pose U",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false,
+        ExitEmote = "getup",
+        ExitEmoteType = "Exits"
+        }
+    },
+    ["femaleposev"] = { --- Custom Emote By DRX Animations
+    "drx@f_standcasual1",
+    "drx",
+    "Female Pose V",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = false
+        }
+    },
+    ["femaleposew"] = { --- Custom Emote By DRX Animations
+    "drx@f_standcasual2",
+    "drx",
+    "Female Pose W",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+         }
+    },
+    ["femaleposex"] = { --- Custom Emote By DRX Animations
+   "drx@femalestand7",
+   "xrd",
+   "Female Pose X",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+    },
+    ["femaleposey"] = { --- Custom Emote By DRX Animations
+   "drx@femalestand8",
+   "xrd",
+   "Female Pose Y",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+    },
+    ["femaleposez"] = { --- Custom Emote By DRX Animations
+    "drx@femalestand9",
+    "xrd",
+    "Female Pose Z",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+         }
+    },
+	["maleposea"] = { --- Custom Emote By DRX Animations
+   "drx@singlemale1",
+   "drx",
+   "Male Pose A",
+   AnimationOptions = {
+   EmoteLoop = true,
+   EmoteMoving = false
+       }
+},
+["maleposeb"] = { --- Custom Emote By DRX Animations
+    "drx@singlemale2",
+    "drx",
+    "Male Pose B",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposec"] = { --- Custom Emote By DRX Animations
+    "drx@singlemalestand1",
+    "drx",
+    "Male Pose C",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposed"] = { --- Custom Emote By DRX Animations
+    "drx@singlemalestand2",
+    "drx",
+    "Male Pose D",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposee"] = { --- Custom Emote By DRX Animations
+    "drx@m_doublehands",
+    "drx",
+    "Male Pose E",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposef"] = { --- Custom Emote By DRX Animations
+    "drx@m_standhide",
+    "drx",
+    "Male Pose F",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposee"] = { --- Custom Emote By DRX Animations
+    "drx@malestand2",
+    "xrd",
+    "Male Pose E",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposef"] = { --- Custom Emote By DRX Animations
+    "drx@malestand3c",
+    "xrd",
+    "Male Pose F",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposeg"] = { --- Custom Emote By DRX Animations
+    "drx@pose_male",
+    "pose_male",
+    "Male Pose G",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposeh"] = { --- Custom Emote By MrWitt
+    "mrwitt@gentleman_style_male",
+    "mrwitt",
+    "Male Pose H",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+ },
+ ["maleposei"] = { --- Custom Emote By MrWitt
+    "mrwitt@thoughtful_man_m",
+    "mrwitt",
+    "Male Pose I",
+    AnimationOptions = {
+    EmoteLoop = true,
+    EmoteMoving = false
+        }
+    },
     ["maleposetie"] = { -- Custom Emotes By MrWhitt Provided To RPEmotes 01/08/2023
     "mrwitt@tie_perfection_in_suit_male",
     "mrwitt",
@@ -10093,6 +10284,42 @@ RP.Emotes = {
     AnimationOptions = {
         EmoteLoop = true,
         EmoteMoving = false,
+        }
+    },
+    ["illuminati"] = { -- Custom Emote By EnchantedBrwny
+    "ebrwny_illum",
+    "ebrwny_illum003",
+    "Illuminati Hand Sign",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = true,
+        }
+    },
+    ["illuminati2"] = { -- Custom Emote By EnchantedBrwny
+    "ebrwny_illum",
+    "ebrwny_illum001",
+    "Illuminati Hand Sign 2",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = true,
+        }
+    },
+    ["illuminati3"] = { -- Custom Emote By EnchantedBrwny
+    "ebrwny_illum",
+    "ebrwny_illum002",
+    "Illuminati Hand Sign 3",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = true,
+        }
+    },
+    ["gunpoint"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "male_gun@vanessssi",
+       "male_gun_clip",
+        "Gun Point - Robbery",
+    AnimationOptions = {
+        EmoteLoop = true,
+        EmoteMoving = true,
         }
     },
     
@@ -11046,6 +11273,40 @@ RP.PropEmotes = {
             },
             PtfxInfo = Config.Languages[Config.MenuLanguage]['vape'],
             PtfxWait = 0.8,
+            PtfxCanHold = true
+        }
+    },
+    ["joint2"] = { --- Custom Emote Provided To RPEmotes By Sel of Darks Animations
+        "smoke_m@sel",
+        "smoke_m_clip",
+        "Pass The Blunt",
+        AnimationOptions = {
+            Prop = 'p_cs_joint_01',
+            PropBone = 26612,
+            PropPlacement = {
+                0.0540,
+               -0.0120,
+			    0.0480,
+              172.3040,
+             -131.4506,
+               45.1778
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+            PtfxAsset = "scr_mp_cig",
+            PtfxName = "ent_anim_cig_smoke",
+            PtfxNoProp = false,
+            PtfxPlacement = {
+               -0.07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            },
+            PtfxInfo = Config.Languages[Config.MenuLanguage]['smoke'],
+            PtfxWait = 0.5,
             PtfxCanHold = true
         }
     },
@@ -15141,7 +15402,7 @@ RP.PropEmotes = {
         "enter",
         "Joint",
         AnimationOptions = {
-            Prop = 'p_cs_joint_02',
+            Prop = 'p_cs_joint_01',
             PropBone = 47419,
             PropPlacement = {
                 0.015,
@@ -23424,6 +23685,25 @@ RP.PropEmotes = {
             },
             EmoteLoop = true,
             EmoteMoving = true,
+        }
+  },
+    ["bbat"] = { --- Custom Emote Provided To RPEmotes Courtesy Of Darks Animations
+       "bat@sel",
+       "bat_clip",
+        "Baseball Bat Pose",
+        AnimationOptions = {
+            Prop = 'p_cs_bbbat_01',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0600,
+               0.0700,
+               0.0100,
+             -73.8317,
+               0.8479,
+             -12.8826
+            },
+            EmoteLoop = true,
+            EmoteMoving = false,
         }
   }
 
