@@ -10136,7 +10136,7 @@ RP.Emotes = {
  ["maleposee1"] = { --- Custom Emote By DRX Animations
     "drx@malestand2",
     "xrd",
-    "Male Pose E",
+    "Male Pose E1",
     AnimationOptions = {
     EmoteLoop = true,
     EmoteMoving = false
@@ -10145,7 +10145,7 @@ RP.Emotes = {
  ["maleposef1"] = { --- Custom Emote By DRX Animations
     "drx@malestand3c",
     "xrd",
-    "Male Pose F",
+    "Male Pose F1",
     AnimationOptions = {
     EmoteLoop = true,
     EmoteMoving = false
