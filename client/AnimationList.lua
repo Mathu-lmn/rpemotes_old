@@ -22181,22 +22181,41 @@ RP.PropEmotes = {
         }
     },
     ['ftorch2'] = {
-        'rcmnigel1d',
-        'base_club_shoulder',
+        'special_ped@griff@base',
+        'base',
         'Fire Torch 2',
         AnimationOptions = {
             Prop = "bzzz_prop_torch_fire001", -- Custom Prop By Bzzzz Used With Permission
             PropBone = 28422,
             PropPlacement = {
-                -0.0800,
-                -0.0300,
-                -0.1700,
-                11.4181,
-                -159.1026,
-                15.0338
+                0.0100,
+                0.0300,
+                0.0500,
+                0.0000,
+                0.0000,
+                0.0000,
             },
             EmoteLoop = true,
             EmoteMoving = true
+        }
+    },
+    ['candle'] = {
+        'special_ped@griff@base',
+        'base',
+        'Candle',
+        AnimationOptions = {
+            Prop = "prop_candle",
+            PropBone = 28422,
+            PropPlacement = {
+                0.0200,
+                0.0100,
+                0.0100,
+                0.0000,
+               10.0000,
+                0.0000,
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
         }
     },
     ["watchstripper2"] = {
@@ -23704,6 +23723,82 @@ RP.PropEmotes = {
             },
             EmoteLoop = true,
             EmoteMoving = false,
+        }
+  },
+    ["stopsign"] = { --- Custom Prop By PNWParksFan
+       "amb@world_human_janitor@male@base",
+       "base",
+        "Stop Sign",
+        AnimationOptions = {
+            Prop = 'prop_flagger_sign_01',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0000,
+               0.0000,
+              -0.6800,
+               0.0000,
+               0.0000,
+             -50.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        }
+  },
+    ["stopsign2"] = { --- Custom Prop By PNWParksFan
+       "amb@world_human_janitor@male@base",
+       "base",
+        "Stop Sign 2 - Slow Down",
+        AnimationOptions = {
+            Prop = 'prop_flagger_sign_01',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0000,
+               0.0000,
+              -0.6800,
+               0.0000,
+               0.0000,
+             120.0000
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        }
+  },
+    ["stopsign3"] = { --- Custom Prop By PNWParksFan
+       "special_ped@griff@base",
+       "base",
+        "Stop Sign 3 - Stop",
+        AnimationOptions = {
+            Prop = 'prop_flagger_sign_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0200,
+               0.0200,
+              -0.2600,
+             169.9999,
+            -180.0000,
+              59.9999
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
+        }
+  },
+    ["stopsign4"] = { --- Custom Prop By PNWParksFan
+       "special_ped@griff@base",
+       "base",
+        "Stop Sign 4 - Slow Down",
+        AnimationOptions = {
+            Prop = 'prop_flagger_sign_02',
+            PropBone = 28422,
+            PropPlacement = {
+               0.0200,
+               0.0200,
+              -0.2600,
+             10.0000,
+              0.0000,
+            -59.9999
+            },
+            EmoteLoop = true,
+            EmoteMoving = true,
         }
   }
 
