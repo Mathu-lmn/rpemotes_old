@@ -695,6 +695,8 @@ A huge thank you to the following people for their amazing contributions made to
 
 - Thank you to [VNSIanims](https://discord.gg/cTNrjYSXXG) for the custom animations and partnership
 
+- Thank you to [PNWParksFan](https://www.gta5-mods.com/users/PNWParksFan) for the custom props
+
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 
 You pay a big role in making this script what it is today and we could not do it without you 🙏
