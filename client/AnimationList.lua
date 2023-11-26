@@ -10133,7 +10133,7 @@ RP.Emotes = {
     EmoteMoving = false
         }
  },
- ["maleposee"] = { --- Custom Emote By DRX Animations
+ ["maleposee1"] = { --- Custom Emote By DRX Animations
     "drx@malestand2",
     "xrd",
     "Male Pose E",
@@ -10142,7 +10142,7 @@ RP.Emotes = {
     EmoteMoving = false
         }
  },
- ["maleposef"] = { --- Custom Emote By DRX Animations
+ ["maleposef1"] = { --- Custom Emote By DRX Animations
     "drx@malestand3c",
     "xrd",
     "Male Pose F",
