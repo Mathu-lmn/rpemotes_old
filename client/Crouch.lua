@@ -405,6 +405,10 @@ local function CrawlKeyPressed()
         return
     end
 
+    if isInActionWithErrorMessage({['IsProne'] = true}) then
+        return
+    end
+
     IsProne = true
     SetPedConfigFlag(playerPed, 48, true) -- CPED_CONFIG_FLAG_BlockWeaponSwitching
 

@@ -46,6 +46,7 @@ for i = 1, #emoteTypes do
     local emoteType = emoteTypes[i]
     for emoteName, emoteData in pairs(RP[emoteType]) do
         local shouldRemove = false
+        if Config.AdultEmotesDisabled and emoteData.AdultAnimation then shouldRemove = true end
         if emoteData[1] and not ((emoteData[1] == 'Scenario') or (emoteData[1] == 'ScenarioObject') or (emoteData[1] == 'MaleScenario')) and not DoesAnimDictExist(emoteData[1]) then shouldRemove = true end
         if shouldRemove then RP[emoteType][emoteName] = nil end
     end
@@ -267,21 +268,14 @@ if Config.HandsupEnabled then
         Handsup()
     end, false)
 
-function Handsup()
-    local playerPed = PlayerPedId()
-    if not IsPedHuman(playerPed) then
-        return
-    end
-    if IsProne then
-        return
-    end
-        if IsProne then
+    function Handsup()
+        local playerPed = PlayerPedId()
+        if not IsPedHuman(playerPed) then
             return
         end
-        if IsProne then
+        if isInActionWithErrorMessage() then
             return
-	end
-		
+        end
 
         inHandsup = not inHandsup
         if inHandsup then
@@ -692,8 +686,7 @@ function OnEmotePlay(EmoteName, name, textureVariation)
         end
     end
 
-    if IsProne then
-        EmoteChatMessage(Config.Languages[lang]['no_anim_crawling'])
+    if isInActionWithErrorMessage() then
         return false
     end
 

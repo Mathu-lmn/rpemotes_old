@@ -200,3 +200,30 @@ function GetPlayers()
 
     return players
 end
+
+---Function that'll check if player is already proning, using news cam or else
+---@param ignores? array|nil key string is the ignored value
+function isInActionWithErrorMessage(ignores)
+    DebugPrint(ignores)
+    DebugPrint('IsProne', IsProne)
+    DebugPrint('IsUsingNewscam', IsUsingNewscam)
+    DebugPrint('IsUsingBinoculars', IsUsingBinoculars)
+    if (ignores == nil) then ignores = {} end
+
+    if not ignores['IsProne'] and IsProne then
+        EmoteChatMessage(Config.Languages[lang]['no_anim_crawling'])
+        return true
+    end
+    if not ignores['IsUsingNewscam'] and IsUsingNewscam then
+        -- TODO: use specific error message
+        EmoteChatMessage(Config.Languages[lang]['no_anim_right_now'])
+        return true
+    end
+    if not ignores['IsUsingBinoculars'] and IsUsingBinoculars then
+        -- TODO: use specific error message
+        EmoteChatMessage(Config.Languages[lang]['no_anim_right_now'])
+        return true
+    end
+
+    return false
+end

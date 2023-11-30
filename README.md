@@ -80,6 +80,8 @@ RPEmotes is a community driven FiveM emote menu allowing players to express them
 
 * Sinhala 🇱🇰
 
+* Slovenian 🇸🇮 
+
 * Spanish 🇪🇸
 
 * Swedish 🇸🇪
@@ -405,7 +407,7 @@ Framework = false,
 
 Many people have expressed concerns over anticheat scripts kicking or banning their community members due to the fact RPEmotes uses props and anticheats detecting said props being spawned.
 
-To make server owners' jobs a little easier, we have added a prop extractor command that you can enter into the server console which will automate a file inside the RPEmotes resource folder appropriately named, `.prop_list.lua`.
+To make server owners' jobs a little easier, we have added a prop extractor command that you can enter into the server console which will automate a file inside the RPEmotes resource folder appropriately named, `prop_list.lua`.
 
 ### Command:
 
@@ -572,6 +574,8 @@ Below is an example:
 
 # 📜 LICENSE & DISCLAIMER
 
+## Aligned with Rockstar Games' [acquisition](https://www.rockstargames.com/newswire/article/8971o8789584a4/roleplay-community-update?utm_source=twitter&utm_medium=o_social&utm_campaign=rockstar_announcement_cfxre-20230811) of Cfxre and FiveM, RPEmotes will abstain from including copyrighted material and animations tailored for child characters, as outlined in bulletpoint 4 of the [November 2023 community pulse](https://forum.cfx.re/t/community-pulse-november-2023/5185781).
+
 This repository was created by **TayMcKenzieNZ** for strict usage with the Grand Theft Auto 5 unofficial multiplayer platform 'FiveM', and is under the GNU General Public License v3.0 license.
 
 All custom props and animations were provided to RPEmotes **by the community** with **express permission** and must **not** be extracted from [RpEmotes](https://github.com/TayMcKenzieNZ/rpemotes), reuploaded to any websites, forums or discord servers without permission **and** credits given.
@@ -681,13 +685,17 @@ A huge thank you to the following people for their amazing contributions made to
 
 - Thank you [-EcLiPsE-](https://www.gta5-mods.com/users/-EcLiPsE-) for allowing me to implement [Improved Prop Sets](https://www.gta5-mods.com/misc/improved-propsets-meta) and [GTA Online Biker Idle Anims](https://www.gta5-mods.com/misc/bike-idle-animations)
 
-- Thank you [MrWitt](https://www.gta5-mods.com/users/MrWitt)for the custom animations
+- Thank you [MrWitt](https://www.gta5-mods.com/users/MrWitt)for the custom animations and partnership
 
 - A huge thank you to [AdoredRose](https://forum.cfx.re/u/adoredrose/summary) for assisting with animations
 
 - Thank you [Vedere](https://discord.gg/XMywAMQ8Ef) for the custom props
 
-- Thank you to [DRX Animations](https://www.gta5-mods.com/users/DRX%2DAnimations) for the custom animations
+- Thank you to [DRX Animations](https://www.gta5-mods.com/users/DRX%2DAnimations) for the custom animations and partnership
+
+- Thank you to [VNSIanims](https://discord.gg/cTNrjYSXXG) for the custom animations and partnership
+
+- Thank you to [PNWParksFan](https://www.gta5-mods.com/users/PNWParksFan) for the custom props
 
 - Thank you to you, the community for being patient, showing love and appreciation, and for providing translations.
 

@@ -5,8 +5,8 @@
 fx_version 'cerulean'
 game 'gta5'
 authors { 'TayMcKenzieNZ', 'MadsL', 'Mathu_lmn', 'Community' }
-description 'RPEmotes V1.3.7'
-version '1.3.7'
+description 'RPEmotes V1.3.8'
+version '1.3.8'
 lua54 'yes'
 
 dependencies {
@@ -89,3 +89,5 @@ data_file 'DLC_ITYP_REQUEST' 'stream/ultra_ringcase.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/pata_props.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/vedere_props.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/pnwsigns.ytyp'

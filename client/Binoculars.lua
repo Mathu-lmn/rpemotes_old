@@ -3,6 +3,7 @@
 --- RPEmotes is FREE and ALWAYS will be. STOP PAYING SCAMMY FUCKERS FOR SOMEONE ELSE'S WORK!!! ---
 
 
+IsUsingBinoculars = false
 if Config.BinocularsEnabled then
     RegisterCommand("binoculars", function()
         UseBinocular()
@@ -16,7 +17,6 @@ if Config.BinocularsEnabled then
     local speed_lr = 8.0 -- speed by which the camera pans left-right
     local speed_ud = 8.0 -- speed by which the camera pans up-down
     local fov = (fov_max + fov_min) * 0.5
-    local binoculars = false
     local index = 0
     prop_binoc = nil
     local instructions = true
@@ -57,9 +57,12 @@ if Config.BinocularsEnabled then
         if IsPedSittingInAnyVehicle(PlayerPedId()) then
             return
         end
-        binoculars = not binoculars
+        if isInActionWithErrorMessage({ ['IsUsingBinoculars'] = true }) then
+          return
+        end
+        IsUsingBinoculars = not IsUsingBinoculars
 
-        if binoculars then
+        if IsUsingBinoculars then
             Citizen.CreateThread(function()
 
                 DestroyAllProps()
@@ -119,10 +122,10 @@ if Config.BinocularsEnabled then
             end
             local scaleform_instructions = SetupButtons(keyList)
             -- MAIN LOOP
-            while binoculars and not IsEntityDead(PlayerPedId()) and not IsPedSittingInAnyVehicle(PlayerPedId()) do
+            while IsUsingBinoculars and not IsEntityDead(PlayerPedId()) and not IsPedSittingInAnyVehicle(PlayerPedId()) do
                 if IsControlJustPressed(0, 177) then
                     PlaySoundFrontend(-1, "SELECT", "HUD_FRONTEND_DEFAULT_SOUNDSET", false)
-                    binoculars = false
+                    IsUsingBinoculars = false
                 end
 
                 local zoomvalue = (1.0 / (fov_max - fov_min)) * (fov - fov_min)
@@ -175,7 +178,7 @@ if Config.BinocularsEnabled then
         end
 
         -- RESET EVERYTHING
-        binoculars = false
+        IsUsingBinoculars = false
         index = 0
         ClearPedTasks(PlayerPedId())
         ClearTimecycleModifier()
@@ -247,7 +250,7 @@ if Config.BinocularsEnabled then
 
     AddEventHandler('onResourceStop', function(resource)
         if resource == GetCurrentResourceName() then
-            if binoculars then
+            if IsUsingBinoculars then
                 ClearPedTasks(PlayerPedId())
                 ClearTimecycleModifier()
                 RenderScriptCams(false, false, 0, 1, 0)
