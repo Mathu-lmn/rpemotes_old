@@ -1255,12 +1255,11 @@ if Config.EmotePreview then
             LoadModel(prop1)
         end
 
-        prop = CreateObject(joaat(prop1), x, y, z + 0.2, true, true, true)
+        prop = CreateObject(joaat(prop1), x, y, z + 0.2, false, false, false)
         if textureVariation ~= nil then
             SetObjectTextureVariation(prop, textureVariation)
         end
-        AttachEntityToEntity(prop, Player, GetPedBoneIndex(Player, bone), off1, off2, off3, rot1, rot2, rot3, true, true,
-            false, true, 1, true)
+        AttachEntityToEntity(prop, Player, GetPedBoneIndex(Player, bone), off1, off2, off3, rot1, rot2, rot3, true, true, false, true, 1, true)
         table.insert(cloneProps, prop)
         cloneHasProps = true
         SetModelAsNoLongerNeeded(prop1)
